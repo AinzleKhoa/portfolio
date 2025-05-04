@@ -237,6 +237,17 @@ a:hover {
     }
 }
 
+/* animation: float-drift-no-opacity 5s ease-in-out infinite alternate; */
+@keyframes float-drift-no-opacity {
+    from {
+        transform: translateY(0px) rotate(0deg);
+    }
+
+    to {
+        transform: translateY(6px) rotate(3deg);
+    }
+}
+
 /* animation: corner-rotate 6s linear infinite; */
 @keyframes corner-rotate {
     0% {
@@ -271,6 +282,21 @@ a:hover {
     }
 }
 
+/*  animation: cosmicGlow 4s ease-in-out infinite; */
+@keyframes cosmicGlow {
+    0% {
+        box-shadow: 0 0 15px #5591a9, 0 0 30px #5591a9 inset;
+    }
+
+    50% {
+        box-shadow: 0 0 30px #9ccddc, 0 0 60px #9ccddc inset;
+    }
+
+    100% {
+        box-shadow: 0 0 15px #5591a9, 0 0 30px #5591a9 inset;
+    }
+}
+
 
 /*---------------------------------------
   BACKGROUND             
@@ -295,7 +321,7 @@ a:hover {
     opacity: 0.8;
     z-index: 1;
     /* Lower z-index */
-    animation: corner-tilt 10s ease-in-out infinite;
+    animation: corner-tilt 8s ease-in-out infinite;
 }
 
 .fixed-img-right {
@@ -314,6 +340,7 @@ a:hover {
 -----------------------------------------*/
 .hero-section {
     text-align: center;
+    margin-top: 80px;
 }
 
 .hero-text {
@@ -376,18 +403,47 @@ a:hover {
 /*---------------------------------------
   ABOUT             
 -----------------------------------------*/
-.about {
-    margin-top: 150px;
-    width: 100%;
+.about-content {
+    margin-top: 220px;
     border-radius: 100px;
-    backdrop-filter: blur(3px);
+    backdrop-filter: blur(4px);
     border: 2px solid rgba(255, 255, 255, 0.3);
-    position: relative;
     z-index: 2;
-    text-align: center;
     padding: 10px;
+    position: relative;
+    max-width: 900px;
+    text-align: center;
 }
 
+.about-title {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.about-text {
+    padding: 0 30px;
+}
+
+.about-img-hero {
+    width: 70%;
+    border-left: 3px solid rgba(255, 255, 255, 0.3);
+    border-radius: 80px;
+    animation: rotateShadow 6s infinite ease-in-out;
+    z-index: 2;
+}
+
+.about-img-planet {
+    position: absolute;
+    width: 28%;
+    top: -100px;
+    left: -80px;
+    z-index: 1;
+    border-radius: 50%;
+    animation: float-drift-no-opacity 5s ease-in-out infinite alternate, cosmicGlow 4s ease-in-out infinite;
+}
+
+/*
 .about-text,
 .about-image {
     display: flex;
@@ -396,9 +452,38 @@ a:hover {
     flex-direction: column;
 }
 
-.about-image img {
-    border-left: 3px solid rgba(255, 255, 255, 0.3);
-    width: 100%;
-    border-radius: 100px;
-    animation: rotateShadow 6s infinite ease-in-out;
+.about-image {
+    position: relative;
+}
+
+@keyframes starDrift {
+    0% {
+        transform: translateY(0) scale(1);
+        opacity: 0.5;
+    }
+
+    100% {
+        transform: translateY(300px) scale(1.5);
+        opacity: 0;
+    }
+}
+
+.star {
+    width: 2px;
+    height: 2px;
+    background: #ced7e0;
+    border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 0;
+    animation: starDrift 8s linear infinite;
+}
+
+    */
+
+/*---------------------------------------
+  PROJECTS             
+-----------------------------------------*/
+.projects-section {
+    margin-top: 200px;
 }
