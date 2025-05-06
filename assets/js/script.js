@@ -15,6 +15,32 @@ function initBackground(headerId) {
     header.style.backgroundAttachment = "fixed";
 }
 
+const scrollSpy = new bootstrap.ScrollSpy(document.body, {
+    target: '#navbarNav',
+    offset: 70 // match your navbar height
+});
+
+function scrollToTop(e) {
+    e.preventDefault();
+    window.scrollTo({
+        top: 0,
+        behavior: 'smooth'
+    });
+}
+
+function copyText(event) {
+    event.stopPropagation();  // Prevents bubbling to anchor tag
+    event.preventDefault();   // Prevents default <a> behavior if nested
+
+    const copyText = document.getElementById('copy-text').innerText;
+    navigator.clipboard.writeText(copyText).then(() => {
+        alert("Text copied to clipboard!");
+    }).catch(err => {
+        console.error("Copy failed:", err);
+    });
+}
+
 window.onload = function () {
+    AOS.init(); // For AOS (Animate on Scroll) JS
     initBackground('main-background');
 }

@@ -13,16 +13,20 @@
         rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
+    <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
 </head>
 
-<body>
+<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
 
     <div id="main-background" data-bg="./assets/img/background.png">
         <!-- Navbar Start -->
-        <nav class="navbar navbar-expand-lg navbar-dark">
+        <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">MyPortfolio</a>
+                <a class="navbar-brand" href="#">Ainzle Khoa</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -31,13 +35,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#home">Home</a>
+                            <a class="nav-link" href="#hero" onclick="scrollToTop(event)">Hero</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#about">About</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#skills">Skills</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#experiences">Experiences</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -52,10 +62,10 @@
 
         <header id="hero" class="hero-section">
             <div class="container">
-                <div class="row align-items-center">
+                <div class="row hero-wrapper align-items-center">
 
                     <!-- Text Column -->
-                    <div class="hero-text col-4">
+                    <div class="hero-text col-md-4 col-lg-4">
                         <div class="intro-content">
                             <h2 class="intro-subtitle">Hello! I'm</h2>
                             <h1 class="intro-name">Lê Anh Khoa</h1>
@@ -65,7 +75,7 @@
                     </div>
 
                     <!-- Image Column -->
-                    <div class="hero-image col-4 text-center">
+                    <div class="hero-image col-md-5 col-lg-4 text-center">
                         <div class="corner-frame">
                             <img src="./assets/img/hero.png" alt="Illustration of Lê Anh Khoa"
                                 class="hero-illustration">
@@ -73,14 +83,22 @@
                     </div>
 
                     <!-- Text Column -->
-                    <div class="hero-text col-4">
+                    <div class="hero-text col-md-3 col-lg-4">
                         <div class="intro-content">
-                            <p class="intro-description">“Where <span>Innovation</span> Meets <span>Execution</span> —
+                            <p class="intro-description">“Where <span>Innovation</span> Meets <span>Execution</span>
+                                —
                                 One Pixel at a
                                 Time.”</p>
                         </div>
                     </div>
-
+                </div>
+                <div class="row align-items-center mt-3">
+                    <div class="social-links">
+                        <a href="mailto:khoale1855@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
+                        <a href="https://github.com/AinzleKhoa" target="_blank"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/khoa-l%C3%AA-anh-b1335a364/" target="_blank"><i
+                                class="fab fa-linkedin"></i></a>
+                    </div>
                 </div>
             </div>
         </header>
@@ -92,15 +110,16 @@
                     <div class="row justify-content-center">
 
                         <!-- Text Column -->
-                        <div class="about-content col-12">
+                        <div class="about-wrapper col-12" data-aos="fade-up" data-aos-offset="300"
+                            data-aos-easing="ease-in-sine">
                             <img src="./assets/img/chatgpt-planet.png" alt="" class="about-img-planet">
-                            <div class="about-title">
-                                <div class="col-8 d-flex align-items-end flex-column">
+                            <div class="about-header">
+                                <div class="col-sm-8 about-title">
                                     <h2 class="section-heading">About Me</h2>
                                     <h1 class="about-name">Lê Anh Khoa</h1>
                                     <h6 class="about-role">Software Engineering</h6>
                                 </div>
-                                <div class="col-4">
+                                <div class="col-sm-4 about-hero">
                                     <img src="./assets/img/about.png" alt="Portrait of Lê Anh Khoa"
                                         class="about-img-hero">
                                 </div>
@@ -129,15 +148,417 @@
             </section>
 
             <section id="projects" class="projects-section mb-5">
-                <div class="container">
-                    <div class="row justify-content-center">
-                        AAA
+                <div class="container justify-content-center">
+                    <div class="projects-wrapper" data-aos="fade-up" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+
+                        <img src="./assets/img/bigspaceship.png" alt="" class="projects-decoration-spaceship">
+
+                        <h1 class="section-heading">Projects I've Built</h1>
+                        <p class="section-subtitle mb-5">
+                            A selection of personal and academic projects that showcase my creativity, problem-solving,
+                            and technical range—from full-stack apps to games and tools.
+                        </p>
+
+                        <div class="row project-list">
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
+                                <div class="project-card card h-100 w-100 d-flex flex-column">
+                                    <img src="./assets/img/projects/project1.png" alt="Screenshot"
+                                        class="img-fluid project-thumbnail">
+                                    <div class="project-info flex-grow-1">
+                                        <h5 class="project-title">Galactic Typist</h5>
+                                        <p class="project-tech">Java-powered typing game</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
+                                <div class="project-card card h-100 w-100 d-flex flex-column">
+                                    <img src="./assets/img/projects/project2.png" alt="Screenshot"
+                                        class="img-fluid project-thumbnail">
+                                    <div class="project-info flex-grow-1">
+                                        <h5 class="project-title">FEL Club Website</h5>
+                                        <p class="project-tech">Frontend website developed for the FPTU English Club
+                                            using HTML, CSS, and JavaScript</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
+                                <div class="project-card card h-100 w-100 d-flex flex-column">
+                                    <img src="./assets/img/projects/project3.png" alt="Screenshot"
+                                        class="img-fluid project-thumbnail">
+                                    <div class="project-info flex-grow-1">
+                                        <h5 class="project-title">Arduino Rover</h5>
+                                        <p class="project-tech">Autonomous navigation rover using Arduino and sensor
+                                            integration</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
+                                <div class="project-card card h-100 w-100 d-flex flex-column">
+                                    <img src="./assets/img/projects/project4.png" alt="Screenshot"
+                                        class="img-fluid project-thumbnail">
+                                    <div class="project-info flex-grow-1">
+                                        <h5 class="project-title">NeonRealm</h5>
+                                        <p class="project-tech">Full-stack Java MVC web application for a digital
+                                            game store</p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
+                                <div class="project-card card h-100 w-100 d-flex flex-column">
+                                    <img src="./assets/img/projects/project5.png" alt="Screenshot"
+                                        class="img-fluid project-thumbnail">
+                                    <div class="project-info flex-grow-1">
+                                        <h5 class="project-title">Student Management System</h5>
+                                        <p class="project-tech">Java-based desktop application for managing student
+                                            records
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </section>
+
+            <section id="skills" class="skills-section">
+                <div class="container justify-content-center">
+                    <div class="skills-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+
+                        <h2 class="section-heading">Skills & Technologies</h2>
+                        <p class="section-subtitle mb-5">
+                            A collection of programming languages, tools, and technologies I've gained hands-on
+                            experience with through academic work, personal projects, and practical exploration.
+                        </p>
+
+                        <div class="skill-grid">
+                            <div class="skill-item">
+                                <i class="devicon-html5-plain colored skill-icon"></i>
+                                <p class="skill-label">HTML5</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-css3-plain colored skill-icon"></i>
+                                <p class="skill-label">CSS3</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-javascript-plain colored skill-icon"></i>
+                                <p class="skill-label">JavaScript</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-java-plain colored skill-icon"></i>
+                                <p class="skill-label">Java (OOP, MVC, JSP)</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-mysql-plain colored skill-icon"></i>
+                                <p class="skill-label">MySQL</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-microsoftsqlserver-plain colored skill-icon"></i>
+                                <p class="skill-label">SQL Server</p>
+                            </div>
+                            <div class="skill-item">
+                                <i class="devicon-cplusplus-plain colored skill-icon"></i>
+                                <p class="skill-label">Arduino Programming</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="experiences" class="experiences-section">
+                <div class="container justify-content-center">
+                    <div class="achievements-wrapper" data-aos="fade-up" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+
+                        <h2 class="section-heading">My Experiences So Far</h2>
+                        <p class="section-subtitle mb-5">
+                            A timeline of my personal and academic journey — highlighting the key projects, milestones,
+                            and hands-on experiences that have shaped my growth in software development and creative
+                            problem-solving.
+                        </p>
+
+                        <div class="timeline">
+
+                            <div class="timeline-item">
+                                <div class="timeline-content right">
+                                    <h4 class="timeline-title">Early Creative Exploration – Plazma Burst 2 Map Design
+                                    </h4>
+                                    <small class="timeline-date">2014 – 2018</small>
+                                    <p>Started exploring game design at a young age by creating custom maps in the 2d
+                                        platformer Plazma Burst 2. Designed nearly 100 unique maps, with over 30
+                                        becoming highly rated by the community. Collaborated with players, iterated
+                                        based on feedback, and tailored experiences to match player preferences—earning
+                                        recognition as one of the most well-known map creators in the game. Was once
+                                        invited to lead one of its largest player clans.</p>
+                                </div>
+                                <div class="timeline-image left">
+                                    <img src="./assets/img/experiences/experience00.png"
+                                        alt="Pre-University Academic Achievements" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content left">
+                                    <h4 class="timeline-title">Pre-University Academic Achievements</h4>
+                                    <small class="timeline-date">2016 – 2023</small>
+                                    <p>Participated in numerous academic and English competitions throughout middle and
+                                        high school, earning multiple awards. Consistently ranked among the top 10
+                                        students every semester during my entire pre-university education.</p>
+                                </div>
+                                <div class="timeline-image right">
+                                    <img src="./assets/img/experiences/experience1.png"
+                                        alt="Pre-University Academic Achievements" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content right">
+                                    <h4 class="timeline-title">Enrolled at FPT University, Can Tho</h4>
+                                    <small class="timeline-date">September 2023</small>
+                                    <p>Chose FPT University in Can Tho over Ho Chi Minh City University of Technology
+                                        (Bach Khoa), prioritizing a modern, practical learning environment.</p>
+                                </div>
+                                <div class="timeline-image left">
+                                    <img src="./assets/img/experiences/experience2.jpg"
+                                        alt="Enrolled at FPT University, Can Tho" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content left">
+                                    <h4 class="timeline-title">English Course – University of Kuala Lumpur, Malaysia
+                                    </h4>
+                                    <small class="timeline-date">November 2023</small>
+                                    <p>Completed a 3-week English immersion program. Engaged in daily communication with
+                                        locals and explored various cultural sites.</p>
+                                </div>
+                                <div class="timeline-image right">
+                                    <img src="./assets/img/experiences/experience3.jpg"
+                                        alt="English Course – University of Kuala Lumpur, Malaysia" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content right">
+                                    <h4 class="timeline-title">First Java Application – Student Management System</h4>
+                                    <small class="timeline-date">May 2024</small>
+                                    <p>Built a fully functional desktop application for managing student data. Developed
+                                        entirely in Java within 4 days.</p>
+                                </div>
+                                <div class="timeline-image left">
+                                    <img src="./assets/img/experiences/experience4.png"
+                                        alt="AFirst Java Application – Student Management System" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content left">
+                                    <h4 class="timeline-title">Completed Vovinam Martial Arts Program</h4>
+                                    <small class="timeline-date">July 2024</small>
+                                    <p>Finished a full 3-term Vovinam training course (6 months total), improving
+                                        discipline and physical resilience.</p>
+                                </div>
+                                <div class="timeline-image right">
+                                    <img src="./assets/img/experiences/experience5.jpg"
+                                        alt="Completed Vovinam Martial Arts Program" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content right">
+                                    <h4 class="timeline-title">Game Development – Galactic Typist</h4>
+                                    <small class="timeline-date">October 2024</small>
+                                    <p>Designed and coded a playable typing-based game using Java, completed in under
+                                        one week.</p>
+                                </div>
+                                <div class="timeline-image left">
+                                    <img src="./assets/img/experiences/experience6.png"
+                                        alt="Game Development – Galactic Typist" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content left">
+                                    <h4 class="timeline-title">Joined English Club and Participated in Multiple Events
+                                    </h4>
+                                    <small class="timeline-date">October 2024</small>
+                                    <p>Actively engaged in various club-organized events to enhance communication,
+                                        collaboration, and other key soft skills.</p>
+                                </div>
+                                <div class="timeline-image right">
+                                    <img src="./assets/img/experiences/experience7.jpg"
+                                        alt="Joined English Club and Participated in Multiple Events" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content right">
+                                    <h4 class="timeline-title">Top 5 – Software Engineering Major, Fall 2024</h4>
+                                    <small class="timeline-date">November 2024</small>
+                                    <p>Achieved a GPA of 9.6, ranking among the top 5 students in the Software
+                                        Engineering program of FALL 2024 semester.</p>
+                                </div>
+                                <div class="timeline-image left">
+                                    <img src="./assets/img/experiences/experience8.jpg"
+                                        alt="Top 5 – Software Engineering Major, Fall 2024" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content left">
+                                    <h4 class="timeline-title">Arduino Autonomous Robot Project</h4>
+                                    <small class="timeline-date">January 2025</small>
+                                    <p>Collaborated with a friend (Nguyen Hoang Huan) to design and build a
+                                        path-following, dust-collecting
+                                        robot using Arduino. Completed within one month.</p>
+                                </div>
+                                <div class="timeline-image right">
+                                    <img src="./assets/img/experiences/experience9.png"
+                                        alt="Arduino Autonomous Robot Project" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content right">
+                                    <h4 class="timeline-title">Full-Stack Web Project – NeonRealm</h4>
+                                    <small class="timeline-date">February 2025</small>
+                                    <p>Developed a full-stack web application using the Java MVC model. Implemented both
+                                        custom frontend and backend features with a strong focus on interactivity,
+                                        structure, and design clarity.</p>
+                                </div>
+                                <div class="timeline-image left">
+                                    <img src="./assets/img/experiences/experience10.png"
+                                        alt="Full-Stack Web Project – NeonRealm" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content left">
+                                    <h4 class="timeline-title">FEL Club Website (Frontend)</h4>
+                                    <small class="timeline-date">April 2025</small>
+                                    <p>Created a static frontend site for FEL Club using JSON data as requested.
+                                        Deployed via GitHub Pages.</p>
+                                </div>
+                                <div class="timeline-image right">
+                                    <img src="./assets/img/experiences/experience11.png"
+                                        alt="FEL Club Website (Frontend)" />
+                                </div>
+                            </div>
+
+                            <div class="timeline-item">
+                                <div class="timeline-content right">
+                                    <h4 class="timeline-title">Personal Portfolio Website</h4>
+                                    <small class="timeline-date">May 2025</small>
+                                    <p>Built a responsive, animated portfolio website to showcase skills and projects
+                                        using modern frontend technologies.</p>
+                                </div>
+                                <div class="timeline-image left">
+                                    <img src="./assets/img/experiences/experience12.png"
+                                        alt="Personal Portfolio Website" />
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+            </section>
+
+            <section id="contact" class="contact-section">
+                <div class="container justify-content-center">
+                    <div class="section-wrapper" data-aos="fade-up" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+
+                        <h2 class="section-heading">Reach Out to Me</h2>
+                        <p class="section-subtitle">
+                            I'm always open to new connections, collaborations, or just a friendly chat. Feel free to
+                            reach out through any of the platforms below.
+                        </p>
+
+                        <div class="contact-grid">
+
+                            <div class="contact-item">
+                                <div class="contact-link">
+                                    <a href="mailto:khoale1855@gmail.com" target="_blank">
+                                        <i class="fas fa-envelope contact-icon"></i>
+                                        <div class="contact-text">
+                                            <p class="contact-label">Gmail</p>
+                                            <p class="contact-info" id="copy-text">khoale1855@gmail.com</p>
+                                        </div>
+                                    </a>
+                                    <button class="copy-btn" onclick="copyText(event)">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-link">
+                                    <a href="https://github.com/AinzleKhoa" target="_blank">
+                                        <i class="fab fa-github contact-icon"></i>
+                                        <div class="contact-text">
+                                            <p class="contact-label">Github</p>
+                                            <p class="contact-info" id="copy-text">AinzleKhoa</p>
+                                        </div>
+                                    </a>
+                                    <button class="copy-btn" onclick="copyText(event)">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                            <div class="contact-item">
+                                <div class="contact-link">
+                                    <a href="https://www.linkedin.com/in/khoa-l%C3%AA-anh-b1335a364/" target="_blank">
+                                        <i class="fab fa-linkedin contact-icon"></i>
+                                        <div class="contact-text">
+                                            <p class="contact-label">Linkedin</p>
+                                            <p class="contact-info" id="copy-text">AinzleKhoa</p>
+                                        </div>
+                                    </a>
+                                    <button class="copy-btn" onclick="copyText(event)">
+                                        <i class="fas fa-copy"></i>
+                                    </button>
+                                </div>
+                            </div>
+
+                        </div>
                     </div>
                 </div>
             </section>
 
         </main>
 
+        <footer class="site-footer text-center mt-5">
+            <div class="container py-5">
+                <h4 class="footer-brand mb-3" style="color: #7dddf4;">Ainzle Khoa</h4>
+                <p class="footer-subtext mb-4 text-light">Creative Software Engineering Student</p>
+
+                <ul class="footer-menu list-unstyled d-flex justify-content-center flex-wrap mb-4">
+                    <li class="mx-3"><a href="#hero" class="footer-link">Hero</a></li>
+                    <li class="mx-3"><a href="#about" class="footer-link">About</a></li>
+                    <li class="mx-3"><a href="#projects" class="footer-link">Projects</a></li>
+                    <li class="mx-3"><a href="#skills" class="footer-link">Skills</a></li>
+                    <li class="mx-3"><a href="#experiences" class="footer-link">Experiences</a></li>
+                    <li class="mx-3"><a href="#contact" class="footer-link">Contact</a></li>
+                </ul>
+
+                <div class="social-links mb-4">
+                    <a href="mailto:khoale1855@gmail.com" target="_blank"><i class="fas fa-envelope fa-lg mx-2"></i></a>
+                    <a href="https://github.com/AinzleKhoa" target="_blank"><i class="fab fa-github fa-lg mx-2"></i></a>
+                    <a href="https://www.linkedin.com/in/khoa-l%C3%AA-anh-b1335a364/" target="_blank"><i
+                            class="fab fa-linkedin fa-lg mx-2"></i></a>
+                </div>
+
+                <p class="small mb-0">
+                    © 2025 <strong>Ainzle Khoa</strong>. All rights reserved.
+                </p>
+            </div>
+        </footer>
 
 
     </div>
@@ -149,4 +570,5 @@
 </html>
 
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/aos.js"></script>
 <script src="./assets/js/script.js"></script>
