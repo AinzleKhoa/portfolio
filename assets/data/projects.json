@@ -1,0 +1,38 @@
+[
+  {
+    "title": "Galactic Typist",
+    "image": "./assets/img/projects/project1.png",
+    "tech": "Java-powered typing game",
+    "category": "game",
+    "featured": "true"
+  },
+  {
+    "title": "FEL Club Website",
+    "image": "./assets/img/projects/project2.png",
+    "tech": "Frontend website developed for the FPTU English Club using HTML, CSS, and JavaScript",
+    "category": "website",
+    "featured": "true"
+  
+},
+  {
+    "title": "Arduino Rover",
+    "image": "./assets/img/projects/project3.png",
+    "tech": "Autonomous navigation rover using Arduino and sensor integration",
+    "category": "robot",
+    "featured": "true"
+  },
+  {
+    "title": "NeonRealm",
+    "image": "./assets/img/projects/project4.png",
+    "tech": "Full-stack Java MVC web application for a digital game store",
+    "category": "website",
+    "featured": "true"
+  },
+  {
+    "title": "Student Management System",
+    "image": "./assets/img/projects/project5.png",
+    "tech": "Java-based desktop application for managing student records",
+    "category": "application",
+    "featured": "true"
+  }
+]

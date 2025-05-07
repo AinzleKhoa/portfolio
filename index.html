@@ -167,67 +167,26 @@
                             and technical range—from full-stack apps to games and tools.
                         </p>
 
-                        <div class="row project-list">
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-                                <div class="project-card card h-100 w-100 d-flex flex-column">
-                                    <img src="./assets/img/projects/project1.png" alt="Screenshot"
-                                        class="img-fluid project-thumbnail">
-                                    <div class="project-info flex-grow-1">
-                                        <h5 class="project-title">Galactic Typist</h5>
-                                        <p class="project-tech">Java-powered typing game</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-                                <div class="project-card card h-100 w-100 d-flex flex-column">
-                                    <img src="./assets/img/projects/project2.png" alt="Screenshot"
-                                        class="img-fluid project-thumbnail">
-                                    <div class="project-info flex-grow-1">
-                                        <h5 class="project-title">FEL Club Website</h5>
-                                        <p class="project-tech">Frontend website developed for the FPTU English Club
-                                            using HTML, CSS, and JavaScript</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-                                <div class="project-card card h-100 w-100 d-flex flex-column">
-                                    <img src="./assets/img/projects/project3.png" alt="Screenshot"
-                                        class="img-fluid project-thumbnail">
-                                    <div class="project-info flex-grow-1">
-                                        <h5 class="project-title">Arduino Rover</h5>
-                                        <p class="project-tech">Autonomous navigation rover using Arduino and sensor
-                                            integration</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-                                <div class="project-card card h-100 w-100 d-flex flex-column">
-                                    <img src="./assets/img/projects/project4.png" alt="Screenshot"
-                                        class="img-fluid project-thumbnail">
-                                    <div class="project-info flex-grow-1">
-                                        <h5 class="project-title">NeonRealm</h5>
-                                        <p class="project-tech">Full-stack Java MVC web application for a digital
-                                            game store</p>
-                                    </div>
-                                </div>
-                            </div>
-
-                            <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-                                <div class="project-card card h-100 w-100 d-flex flex-column">
-                                    <img src="./assets/img/projects/project5.png" alt="Screenshot"
-                                        class="img-fluid project-thumbnail">
-                                    <div class="project-info flex-grow-1">
-                                        <h5 class="project-title">Student Management System</h5>
-                                        <p class="project-tech">Java-based desktop application for managing student
-                                            records
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
+                        <div class="project-category">
+                            <div data-category="featured" class="category-btn active">Featured</div>
+                            <div data-category="all" class="category-btn">All</div>
+                            <div data-category="website" class="category-btn">Website</div>
+                            <div data-category="game" class="category-btn">Game</div>
+                            <div data-category="application" class="category-btn">Application</div>
                         </div>
+
+                        <div id="project-list" class="row project-list">
+                            <!-- Dynamically generating -->
+                        </div>
+
+                        <p style="margin: 0;">Total Personal Project Done: <span id="total-project"></span><span
+                                class="project-dot">_</span></p>
+
+                        <!-- Pagination Controls -->
+                        <ul class="pagination" id="pagination">
+                            <!-- Add more page buttons dynamically -->
+                        </ul>
+
 
                     </div>
                 </div>
