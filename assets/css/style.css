@@ -410,7 +410,7 @@ a:hover {
     opacity: 0.8;
     z-index: 1;
     /* Lower z-index */
-    animation: corner-tilt 8s ease-in-out infinite;
+    animation: corner-tilt 5s ease-in-out infinite;
 }
 
 .fixed-img-right {
@@ -421,7 +421,7 @@ a:hover {
     opacity: 0.6;
     z-index: 1;
     /* Lower z-index */
-    animation: float-drift 5s ease-in-out infinite alternate;
+    animation: float-drift 3s ease-in-out infinite alternate;
 }
 
 @media (max-width: 1400px) {
@@ -746,7 +746,7 @@ nav button {
   ABOUT             
 -----------------------------------------*/
 .about-section {
-    margin-top: 220px;
+    margin-top: 250px;
 }
 
 .about-wrapper {
@@ -780,7 +780,7 @@ nav button {
 .about-img-hero {
     width: 70%;
     border-left: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 80px;
+    border-radius: 60px;
     animation: rotateShadow 6s infinite ease-in-out;
     z-index: 2;
 }
@@ -795,6 +795,12 @@ nav button {
     animation: float-drift-no-opacity 5s ease-in-out infinite alternate, cosmicGlow 4s ease-in-out infinite;
 }
 
+@media (max-width: 991.5px) {
+    .about-name {
+        font-size: 50px;
+    }
+}
+
 @media (max-width: 767.5px) {
     .about-img-planet {
         width: 35%;
@@ -804,6 +810,12 @@ nav button {
 
     .about-name {
         text-align: end;
+        font-size: 40px;
+    }
+
+    .about-img-hero {
+        width: 83%;
+        border-radius: 60px;
     }
 }
 
@@ -824,10 +836,10 @@ nav button {
         display: flex;
         align-items: center;
         justify-content: center;
-        text-align: center;
     }
 
-    .about-name {
+    .about-name,
+    .about-role {
         text-align: center;
     }
 
@@ -835,11 +847,16 @@ nav button {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 60%;
+        width: 70%;
+        border-radius: 60px;
     }
 
     .about-text {
         margin-top: 30px;
+    }
+
+    .about-img-hero {
+        width: 65%;
     }
 }
 
@@ -861,6 +878,14 @@ nav button {
         top: -50px;
         left: -60px;
     }
+
+    .about-img-hero {
+        width: 70%;
+    }
+
+    .about-description {
+        font-size: 20px;
+    }
 }
 
 @media (max-width: 350.5px) {
@@ -868,6 +893,14 @@ nav button {
         width: 50%;
         top: -120px;
         left: 72px;
+    }
+
+    .about-img-hero {
+        width: 80%;
+    }
+
+    .about-description {
+        font-size: 18px;
     }
 }
 
@@ -1367,6 +1400,11 @@ nav button {
 .footer-link:hover {
     color: #00f0ff;
     text-shadow: 0 0 6px #00f0ff;
+}
+
+.social-links {
+    position: relative;
+    z-index: 2;
 }
 
 .social-links a {
