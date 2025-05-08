@@ -350,6 +350,17 @@ a:hover {
     }
 }
 
+/* animation: playVideo 0.3s forwards; */
+@keyframes playVideo {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
 /*---------------------------------------
   PRE LOADER               
 -----------------------------------------*/
@@ -978,14 +989,25 @@ nav button {
     row-gap: 2rem;
 }
 
+/* Project Card */
 .project-card {
     position: relative;
+    width: 100%;
+    height: 100%;
     overflow: hidden;
     border-radius: 30px;
     background-color: var(--bg-primary);
     transition: all 0.3s ease;
     cursor: pointer;
     animation: holoEaseIn 0.4s ease-out forwards;
+}
+
+/* Image & Video Wrapper */
+.project-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
 }
 
 .project-card:hover {
@@ -995,15 +1017,44 @@ nav button {
 
 /* Thumbnail */
 .project-thumbnail {
-    width: 100%;
     display: block;
     border-radius: 30px;
     border: 2px solid rgba(156, 205, 220, 0.2);
     box-shadow: 0 0 15px rgba(85, 145, 169, 0.3);
-    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    transition: all 0.4s ease;
     object-fit: cover;
     width: 100%;
     height: 100%;
+}
+
+.project-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.project-card:hover .project-thumbnail {
+    opacity: 0;
+    transform: scale(1.05);
+    /* Slightly increase scale for hover effect */
+    transform-origin: center center;
+    /* Ensure scaling starts from the center */
+    box-shadow: 0 0 35px var(--text-accent);
+}
+
+.project-card:hover .project-video {
+    opacity: 1;
+    /* Show the video when hovered */
+}
+
+.project-card:hover .project-video {
+    animation: playVideo 0.3s forwards;
+    /* Play the video smoothly on hover */
 }
 
 .project-card:hover .project-thumbnail {
@@ -1101,6 +1152,186 @@ nav button {
         width: 90%;
         top: -150px;
         left: 0px;
+    }
+}
+
+/*---------------------------------------
+  MODAL PROJECT           
+-----------------------------------------*/
+
+/* Modal Dialog Setup */
+.modal-dialog {
+    max-width: 60%;
+    margin: 20px auto;
+    /* Centering modal */
+    width: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Modal Background */
+.modal-content {
+    background: rgba(0, 0, 0, 0.2);
+    backdrop-filter: blur(4px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+    color: #ced7e0;
+    box-shadow: 0 6px 25px rgba(0, 0, 0, 0.8), 0 0 25px rgba(125, 221, 244, 0.8);
+    transition: all 0.3s ease;
+}
+
+.modal-header {
+    border-bottom: 2px solid #333;
+    padding: 20px;
+}
+
+.modal-title {
+    font-size: 2rem;
+    color: #7dddf4;
+    text-shadow: 0 0 10px rgba(125, 221, 244, 0.7);
+}
+
+.btn-close {
+    background: #333;
+    border: 1px solid #444;
+    color: #7dddf4 !;
+    transition: all 0.2s ease;
+}
+
+/* Modal Body */
+.modal-body {
+    padding: 30px;
+    color: #d3d3d3;
+    border-radius: 10px;
+}
+
+/* Video Styling */
+#modalVideoContent {
+    position: relative;
+    overflow: hidden;
+    margin-bottom: 30px;
+    border-radius: 15px;
+}
+
+#my-video {
+    width: 100%;
+    border-radius: 15px;
+    border: 3px solid #222;
+    box-shadow: 0 0 15px rgba(85, 145, 169, 0.5);
+}
+
+/* Project Information */
+.modal-project-details {
+    margin-top: 30px;
+}
+
+.modal-project-details h6 {
+    font-size: 1.4rem;
+    color: #7dddf4;
+    margin-top: 20px;
+    text-shadow: 0 0 10px rgba(125, 221, 244, 0.7);
+}
+
+.modal-project-details p {
+    font-size: 1.2rem;
+    color: #b0b0b0;
+    line-height: 1.5;
+    margin-bottom: 15px;
+}
+
+.modal-project-details h6::before {
+    content: "► ";
+    color: #7dddf4;
+}
+
+.modal-project-details h6,
+.modal-project-details p {
+    text-shadow: 0 0 10px rgba(125, 221, 244, 0.7);
+}
+
+/* Transitions and animations */
+#modalContent {
+    animation: fadeIn 1s ease-in-out;
+}
+
+/* Style for GitHub and EXE Download buttons */
+.download-section .btn {
+    font-size: 0.9rem;
+    padding: 10px 20px;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-align: center;
+    display: inline-block;
+    margin-bottom: 10px;
+}
+
+/* Keyframes for smooth fade-in animation */
+@keyframes fadeIn {
+    0% {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@media (max-width: 1200px) {
+    .modal-dialog {
+        max-width: 75%;
+    }
+
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+    .modal-dialog {
+        width: 95%;
+    }
+
+    .modal-title {
+        font-size: 1.5rem;
+    }
+
+    .modal-project-details h6 {
+        font-size: 1.2rem;
+    }
+
+    .modal-project-details p {
+        font-size: 1rem;
+    }
+
+    .download-section .btn {
+        font-size: 0.75rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .modal-dialog {
+        width: 100%;
+    }
+
+    .modal-title {
+        font-size: 1.3rem;
+    }
+
+    .modal-project-details h6 {
+        font-size: 1rem;
+    }
+
+    .modal-project-details p {
+        font-size: 0.9rem;
+    }
+
+    .modal-body {
+        padding: 15px;
+    }
+
+    .download-section .btn {
+        font-size: 0.6rem;
     }
 }
 

@@ -136,6 +136,8 @@ function renderProjectsByPage(project) {
     generatePagination(totalPages, generateProjects);
 
     document.getElementById("project-list").innerHTML = output;
+
+    initVideoPlayerProject(); // Init video after all project is done loading
 }
 
 function generatePagination(totalPages, updateFunction) {
@@ -244,10 +246,17 @@ function generatePagination(totalPages, updateFunction) {
 
 function createProjectCard(project) {
     return `
-        <div class="col-lg-6 col-md-6 col-12 mb-4 d-flex">
-        <div class="project-card card h-100 w-100 d-flex flex-column">
-            <img src="${project.image}" alt="${project.title}"
-                class="img-fluid project-thumbnail">
+    <div class="col-lg-6 col-md-6 col-12 mb-4 d-flex">
+        <div class="project-card card h-100 w-100 d-flex flex-column" onclick="showProjectModal('${project.title}', '${project.tech}', '${project.image}', '${project.video}', '${project.team}', '${project.role}', '${project.purpose}', '${project.description}', '${project.githubLink}', '${project.downloadLink}', '${project.websiteLink}', '${project.category}')">
+            <!-- Image Thumbnail -->
+            <div class="project-image">
+                <img src="${project.image}" alt="${project.title}" class="img-fluid project-thumbnail">
+                <!-- Video Preview (hidden by default) -->
+                <video class="project-video" loop muted preload="auto" playsinline>
+                    <source src="${project.video}" type="video/mp4">
+                    Your browser does not support the video tag.
+                </video>
+            </div>
             <div class="project-info flex-grow-1">
                 <h5 class="project-title">${project.title}</h5>
                 <p class="project-tech">${project.tech}</p>
@@ -287,6 +296,91 @@ function reinitProjects(btn) {
         isFeatured = false;
     }
     initGeneratingProjects();
+}
+/*---------------------------------------
+ Video Preview Project
+-----------------------------------------*/
+function initVideoPlayerProject() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        const video = card.querySelector('.project-video');
+
+        card.addEventListener('mouseenter', () => {
+            video.play(); // Play the video when hovering
+            video.currentTime = 0; // Ensure it starts from the beginning each time
+        });
+
+        card.addEventListener('mouseleave', () => {
+            video.pause(); // Pause the video when leaving
+            video.currentTime = 0; // Rewind to the start for next hover
+        });
+    });
+}
+
+function stopVideoPlayerProject() {
+    document.querySelectorAll('.project-card').forEach(card => {
+        const video = card.querySelector('.project-video');
+        video.pause(); // Pause the video when leaving
+        video.currentTime = 0; // Rewind to the start for next hover
+    });
+}
+/*---------------------------------------
+// Modal Project
+-----------------------------------------*/
+function showProjectModal(title, tech, image, videoUrl, team, role, purpose, description, githubLink, downloadLink, websiteLink, category) {
+    // Update modal content
+    const modalVideoContent = document.getElementById('modalVideoContent');
+
+    modalVideoContent.innerHTML = `
+            <video
+                id="my-video"
+                class="video-js"
+                controls
+                preload="auto"
+                poster="${image}"
+                data-setup='{ "fluid": true }'
+                >
+            <source src="${videoUrl}" type="video/mp4" />
+            <p class="vjs-no-js">
+                To view this video please enable JavaScript, and consider upgrading to a
+                web browser that
+            <a href="https://videojs.com/html5-video-support/" target="_blank"
+                    >supports HTML5 video</a
+                >
+            </p>
+            </video>
+    `;
+
+    // Update other details in the modal
+    document.getElementById('projectModalTitle').textContent = title; // Set project title
+    document.getElementById('tech').textContent = tech;
+    document.getElementById('category').textContent = category.toUpperCase();
+    document.getElementById('team').textContent = team;
+    document.getElementById('role').textContent = role;
+    document.getElementById('purpose').textContent = purpose;
+    document.getElementById('description').textContent = description;
+
+    if (githubLink === 'none') {
+        document.getElementById('modalGithubLink').style.display = 'none';
+    } else {
+        document.getElementById('modalGithubLink').href = githubLink;
+    }
+
+    if (downloadLink === 'none') {
+        document.getElementById('modalDownloadLink').style.display = 'none';
+    } else {
+        document.getElementById('modalDownloadLink').href = downloadLink;
+    }
+
+    if (websiteLink === 'none') {
+        document.getElementById('modalWebsiteLink').style.display = 'none';
+    } else {
+        document.getElementById('modalWebsiteLink').href = websiteLink;
+    }
+
+    // Show the modal
+    const myModal = new bootstrap.Modal(document.getElementById('projectModal'));
+    stopVideoPlayerProject();
+    myModal.show();
 }
 /*---------------------------------------
 // Main initializer function

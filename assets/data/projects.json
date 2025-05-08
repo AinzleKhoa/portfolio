@@ -2,7 +2,15 @@
   {
     "title": "Galactic Typist",
     "image": "./assets/img/projects/project1.png",
-    "tech": "Java-powered typing game",
+    "tech": "Java",
+    "video": "./assets/video/galactictypist.mp4",
+    "team": "1 Person",
+    "role": "Solo Developer",
+    "purpose": "Originally designed as a simple assignment, Galactic Typist evolved into a project driven by passion. Its primary goal is to help players improve their typing speed and accuracy through engaging gameplay. The game provides a fun and interactive way to practice typing while immersing players in a thrilling, sci-fi universe.",
+    "description": "Galactic Typist is a fast-paced typing game where players defend Earth from the Voidlord, an alien empire determined to conquer the galaxy. Players control advanced Federation ships, using typing commands to shoot and dodge enemy fire. With each correct keystroke, players not only advance through the levels but also enhance their typing skills. The game features customizable challenges, making it a unique blend of education and entertainment.",
+    "githubLink": "https://github.com/AinzleKhoa/galactic-typist",
+    "downloadLink": "https://drive.google.com/file/d/1HYBTpDX-70mziTiFy_10fYUZAsJMqBKN/view?usp=sharing",
+    "websiteLink": "none",
     "category": "game",
     "featured": "true"
   },
@@ -10,29 +18,39 @@
     "title": "FEL Club Website",
     "image": "./assets/img/projects/project2.png",
     "tech": "Frontend website developed for the FPTU English Club using HTML, CSS, and JavaScript",
+    "video": "./assets/video/felwebsite.mp4",
+    "team": "1 Person",
+    "role": "Solo Developer",
+    "purpose": "The FEL Club Website was created to provide an easy-to-update platform for the FPTU English Club. It was built to be simple, cost-effective, and manageable by the clubs members without requiring a domain or complex setup.",
+    "description": "This frontend-only website showcases club events and activities, hosted on GitHub Pages for simplicity. Built using Bootstrap and custom HTML/CSS, the site dynamically pulls event data from a JSON file, allowing for easy future updates. I customized a free template to fit the clubs needs, focusing on a clean, user-friendly interface.",
+    "githubLink": "https://github.com/AinzleKhoa/FEL",
+    "downloadLink": "none",
+    "websiteLink": "https://ainzlekhoa.github.io/FEL/",
     "category": "website",
     "featured": "true"
-  
-},
+  },
   {
     "title": "Arduino Rover",
     "image": "./assets/img/projects/project3.png",
     "tech": "Autonomous navigation rover using Arduino and sensor integration",
+    "video": "./assets/video/arduinorover.mp4",
     "category": "robot",
-    "featured": "true"
+    "featured": "false"
   },
   {
     "title": "NeonRealm",
     "image": "./assets/img/projects/project4.png",
     "tech": "Full-stack Java MVC web application for a digital game store",
+    "video": "./assets/video/neonrealm.mp4",
     "category": "website",
-    "featured": "true"
+    "featured": "false"
   },
   {
     "title": "Student Management System",
     "image": "./assets/img/projects/project5.png",
     "tech": "Java-based desktop application for managing student records",
+    "video": "./assets/video/studentmanagementsystem.mp4",
     "category": "application",
-    "featured": "true"
+    "featured": "false"
   }
 ]
