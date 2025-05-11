@@ -73,7 +73,7 @@ let category = '';
 let isFeatured = true; // True at start
 
 let currentPage = 1; // Start with the first page
-let itemsPerPage = 2; // Number of items to show per page
+let itemsPerPage = 3; // Number of items to show per page
 
 async function initGeneratingProjects() {
     currentPage = 1; // Restart at the first page
@@ -246,8 +246,8 @@ function generatePagination(totalPages, updateFunction) {
 
 function createProjectCard(project) {
     return `
-    <div class="col-lg-6 col-md-6 col-12 mb-4 d-flex">
-        <div class="project-card card h-100 w-100 d-flex flex-column" onclick="showProjectModal('${project.title}', '${project.tech}', '${project.image}', '${project.video}', '${project.team}', '${project.role}', '${project.purpose}', '${project.description}', '${project.githubLink}', '${project.downloadLink}', '${project.websiteLink}', '${project.category}')">
+    <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
+        <div class="project-card card h-100 w-100 d-flex flex-column" onclick="showProjectModal('${project.title}', '${project.tech}', '${project.image}', '${project.video}', '${project.team}', '${project.role}', '${project.purpose}', '${project.description}', '${project.githubLink}', '${project.downloadLink}', '${project.websiteLink}', '${project.yearCompleted}')">
             <!-- Image Thumbnail -->
             <div class="project-image">
                 <img src="${project.image}" alt="${project.title}" class="img-fluid project-thumbnail">
@@ -258,8 +258,9 @@ function createProjectCard(project) {
                 </video>
             </div>
             <div class="project-info flex-grow-1">
+                <p class="project-top">Click to view more details</p>
                 <h5 class="project-title">${project.title}</h5>
-                <p class="project-tech">${project.tech}</p>
+                <p class="project-des">${project.category.toUpperCase()}</p>
             </div>
         </div>
     </div>
@@ -326,7 +327,7 @@ function stopVideoPlayerProject() {
 /*---------------------------------------
 // Modal Project
 -----------------------------------------*/
-function showProjectModal(title, tech, image, videoUrl, team, role, purpose, description, githubLink, downloadLink, websiteLink, category) {
+function showProjectModal(title, tech, image, videoUrl, team, role, purpose, description, githubLink, downloadLink, websiteLink, yearCompleted) {
     // Update modal content
     const modalVideoContent = document.getElementById('modalVideoContent');
 
@@ -353,7 +354,7 @@ function showProjectModal(title, tech, image, videoUrl, team, role, purpose, des
     // Update other details in the modal
     document.getElementById('projectModalTitle').textContent = title; // Set project title
     document.getElementById('tech').textContent = tech;
-    document.getElementById('category').textContent = category.toUpperCase();
+    document.getElementById('yearCompleted').textContent = yearCompleted.toUpperCase();
     document.getElementById('team').textContent = team;
     document.getElementById('role').textContent = role;
     document.getElementById('purpose').textContent = purpose;
@@ -362,18 +363,21 @@ function showProjectModal(title, tech, image, videoUrl, team, role, purpose, des
     if (githubLink === 'none') {
         document.getElementById('modalGithubLink').style.display = 'none';
     } else {
+        document.getElementById('modalGithubLink').style.display = 'inline-block';
         document.getElementById('modalGithubLink').href = githubLink;
     }
 
     if (downloadLink === 'none') {
         document.getElementById('modalDownloadLink').style.display = 'none';
     } else {
+        document.getElementById('modalDownloadLink').style.display = 'inline-block';
         document.getElementById('modalDownloadLink').href = downloadLink;
     }
 
     if (websiteLink === 'none') {
         document.getElementById('modalWebsiteLink').style.display = 'none';
     } else {
+        document.getElementById('modalWebsiteLink').style.display = 'inline-block';
         document.getElementById('modalWebsiteLink').href = websiteLink;
     }
 
@@ -392,6 +396,8 @@ function initPage() {
     hidePreloader(1000);
     initCategoryBtn();
     initGeneratingProjects();
+
+    initBackground('sideHeader');
 }
 
 // Track initial page load time

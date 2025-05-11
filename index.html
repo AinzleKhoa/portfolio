@@ -14,6 +14,7 @@
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/aos.css">
+    <link rel="stylesheet" href="./assets/css/lightbox.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet" />
@@ -50,6 +51,9 @@
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#projects">Projects</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#sideProjects">Side</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Skills</a>
@@ -100,12 +104,16 @@
                         </div>
                     </div>
                 </div>
-                <div class="row align-items-center mt-3">
+                <div class="row align-items-center mt-1">
                     <div class="social-links">
                         <a href="mailto:khoale1855@gmail.com" target="_blank"><i class="fas fa-envelope"></i></a>
                         <a href="https://github.com/AinzleKhoa" target="_blank"><i class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/khoa-l%C3%AA-anh-b1335a364/" target="_blank"><i
                                 class="fab fa-linkedin"></i></a>
+                    </div>
+                    <div class="cta-buttons">
+                        <a href="#projects" class="btn-cta">View My Work</a>
+                        <a href="./assets/files/AinzleKhoa_CV.pdf" class="btn-cta outline" download>Download CV</a>
                     </div>
                 </div>
             </div>
@@ -210,8 +218,7 @@
                                 </div>
                                 <div class="modal-project-details">
                                     <div class="download-section">
-                                        <h6>Download Game</h6>
-                                        <p>Get the game source code on GitHub or download the executable version:</p>
+                                        <h6>More Info</h6>
 
                                         <!-- GitHub Link -->
                                         <a href="https://github.com/yourusername/your-repository" target="_blank"
@@ -222,7 +229,7 @@
                                         <!-- EXE Download Link -->
                                         <a href="https://example.com/path-to-your-game.exe" class="btn btn-success"
                                             target="_blank" id="modalDownloadLink">
-                                            Download Game (Windows Executable)
+                                            Download Link (Windows Executable)
                                         </a>
 
                                         <!-- Website Link -->
@@ -237,8 +244,8 @@
                                             <p id="tech"></p>
                                         </div>
                                         <div class="col-12 col-md-6">
-                                            <h6>Category:</h6>
-                                            <p id="category"></p>
+                                            <h6>Year Completed:</h6>
+                                            <p id="yearCompleted"></p>
                                         </div>
                                     </div>
                                     <div class="row">
@@ -261,6 +268,41 @@
                     </div>
                 </div>
             </div>
+
+            <section id="sideProjects" class="side-section mb-5">
+                <div class="container justify-content-center">
+                    <div class="side-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+
+                        <h1 class="section-heading">Side Projects</h1>
+                        <p class="section-subtitle mb-5">
+                            A selection of side projects i built for fun
+                        </p>
+
+
+                        <div class="col-lg-6 col-md-6 col-12 mb-4 d-flex">
+                            <div class="side-list">
+
+                                <a href="minecraft.html" class="card-wrap d-flex w-100" target="_blank">
+                                    <div class="side-card card h-100 w-100 d-flex flex-column">
+                                        <div class="side-image">
+                                            <img src="./assets/img/side/side2.png" alt="Minecraft Origin Modding"
+                                                class="img-fluid side-thumbnail">
+                                        </div>
+                                        <div class="side-info flex-grow-1">
+                                            <p class="side-top">Click to see project details</p>
+                                            <h5 class="side-title">Minecraft-Origin Modding</h5>
+                                            <p class="side-des">Gaining special power</p>
+                                        </div>
+                                    </div>
+                                </a>
+
+                            </div>
+                        </div>
+
+
+                    </div>
+                </div>
+            </section>
 
             <section id="skills" class="skills-section">
                 <div class="container justify-content-center">
@@ -334,7 +376,7 @@
                                 </div>
                                 <div class="timeline-image left">
                                     <img src="./assets/img/experiences/experience0.png"
-                                        alt="Pre-University Academic Achievements" />
+                                        alt="Early Creative Exploration – Plazma Burst 2 Map Design" />
                                 </div>
                             </div>
 
@@ -606,6 +648,7 @@
 </html>
 
 <script src="./assets/js/bootstrap.bundle.min.js"></script>
+<script src="./assets/js/lightbox.js"></script>
 <script src="./assets/js/aos.js"></script>
 <script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
 <script src="./assets/js/script.js"></script>

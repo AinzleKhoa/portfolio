@@ -335,8 +335,8 @@ a:hover {
     }
 }
 
-/* animation: glowPulse 2.5s infinite ease-in-out; */
-@keyframes glowPulse {
+/* animation: glowPulseText 2.5s infinite ease-in-out; */
+@keyframes glowPulseText {
     0% {
         text-shadow: 0 0 5px #37c0e6, 0 0 10px #7dddf4;
     }
@@ -347,6 +347,21 @@ a:hover {
 
     100% {
         text-shadow: 0 0 5px #37c0e6, 0 0 10px #7dddf4;
+    }
+}
+
+/* animation: glowPulseBox 4s ease-in-out infinite; */
+@keyframes glowPulseBox {
+    0% {
+        box-shadow: 0 0 4px #00ffff, 0 0 6px #00ffff inset;
+    }
+
+    50% {
+        box-shadow: 0 0 10px #00ffff, 0 0 14px #00ffff inset;
+    }
+
+    100% {
+        box-shadow: 0 0 4px #00ffff, 0 0 6px #00ffff inset;
     }
 }
 
@@ -627,11 +642,16 @@ a:hover {
 /*---------------------------------------
   NAVBAR               
 -----------------------------------------*/
+.navbar-nav {
+    gap: 15px;
+}
+
 nav a,
 nav button {
+    padding: 0 !important;
     border-radius: 100%;
     text-shadow: 1px 1px 10px white;
-    backdrop-filter: blur(2px);
+    backdrop-filter: blur(4px);
 }
 
 .nav-link {
@@ -654,7 +674,7 @@ nav button {
     color: #7dddf4;
     font-weight: 700;
     margin-bottom: 1rem;
-    animation: glowPulse 4s infinite ease-in-out;
+    animation: glowPulseText 4s infinite ease-in-out;
 }
 
 .section-subtitle {
@@ -671,7 +691,7 @@ nav button {
 -----------------------------------------*/
 .hero-section {
     text-align: center;
-    margin-top: 120px;
+    margin-top: 100px;
 }
 
 .hero-text {
@@ -771,6 +791,10 @@ nav button {
 /*---------------------------------------
   SOCIAL LINK       
 -----------------------------------------*/
+.social-links {
+    margin-bottom: 0px;
+}
+
 .social-links a {
     color: #7dddf4;
     font-size: 1.8rem;
@@ -790,6 +814,43 @@ nav button {
     height: 24px;
     filter: drop-shadow(0 0 4px #00eaff);
     vertical-align: middle;
+}
+
+/*---------------------------------------
+  CALL TO ACTION (CTA)             
+-----------------------------------------*/
+.cta-buttons {
+    margin-top: 0px;
+    position: relative;
+    z-index: 2;
+}
+
+.btn-cta {
+    display: inline-block;
+    padding: 8px 20px;
+    margin: 8px;
+    font-size: 1rem;
+    font-weight: 600;
+    color: #7dddf4;
+    border: 2px solid #7dddf4;
+    border-radius: 6px;
+    background: transparent;
+    text-decoration: none;
+    transition: 0.3s ease;
+    box-shadow: 0 0 6px rgba(125, 221, 244, 0.4);
+    animation: glowPulseBox 4s ease-in-out infinite;
+}
+
+.btn-cta:hover,
+.btn-cta.outline:hover {
+    background: #7dddf4;
+    color: #000;
+    box-shadow: 0 0 12px rgba(125, 221, 244, 0.6);
+}
+
+.btn-cta.outline {
+    background: rgba(255, 255, 255, 0.05);
+    color: #0ef;
 }
 
 /*---------------------------------------
@@ -830,7 +891,7 @@ nav button {
 .about-img-hero {
     width: 70%;
     border-left: 3px solid rgba(255, 255, 255, 0.3);
-    border-radius: 60px;
+    border-radius: 40px;
     animation: rotateShadow 6s infinite ease-in-out;
     z-index: 2;
 }
@@ -864,8 +925,8 @@ nav button {
     }
 
     .about-img-hero {
-        width: 83%;
-        border-radius: 60px;
+        width: 80%;
+        border-radius: 40px;
     }
 }
 
@@ -897,7 +958,7 @@ nav button {
         display: flex;
         align-items: center;
         justify-content: center;
-        width: 70%;
+        width: 65%;
         border-radius: 60px;
     }
 
@@ -922,7 +983,7 @@ nav button {
     }
 
     .about-img-hero {
-        width: 80%;
+        width: 75%;
     }
 }
 
@@ -978,8 +1039,8 @@ nav button {
 .projects-decoration-spaceship {
     position: absolute;
     width: 35%;
-    top: -200px;
-    left: 0px;
+    top: 0px;
+    left: -100px;
     z-index: 1;
     border-top-left-radius: 50%;
     animation: float-drift-no-opacity 4s ease-in-out infinite alternate;
@@ -1041,9 +1102,7 @@ nav button {
 .project-card:hover .project-thumbnail {
     opacity: 0;
     transform: scale(1.05);
-    /* Slightly increase scale for hover effect */
     transform-origin: center center;
-    /* Ensure scaling starts from the center */
     box-shadow: 0 0 35px var(--text-accent);
 }
 
@@ -1108,22 +1167,45 @@ nav button {
     text-shadow: 0 0 10px black;
 }
 
-.project-tech {
+.project-top {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+    text-shadow: 1px 1px 20px black;
+}
+
+.project-des {
     font-size: 0.85rem;
     opacity: 0.8;
     margin: 0;
     text-shadow: 0 0 10px black;
 }
 
+@media (max-width: 1400.5px) {
+    .projects-decoration-spaceship {
+        width: 35%;
+        top: 50px;
+        left: -100px;
+    }
+}
+
 @media (max-width: 991.5px) {
     .projects-decoration-spaceship {
-        width: 45%;
-        top: -180px;
-        left: 0px;
+        width: 35%;
+        top: 100px;
+        left: -150px;
     }
 }
 
 @media (max-width: 767.5px) {
+    .projects-decoration-spaceship {
+        width: 45%;
+        top: 120px;
+        left: -150px;
+    }
+}
+
+@media (max-width: 575.5px) {
     .projects-decoration-spaceship {
         width: 55%;
         top: -150px;
@@ -1161,7 +1243,7 @@ nav button {
 
 /* Modal Dialog Setup */
 .modal-dialog {
-    max-width: 60%;
+    max-width: 70%;
     margin: 20px auto;
     /* Centering modal */
     width: auto;
@@ -1172,8 +1254,8 @@ nav button {
 
 /* Modal Background */
 .modal-content {
-    background: rgba(0, 0, 0, 0.2);
-    backdrop-filter: blur(4px);
+    background: rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(6px);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 10px;
     color: #ced7e0;
@@ -1195,7 +1277,7 @@ nav button {
 .btn-close {
     background: #333;
     border: 1px solid #444;
-    color: #7dddf4 !;
+    color: #7dddf4;
     transition: all 0.2s ease;
 }
 
@@ -1333,6 +1415,149 @@ nav button {
     .download-section .btn {
         font-size: 0.6rem;
     }
+}
+
+/*---------------------------------------
+  SIDE PROJECT           
+-----------------------------------------*/
+.side-section {
+    margin-top: 250px;
+}
+
+.side-wrapper {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    z-index: 2;
+}
+
+
+.side-list {
+    row-gap: 2rem;
+}
+
+/* Project Card */
+.side-card {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+    border-radius: 30px;
+    background-color: var(--bg-primary);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    animation: holoEaseIn 0.4s ease-out forwards;
+}
+
+/* Image & Video Wrapper */
+.side-image {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.side-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 0 20px var(--text-accent);
+}
+
+/* Thumbnail */
+.side-thumbnail {
+    display: block;
+    border-radius: 30px;
+    border: 2px solid rgba(156, 205, 220, 0.2);
+    box-shadow: 0 0 15px rgba(85, 145, 169, 0.3);
+    transition: all 0.4s ease;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.side-video {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
+
+.side-card:hover .side-thumbnail {
+    transform: scale(1.05);
+    transform-origin: center center;
+    box-shadow: 0 0 35px var(--text-accent);
+}
+
+
+.side-card:hover .side-thumbnail {
+    transform: scale(1.05);
+    box-shadow: 0 0 35px var(--text-accent);
+}
+
+/* Overlay: hidden by default */
+.side-overlay {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(6, 44, 67, 0.95) 0%, rgba(6, 44, 67, 0.75) 40%, rgba(6, 44, 67, 0.2) 75%, transparent 90%);
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+    z-index: 1;
+}
+
+/* Show overlay on hover */
+.side-card:hover .side-overlay {
+    opacity: 1;
+}
+
+/* Info Overlay */
+.side-info {
+    z-index: 2;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    padding: 1rem 0.75rem;
+    text-align: center;
+    background: linear-gradient(to top, rgba(6, 44, 67, 0.95), rgba(6, 44, 67, 0));
+    color: #ced7e0;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+    pointer-events: none;
+}
+
+.side-card:hover .side-info {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.side-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-bottom: 0.25rem;
+    color: #ced7e0;
+    text-shadow: 0 0 10px black;
+}
+
+.side-top {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+    text-shadow: 1px 1px 20px black;
+}
+
+.side-des {
+    font-size: 0.85rem;
+    opacity: 0.8;
+    margin: 0;
+    text-shadow: 0 0 10px black;
 }
 
 /*---------------------------------------
@@ -1757,6 +1982,285 @@ nav button {
 
 .copy-btn:hover {
     color: #7dddf4;
+}
+
+/*---------------------------------------
+  SIDE PROJECT HTML            
+-----------------------------------------*/
+
+/* Side Project Sci-Fi Style */
+.side-project-card {
+    margin: 60px auto;
+    padding: 0 20px;
+    max-width: 1300px;
+    position: relative;
+    z-index: 2;
+}
+
+.sci-fi-frame {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid rgba(125, 221, 244, 0.2);
+    box-shadow: 0 0 30px rgba(125, 221, 244, 0.3), inset 0 0 15px rgba(0, 0, 0, 0.6);
+    backdrop-filter: blur(10px);
+    display: flex;
+    flex-direction: column;
+    transition: transform 0.3s ease;
+    animation: borderGlow 5s ease-in-out infinite;
+}
+
+@keyframes borderGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 20px rgba(125, 221, 244, 0.3), inset 0 0 10px rgba(0, 0, 0, 0.6);
+    }
+
+    50% {
+        box-shadow: 0 0 30px rgba(125, 221, 244, 0.6), inset 0 0 20px rgba(0, 0, 0, 0.8);
+    }
+}
+
+.sci-fi-thumbnail {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 340px;
+    width: 100%;
+}
+
+.sci-fi-thumbnail::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: radial-gradient(ellipse at center, rgba(0, 0, 0, 0.3), rgba(0, 0, 0, 0.6));
+}
+
+.sci-fi-content {
+    padding: 40px 60px;
+    text-align: center;
+}
+
+.sci-fi-title {
+    font-size: 2.6rem;
+    color: #7dddf4;
+    margin-bottom: 30px;
+    text-shadow: 0 0 10px rgba(125, 221, 244, 0.8);
+    position: relative;
+    display: inline-block;
+}
+
+.sci-fi-title::after {
+    content: "";
+    display: block;
+    height: 3px;
+    width: 80%;
+    margin: 12px auto 0;
+    background: linear-gradient(90deg, #7dddf4, #0ff);
+    border-radius: 10px;
+    box-shadow: 0 0 10px #7dddf4;
+}
+
+.sci-fi-description {
+    color: #d0e6f6;
+    font-size: 1.25rem;
+    line-height: 1.8;
+}
+
+/* Optional responsive tweaks */
+@media (max-width: 768px) {
+    .sci-fi-content {
+        padding: 30px 20px;
+    }
+
+    .sci-fi-title {
+        font-size: 2rem;
+    }
+
+    .sci-fi-description {
+        font-size: 1rem;
+    }
+}
+
+/*---------------------------------------
+  ACCORDION             
+-----------------------------------------*/
+
+.accordion-button {
+    color: #7dddf4;
+    font-size: 1.8rem;
+    border: none;
+    text-shadow: 0 0 10px rgba(125, 221, 244, 0.6);
+    transition: all 0.3s ease;
+    border-left: 3px solid #7dddf4;
+    padding-left: 30px;
+}
+
+.accordion-button:not(.collapsed) {
+    color: #00ffff;
+    text-shadow: 0 0 15px rgba(125, 221, 244, 0.6);
+}
+
+.accordion-button::before {
+    content: "\25BC";
+    font-size: 1.4rem;
+    color: #7dddf4;
+    transition: transform 0.3s ease;
+}
+
+.accordion-button:not(.collapsed)::before {
+    transform: rotate(180deg);
+}
+
+.accordion-body {
+    background-color: rgba(12, 18, 30, 0.2);
+    color: #d0e6f6;
+    padding: 1.5rem;
+    border-top: 1px solid rgba(125, 221, 244, 0.2);
+    border-radius: 0 0 10px 10px;
+    text-align: left;
+}
+
+.accordion-body .row {
+    padding-top: 10px;
+    border-top: 2px solid rgba(125, 221, 244, 0.2);
+}
+
+.accordion-body p {
+    font-size: 1.25rem;
+}
+
+.accordion-body a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #7dddf4;
+    text-decoration: none;
+    border-radius: 8px;
+    text-shadow: 0 0 6px #7dddf4;
+    transition: all 0.3s ease;
+}
+
+.accordion-body a::before {
+    content: "► ";
+    color: #7dddf4;
+}
+
+.accordion-body a:hover {
+    color: #fff;
+}
+
+.accordion-body img {
+    width: 100%;
+    border-radius: 10px;
+    border: 2px solid rgba(125, 221, 244, 0.2);
+    transition: all 0.3s ease;
+    box-shadow: 0 0 12px rgba(125, 221, 244, 0.2);
+}
+
+.accordion-body .center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.accordion-body video {
+    border-radius: 20px;
+    border: 3px solid rgba(125, 221, 244, 0.2);
+    box-shadow: 0 0 12px rgba(125, 221, 244, 0.2);
+    transition: all 0.3s ease;
+}
+
+/*---------------------------------------
+  CHARACTER ORIGINS             
+-----------------------------------------*/
+
+.aetherius {
+    background: linear-gradient(to right, #4da6ff, #ffd700);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    color: transparent;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.baran {
+    color: #ffd700;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.wintan {
+    color: #4da6ff;
+    font-size: 1.15em;
+    font-weight: bold;
+}
+
+.arceus {
+    color: #999;
+    font-weight: bold;
+    font-style: italic;
+    font-size: 1.15em;
+    text-shadow: 0 0 4px #222;
+}
+
+.felorian {
+    color: #7ecb8f;
+    font-weight: bold;
+    font-size: 1.15em;
+}
+
+.origin-thumbnail {
+    width: 40%;
+    margin: 0 auto;
+}
+
+@media (max-width: 1000px) {
+    .origin-thumbnail {
+        width: 70%;
+    }
+}
+
+@media (max-width: 500px) {
+    .origin-thumbnail {
+        width: 90%;
+    }
+}
+
+.green {
+    color: chartreuse;
+}
+
+.red {
+    color: red;
+}
+
+.yellow {
+    color: yellow;
+}
+
+.purple {
+    color: darkorchid;
+    text-shadow: 0 0 4px black;
+}
+
+.black {
+    color: rgb(14, 12, 12);
+    text-shadow: 0 0 4px white;
+}
+
+.smaller {
+    font-size: 1.5rem;
+}
+
+.condition-indent {
+    padding-left: 1.5rem;
+    /* Adjust this value as needed */
 }
 
 /*---------------------------------------
