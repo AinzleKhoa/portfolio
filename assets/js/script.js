@@ -250,7 +250,7 @@ function createProjectCard(project) {
         <div class="project-card card h-100 w-100 d-flex flex-column" onclick="showProjectModal('${project.title}', '${project.tech}', '${project.image}', '${project.video}', '${project.team}', '${project.role}', '${project.purpose}', '${project.description}', '${project.githubLink}', '${project.downloadLink}', '${project.websiteLink}', '${project.yearCompleted}')">
             <!-- Image Thumbnail -->
             <div class="project-image">
-                <img src="${project.image}" alt="${project.title}" class="img-fluid project-thumbnail">
+                <img data-src="${project.image}" alt="${project.title}" class="img-fluid project-thumbnail lazyload">
                 <!-- Video Preview (hidden by default) -->
                 <video class="project-video" loop muted preload="auto" playsinline>
                     <source src="${project.video}" type="video/mp4">
