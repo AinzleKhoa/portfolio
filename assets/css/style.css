@@ -1288,14 +1288,6 @@ nav button {
     border-radius: 10px;
 }
 
-/* Video Styling */
-#modalVideoContent {
-    position: relative;
-    overflow: hidden;
-    margin-bottom: 30px;
-    border-radius: 15px;
-}
-
 #my-video {
     width: 100%;
     border-radius: 15px;
@@ -1335,6 +1327,37 @@ nav button {
 /* Transitions and animations */
 #modalContent {
     animation: fadeIn 1s ease-in-out;
+}
+
+/* Container to keep 16:9 aspect ratio */
+.video-container {
+    position: relative;
+    width: 100%;
+    margin: 0 auto;
+    padding-bottom: 56.25%;
+    overflow: hidden;
+    border-radius: 12px;
+    box-shadow: 0 4px 24px rgba(125, 221, 244, 0.7);
+}
+
+/* Responsive iframe */
+.video-container iframe,
+.video-container img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: none;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(125, 221, 244, 0.4);
+    transition: box-shadow 0.3s ease;
+}
+
+/* Optional: Hover effect */
+.video-container iframe:hover,
+.video-container img:hover {
+    box-shadow: 0 6px 28px #7dddf4;
 }
 
 /* Style for GitHub and EXE Download buttons */
@@ -1857,6 +1880,27 @@ nav button {
     color: #e0e0e0;
     text-shadow: 0 0 3px rgba(255, 255, 255, 0.08);
     padding-top: 0.5rem;
+}
+
+.timeline-content a {
+    display: inline-block;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    color: #7dddf4;
+    text-decoration: none;
+    border-radius: 8px;
+    text-shadow: 0 0 6px #7dddf4;
+    transition: all 0.3s ease;
+    text-decoration: underline;
+}
+
+.timeline-content a::before {
+    content: "► ";
+    color: #7dddf4;
+}
+
+.timeline-content a:hover {
+    color: #fff;
 }
 
 /* === RESPONSIVE STACKING === */

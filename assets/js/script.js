@@ -247,7 +247,7 @@ function generatePagination(totalPages, updateFunction) {
 function createProjectCard(project) {
     return `
     <div class="col-lg-4 col-md-6 col-12 mb-4 d-flex">
-        <div class="project-card card h-100 w-100 d-flex flex-column" onclick="showProjectModal('${project.title}', '${project.tech}', '${project.image}', '${project.video}', '${project.team}', '${project.role}', '${project.purpose}', '${project.description}', '${project.githubLink}', '${project.downloadLink}', '${project.websiteLink}', '${project.yearCompleted}')">
+        <div class="project-card card h-100 w-100 d-flex flex-column" onclick="showProjectModal('${project.title}', '${project.tech}', '${project.image}', '${project.video}', '${project.youtube}', '${project.team}', '${project.role}', '${project.purpose}', '${project.description}', '${project.githubLink}', '${project.downloadLink}', '${project.websiteLink}', '${project.yearCompleted}')">
             <!-- Image Thumbnail -->
             <div class="project-image">
                 <img data-src="${project.image}" alt="${project.title}" class="img-fluid project-thumbnail lazyload">
@@ -327,29 +327,42 @@ function stopVideoPlayerProject() {
 /*---------------------------------------
 // Modal Project
 -----------------------------------------*/
-function showProjectModal(title, tech, image, videoUrl, team, role, purpose, description, githubLink, downloadLink, websiteLink, yearCompleted) {
-    // Update modal content
-    const modalVideoContent = document.getElementById('modalVideoContent');
+function showProjectModal(title, tech, image, videoUrl, youtubeUrl, team, role, purpose, description, githubLink, downloadLink, websiteLink, yearCompleted) {
 
-    modalVideoContent.innerHTML = `
-            <video
-                id="my-video"
-                class="video-js"
-                controls
-                preload="auto"
-                poster="${image}"
-                data-setup='{ "fluid": true }'
-                >
+    const modalVideoContent = document.getElementById('modalVideoContent');
+    if (youtubeUrl === 'none' && videoUrl === 'none') {
+        modalVideoContent.innerHTML = ``; // clean it before going
+        // Neither YouTube nor mp4 video — show image only
+        modalVideoContent.innerHTML = `<img src="${image}" alt="${title}">`;
+    } else if (youtubeUrl === 'none') {
+        // No YouTube, but have mp4 video — show video tag
+        modalVideoContent.innerHTML = `
+        <video
+            id="my-video"
+            class="video-js"
+            controls
+            preload="auto"
+            poster="${image}"
+            data-setup='{ "fluid": true }'>
             <source src="${videoUrl}" type="video/mp4" />
             <p class="vjs-no-js">
                 To view this video please enable JavaScript, and consider upgrading to a
                 web browser that
-            <a href="https://videojs.com/html5-video-support/" target="_blank"
-                    >supports HTML5 video</a
-                >
+                <a href="https://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a>
             </p>
-            </video>
+        </video>
     `;
+    } else {
+        // YouTube video — update iframe src if iframe exists
+        const embedUrl = convertYouTubeUrlToEmbed(youtubeUrl);
+
+        modalVideoContent.innerHTML = `
+            <iframe width="100%" height="315" src="${embedUrl}" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen>
+            </iframe>
+    `;
+    }
 
     // Update other details in the modal
     document.getElementById('projectModalTitle').textContent = title; // Set project title
@@ -385,6 +398,23 @@ function showProjectModal(title, tech, image, videoUrl, team, role, purpose, des
     const myModal = new bootstrap.Modal(document.getElementById('projectModal'));
     stopVideoPlayerProject();
     myModal.show();
+}
+
+function convertYouTubeUrlToEmbed(url) {
+    if (!url) return '';
+
+    const urlObj = new URL(url);
+    let videoId = '';
+
+    if (urlObj.hostname.includes('youtu.be')) {
+        // Short URL format: https://youtu.be/VIDEO_ID
+        videoId = urlObj.pathname.slice(1);
+    } else if (urlObj.hostname.includes('youtube.com')) {
+        // Full URL format: https://www.youtube.com/watch?v=VIDEO_ID
+        videoId = urlObj.searchParams.get('v');
+    }
+
+    return videoId ? `https://www.youtube.com/embed/${videoId}` : '';
 }
 /*---------------------------------------
 // Main initializer function
