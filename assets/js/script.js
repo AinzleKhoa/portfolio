@@ -86,7 +86,7 @@ function createEarlierCard(project) {
             <img src="${escapeHtml(project.thumb)}" alt="${escapeHtml(project.title)} screenshot" loading="lazy">
         </div>
         <div class="earlier-body">
-            <p class="earlier-year">${escapeHtml(project.yearCompleted)}</p>
+            ${project.yearCompleted ? `<p class="earlier-year">${escapeHtml(project.yearCompleted)}</p>` : ''}
             <h3 class="earlier-title">${escapeHtml(project.title)}</h3>
             <p class="earlier-meta">${escapeHtml(project.meta)}</p>
             <p class="earlier-summary">${escapeHtml(project.summary)}</p>
