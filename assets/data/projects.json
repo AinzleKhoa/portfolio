@@ -14,7 +14,15 @@
     "websiteLink": "https://ainzlekhoa.github.io/cosmora-celestica/",
     "yearCompleted": "Second Year",
     "category": "website",
-    "featured": "false"
+    "featured": "false",
+    "thumb": "./assets/img/projects/thumbs/project7.jpg",
+    "meta": "Lead Developer · Team of 5",
+    "summary": "An upgrade of my NeonRealm MVC project into a digital storefront for games and gaming accessories, built for a Java MVC course. The focus is a clean MVC architecture, strong security and a smooth user experience. The project is still in progress.",
+    "chips": [
+      "Java",
+      "MVC",
+      "Security"
+    ]
   },
   {
     "title": "Personal Portfolio",
@@ -31,7 +39,17 @@
     "websiteLink": "none",
     "yearCompleted": "Second Year",
     "category": "website",
-    "featured": "false"
+    "featured": "false",
+    "thumb": "./assets/img/projects/thumbs/project6.jpg",
+    "meta": "Solo Developer · Solo",
+    "summary": "The first version of this portfolio, built from scratch with HTML, CSS, JavaScript and Bootstrap, without templates. It is hosted on GitHub Pages and reflects my early frontend work. It was meant as a personal introduction to who I am as a developer.",
+    "chips": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "jQuery"
+    ]
   },
   {
     "title": "FEL Club Website",
@@ -48,7 +66,17 @@
     "websiteLink": "https://ainzlekhoa.github.io/FEL/",
     "yearCompleted": "Second Year",
     "category": "website",
-    "featured": "true"
+    "featured": "true",
+    "thumb": "./assets/img/projects/thumbs/project2.jpg",
+    "meta": "Solo Developer · Solo",
+    "summary": "A static website for the FPTU English Club to showcase its events and activities, hosted on GitHub Pages. Event data is loaded from a JSON file, so the club can update it without a domain or a complex setup.",
+    "chips": [
+      "HTML",
+      "CSS",
+      "JavaScript",
+      "Bootstrap",
+      "JSON"
+    ]
   },
   {
     "title": "NeonRealm",
@@ -65,7 +93,16 @@
     "websiteLink": "none",
     "yearCompleted": "Second Year",
     "category": "website",
-    "featured": "false"
+    "featured": "false",
+    "thumb": "./assets/img/projects/thumbs/project4.jpg",
+    "meta": "Team lead & primary developer · Team of 6",
+    "summary": "A Java MVC digital game store on SQL Server, with secure sign-in and sign-up, game browsing and user profiles. As team lead I built the home and category pages, the MVC model and the authentication flow.",
+    "chips": [
+      "Java Servlet & JSP",
+      "SQL Server",
+      "OAuth 2.0",
+      "Bootstrap"
+    ]
   },
   {
     "title": "Arduino Rover",
@@ -82,7 +119,16 @@
     "websiteLink": "none",
     "yearCompleted": "Second Year",
     "category": "robot",
-    "featured": "true"
+    "featured": "true",
+    "thumb": "./assets/img/projects/thumbs/project3.jpg",
+    "meta": "Collaborator · Team of 2",
+    "summary": "An autonomous rover built with Arduino and an ESP32, with ultrasonic obstacle detection. It can be driven manually or navigate on its own. I co-designed it with a friend, drew the block and schematic diagrams, coded the logic and helped wire the hardware.",
+    "chips": [
+      "Arduino",
+      "ESP32",
+      "C/C++",
+      "Ultrasonic sensors"
+    ]
   },
   {
     "title": "Galactic Typist",
@@ -99,7 +145,16 @@
     "websiteLink": "none",
     "yearCompleted": "First Year",
     "category": "game",
-    "featured": "true"
+    "featured": "true",
+    "thumb": "./assets/img/projects/thumbs/project1.jpg",
+    "meta": "Solo Developer · Solo",
+    "summary": "A fast-paced typing game in Java where players defend Earth from an alien empire with typing commands. Every correct keystroke advances the game and helps players improve their typing speed and accuracy.",
+    "chips": [
+      "Java",
+      "Swing",
+      "Multi-threading",
+      "OOP"
+    ]
   },
   {
     "title": "Student Management System",
@@ -116,6 +171,14 @@
     "websiteLink": "none",
     "yearCompleted": "First Year",
     "category": "application",
-    "featured": "false"
+    "featured": "false",
+    "thumb": "./assets/img/projects/thumbs/project5.jpg",
+    "meta": "Solo Developer · Solo",
+    "summary": "A desktop application built with Java Swing to help teachers manage student records. It is simple by design, and I completed it within 4 days as a solo university assignment.",
+    "chips": [
+      "Java",
+      "Swing",
+      "OOP"
+    ]
   }
 ]

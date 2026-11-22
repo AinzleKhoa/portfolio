@@ -54,24 +54,28 @@ function escapeHtml(value) {
 }
 
 function createEarlierCard(project) {
-    const link = project.websiteLink !== 'none' ? project.websiteLink : project.githubLink;
-    const image = project.image !== 'none'
-        ? `<img data-src="${escapeHtml(project.image)}" alt="${escapeHtml(project.title)}" class="lazyload earlier-thumb">`
-        : '';
-    const inner = `
-            <div class="earlier-media">${image}</div>
-            <div class="earlier-info">
-                <h4 class="earlier-title">${escapeHtml(project.title)}</h4>
-                <p class="earlier-meta">${escapeHtml(project.yearCompleted)}</p>
-            </div>`;
+    const link = (url) => url && url !== 'none';
+    const buttons = [];
+    if (link(project.githubLink)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`);
+    if (link(project.websiteLink)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.websiteLink)}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> Website</a>`);
+    if (link(project.youtube)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.youtube)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> Demo video</a>`);
 
-    if (link === 'none') {
-        return `<div class="earlier-item"><div class="earlier-card">${inner}</div></div>`;
-    }
-    return `<div class="earlier-item">
-        <a href="${escapeHtml(link)}" target="_blank" rel="noopener noreferrer" class="earlier-card">${inner}
-        </a>
-    </div>`;
+    const chips = (project.chips || []).map(c => `<span class="earlier-chip">${escapeHtml(c)}</span>`).join('');
+
+    return `
+    <article class="earlier-card">
+        <div class="earlier-thumb">
+            <img src="${escapeHtml(project.thumb)}" alt="${escapeHtml(project.title)} screenshot" loading="lazy">
+        </div>
+        <div class="earlier-body">
+            <p class="earlier-year">${escapeHtml(project.yearCompleted)}</p>
+            <h3 class="earlier-title">${escapeHtml(project.title)}</h3>
+            <p class="earlier-meta">${escapeHtml(project.meta)}</p>
+            <p class="earlier-summary">${escapeHtml(project.summary)}</p>
+            <div class="earlier-chips">${chips}</div>
+            <div class="earlier-links">${buttons.join('')}</div>
+        </div>
+    </article>`;
 }
 
 async function renderEarlierWork() {
@@ -100,6 +104,7 @@ function initPage() {
     // ?noaos: static capture mode (screenshots). Real visitors never pass this.
     if (new URLSearchParams(window.location.search).has('noaos')) {
         document.querySelectorAll('[data-aos]').forEach(el => el.removeAttribute('data-aos'));
+        document.documentElement.classList.add('capture'); // full-page captures: no 100vh hero
     } else {
         AOS.init();
     }

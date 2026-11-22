@@ -28,7 +28,7 @@
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top floating-nav">
             <div class="container-fluid px-3">
-                <a class="navbar-brand" href="#hero"><span class="brand-mark">LAK</span><span class="brand-name">Lê Anh Khoa</span></a>
+                <a class="navbar-brand" href="#hero"><span class="brand-name">Lê Anh Khoa</span></a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -162,8 +162,8 @@
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta">Visit ansite.vn</a>
-                                        <a href="./assets/img/featured/ansite-login.jpg" data-lightbox="ansite"
-                                            data-title="AnSite SafetyOps login" class="btn-cta outline">More screenshots</a>
+                                        <a href="https://www.facebook.com/profile.php?id=61590629583410" target="_blank"
+                                            rel="noopener noreferrer" class="btn-cta outline"><i class="fa-brands fa-facebook"></i> Facebook fanpage</a>
                                     </div>
                                 </div>
                             </article>
@@ -214,16 +214,10 @@
                         </div>
 
                         <!-- Earlier Work (collapsed by default) -->
-                        <div class="earlier-wrap mt-5">
-                            <button class="btn-cta outline earlier-toggle" type="button" data-bs-toggle="collapse"
-                                data-bs-target="#earlierWork" aria-expanded="false" aria-controls="earlierWork">
-                                Show earlier projects
-                            </button>
-                            <div class="collapse" id="earlierWork">
-                                <h3 class="earlier-heading">Earlier Work</h3>
-                                <div id="earlier-list" class="earlier-grid">
-                                    <!-- Rendered from assets/data/projects.json -->
-                                </div>
+                        <div class="earlier-wrap">
+                            <h3 class="earlier-heading">Earlier Work</h3>
+                            <div id="earlier-list" class="earlier-grid">
+                                <!-- Rendered from assets/data/projects.json -->
                             </div>
                         </div>
 
@@ -288,11 +282,11 @@
                                 <figcaption>OJT — OneConnect, Rikkei Education</figcaption>
                             </figure>
                             <figure class="award-item">
-                                <!-- TODO: replace with certificate -->
-                                <a href="./assets/img/experiences/experience3.jpg" data-lightbox="awards" data-title="English &amp; Cultural Immersion Program — University of Kuala Lumpur, Malaysia (Nov 2023)">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/malaysia-thumb.jpg" alt="English &amp; Cultural Immersion Program — University of Kuala Lumpur, Malaysia (Nov 2023)" loading="lazy"></div>
+                                <a href="./assets/img/journey/malaysia-cert.jpg" data-lightbox="awards"
+                                    data-title="English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/malaysia-cert-thumb.jpg" alt="English Edu-Tourism Program certificate, UniKL MIIT, Malaysia" loading="lazy"></div>
                                 </a>
-                                <figcaption>English &amp; Cultural Immersion — Malaysia (Nov 2023)</figcaption>
+                                <figcaption>English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)</figcaption>
                             </figure>
                         </div>
 
@@ -358,23 +352,27 @@
                         <div class="skill-groups">
                             <div class="skill-group accent-cyan">
                                 <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-code"></i></span><h3 class="skill-group-title">Languages</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-csharp-plain colored"></i>C#</span><span class="skill-chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span><span class="skill-chip">SQL</span><span class="skill-chip"><i class="devicon-python-plain colored"></i>Python</span></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-csharp-plain colored"></i>C#</span><span class="skill-chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span><span class="skill-chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span><span class="skill-chip">SQL</span><span class="skill-chip"><i class="devicon-python-plain colored"></i>Python</span><span class="skill-chip"><i class="devicon-java-plain colored"></i>Java</span></div>
                             </div>
                             <div class="skill-group accent-blue">
                                 <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-server"></i></span><h3 class="skill-group-title">Backend</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-dotnetcore-plain colored"></i>ASP.NET Core 8</span><span class="skill-chip">EF Core</span><span class="skill-chip"><i class="devicon-nestjs-plain colored"></i>NestJS</span><span class="skill-chip">TypeORM</span><span class="skill-chip">REST</span><span class="skill-chip">OData</span><span class="skill-chip">SignalR</span><span class="skill-chip"><i class="devicon-socketio-original colored"></i>Socket.IO</span><span class="skill-chip">JWT/RBAC</span><span class="skill-chip">Background Services</span></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-dotnetcore-plain colored"></i>ASP.NET Core</span><span class="skill-chip">EF Core</span><span class="skill-chip"><i class="devicon-nestjs-plain colored"></i>NestJS</span><span class="skill-chip">TypeORM</span><span class="skill-chip">REST APIs</span><span class="skill-chip">OData</span><span class="skill-chip">SignalR</span><span class="skill-chip"><i class="devicon-socketio-original colored"></i>Socket.IO</span><span class="skill-chip">JWT</span></div>
                             </div>
                             <div class="skill-group accent-violet">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-database"></i></span><h3 class="skill-group-title">Data</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</span><span class="skill-chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL (pgvector)</span><span class="skill-chip"><i class="devicon-redis-plain colored"></i>Redis (caching, distributed locks)</span></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-window-maximize"></i></span><h3 class="skill-group-title">Frontend</h3></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-react-original colored"></i>React</span><span class="skill-chip"><i class="devicon-redux-original colored"></i>Redux Toolkit</span><span class="skill-chip">TanStack Query</span><span class="skill-chip"><i class="devicon-html5-plain colored"></i>HTML</span><span class="skill-chip"><i class="devicon-css3-plain colored"></i>CSS</span><span class="skill-chip"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span><span class="skill-chip"><i class="devicon-flutter-plain colored"></i>Flutter</span></div>
                             </div>
                             <div class="skill-group accent-teal">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-diagram-project"></i></span><h3 class="skill-group-title">Architecture &amp; DevOps</h3></div>
-                                <div class="skill-chips"><span class="skill-chip">Microservices</span><span class="skill-chip">Database-per-Service</span><span class="skill-chip">Ocelot</span><span class="skill-chip">Nx Monorepo</span><span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker Compose</span><span class="skill-chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span><span class="skill-chip">Caddy</span><span class="skill-chip">VPS</span></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-database"></i></span><h3 class="skill-group-title">Databases</h3></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</span><span class="skill-chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span><span class="skill-chip"><i class="devicon-redis-plain colored"></i>Redis</span></div>
                             </div>
                             <div class="skill-group accent-amber">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-flask-vial"></i></span><h3 class="skill-group-title">Testing &amp; Workflow</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-jest-plain colored"></i>Jest</span><span class="skill-chip"><i class="devicon-vitest-plain colored"></i>Vitest</span><span class="skill-chip"><i class="devicon-pytest-plain colored"></i>Pytest</span><span class="skill-chip"><i class="devicon-git-plain colored"></i>Git feature-branch workflow</span><span class="skill-chip">AI-assisted SDLC (Codex, Claude Code, AGENTS.md)</span></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-diagram-project"></i></span><h3 class="skill-group-title">DevOps & Tools</h3></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker</span><span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker Compose</span><span class="skill-chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span><span class="skill-chip">Nx</span><span class="skill-chip"><i class="devicon-git-plain colored"></i>Git</span><span class="skill-chip"><i class="devicon-linux-plain colored"></i>Linux VPS</span><span class="skill-chip">Caddy</span></div>
+                            </div>
+                            <div class="skill-group accent-rose">
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-flask-vial"></i></span><h3 class="skill-group-title">Testing & Practices</h3></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-jest-plain colored"></i>Jest</span><span class="skill-chip"><i class="devicon-vitest-plain colored"></i>Vitest</span><span class="skill-chip"><i class="devicon-pytest-plain colored"></i>Pytest</span><span class="skill-chip"><i class="devicon-postman-plain colored"></i>Postman</span><span class="skill-chip"><i class="devicon-swagger-plain colored"></i>Swagger</span><span class="skill-chip">Microservices</span><span class="skill-chip">Clean layering</span><span class="skill-chip">AI coding agents</span></div>
                             </div>
                         </div>
                     </div>
@@ -391,7 +389,10 @@
                                     <span class="j-date">2014 – 2018</span>
                                     <h3 class="j-title">Where it started: Plazma Burst 2 map design</h3>
                                     <p class="j-text">I started designing custom maps for the 2D platformer Plazma Burst 2. I made nearly 100, and over 30 became highly rated by the community.</p>
-                                    <img class="j-img" src="./assets/img/journey/plazma.jpg" alt="" loading="lazy">
+                                    <a class="j-media" href="./assets/img/journey/plazma.jpg" data-lightbox="journey"
+                                        data-title="Plazma Burst 2 map design">
+                                        <img class="j-img" src="./assets/img/journey/plazma-thumb.jpg" alt="Plazma Burst 2 map design" loading="lazy">
+                                    </a>
                                     <a class="j-link" href="https://www.plazmaburst2.com/?a=&s=7&ac=leanhkhoa&id=1333791" target="_blank" rel="noopener noreferrer">My profile on PlazmaBurst 2</a>
                                 </div>
                             </li>
@@ -400,7 +401,10 @@
                                     <span class="j-date">2016 – 2023</span>
                                     <h3 class="j-title">Pre-university academic awards</h3>
                                     <p class="j-text">I took part in academic and English competitions through middle and high school, and ranked among the top 10 students every semester.</p>
-                                    <img class="j-img" src="./assets/img/journey/awards.jpg" alt="" loading="lazy">
+                                    <a class="j-media" href="./assets/img/journey/awards.jpg" data-lightbox="journey"
+                                        data-title="Pre-university academic awards">
+                                        <img class="j-img" src="./assets/img/journey/awards-thumb.jpg" alt="Pre-university academic awards" loading="lazy">
+                                    </a>
                                 </div>
                             </li>
                             <li class="j-item left">
@@ -408,15 +412,43 @@
                                     <span class="j-date">Sep 2023</span>
                                     <h3 class="j-title">Enrolled at FPT University, Can Tho</h3>
                                     <p class="j-text">I began the Software Engineering programme at FPT University, Can Tho.</p>
-                                    <img class="j-img" src="./assets/img/journey/fpt.jpg" alt="" loading="lazy">
+                                    <a class="j-media" href="./assets/img/journey/fpt.jpg" data-lightbox="journey"
+                                        data-title="Enrolled at FPT University, Can Tho">
+                                        <img class="j-img" src="./assets/img/journey/fpt-thumb.jpg" alt="Enrolled at FPT University, Can Tho" loading="lazy">
+                                    </a>
                                 </div>
                             </li>
                             <li class="j-item right">
                                 <div class="j-card">
-                                    <span class="j-date">Nov 2023</span>
-                                    <h3 class="j-title">English &amp; Cultural Immersion, Malaysia</h3>
-                                    <p class="j-text">I completed a 3-week English immersion programme at the University of Kuala Lumpur, speaking English daily with locals and exploring the culture.</p>
-                                    <img class="j-img" src="./assets/img/journey/malaysia.jpg" alt="" loading="lazy">
+                                    <span class="j-date">Nov – Dec 2023</span>
+                                    <h3 class="j-title">English Edu-Tourism Program, UniKL MIIT</h3>
+                                    <p class="j-text">I spent three weeks at Universiti Kuala Lumpur (UniKL MIIT), practicing English daily with locals and exploring the culture.</p>
+                                    <a class="j-media" href="./assets/img/journey/malaysia-cert.jpg" data-lightbox="journey"
+                                        data-title="English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)">
+                                        <img class="j-img" src="./assets/img/journey/malaysia-cert-thumb.jpg" alt="English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)" loading="lazy">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="j-item left">
+                                <div class="j-card">
+                                    <span class="j-date">Jul 2024</span>
+                                    <h3 class="j-title">Completed Vovinam martial arts training</h3>
+                                    <p class="j-text">I finished the full 3-term Vovinam course, six months in total, which built my discipline and physical resilience.</p>
+                                    <a class="j-media" href="./assets/img/journey/vovinam.jpg" data-lightbox="journey"
+                                        data-title="Completed Vovinam martial arts training">
+                                        <img class="j-img" src="./assets/img/journey/vovinam-thumb.jpg" alt="Completed Vovinam martial arts training" loading="lazy">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="j-item right j-major">
+                                <div class="j-card">
+                                    <span class="j-date">Oct 2024</span>
+                                    <h3 class="j-title">Joined FEL — FPTU Can Tho English Club</h3>
+                                    <p class="j-text">I joined the club and took part in many of its events, building my communication, teamwork and other soft skills.</p>
+                                    <a class="j-media" href="./assets/img/journey/english-club.jpg" data-lightbox="journey"
+                                        data-title="Joined FEL — FPTU Can Tho English Club">
+                                        <img class="j-img" src="./assets/img/journey/english-club-thumb.jpg" alt="Joined FEL — FPTU Can Tho English Club" loading="lazy">
+                                    </a>
                                 </div>
                             </li>
                             <li class="j-item left">
@@ -424,51 +456,58 @@
                                     <span class="j-date">Fall 2024</span>
                                     <h3 class="j-title">Top 5, Engineering &amp; Technology Faculty Group</h3>
                                     <p class="j-text">I was ranked top 5 in the Engineering &amp; Technology Faculty Group in Fall 2024. Seven merit certificates followed from 2024 to 2026: three Excellent and four Honorable Student of Trimester.</p>
-                                    <img class="j-img" src="./assets/img/proofs/top5-ceremony.jpg" alt="" loading="lazy">
+                                    <a class="j-media" href="./assets/img/journey/top5.jpg" data-lightbox="journey"
+                                        data-title="Top 5 Students, Engineering &amp; Technology Faculty Group — Fall 2024">
+                                        <img class="j-img" src="./assets/img/journey/top5-thumb.jpg" alt="Top 5 Students, Engineering &amp; Technology Faculty Group — Fall 2024" loading="lazy">
+                                    </a>
                                 </div>
                             </li>
                             <li class="j-item right">
                                 <div class="j-card">
-                                    <span class="j-date">Mar – Jun 2025</span>
-                                    <h3 class="j-title">EventHub: my first microservices system</h3>
-                                    <p class="j-text">I built EventHub, a booking platform split into 10 ASP.NET Core services, each with its own SQL Server database.</p>
-                                    <a class="j-link" href="https://github.com/AinzleKhoa/EventManagementSystem" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                                    <span class="j-date">Jan 2025</span>
+                                    <h3 class="j-title">Arduino autonomous robot project</h3>
+                                    <p class="j-text">With a friend, I designed and built a path-following, dust-collecting robot using Arduino. We completed it within one month.</p>
+                                    <a class="j-media" href="./assets/img/journey/arduino.jpg" data-lightbox="journey"
+                                        data-title="Arduino autonomous robot project">
+                                        <img class="j-img" src="./assets/img/journey/arduino-thumb.jpg" alt="Arduino autonomous robot project" loading="lazy">
+                                    </a>
                                 </div>
                             </li>
                             <li class="j-item left">
+                                <div class="j-card">
+                                    <span class="j-date">Apr 2025</span>
+                                    <h3 class="j-title">FEL Club website</h3>
+                                    <p class="j-text">I built a static frontend site for FEL Club that loads its event data from a JSON file, deployed on GitHub Pages.</p>
+                                    <a class="j-media" href="./assets/img/journey/fel-website.jpg" data-lightbox="journey"
+                                        data-title="FEL Club website">
+                                        <img class="j-img" src="./assets/img/journey/fel-website-thumb.jpg" alt="FEL Club website" loading="lazy">
+                                    </a>
+                                    <a class="j-link" href="https://ainzlekhoa.github.io/FEL/" target="_blank" rel="noopener noreferrer">Visit the FEL website</a>
+                                </div>
+                            </li>
+                            <li class="j-item right">
                                 <div class="j-card">
                                     <span class="j-date">Sep 2025 – Jan 2026</span>
                                     <h3 class="j-title">OJT at Rikkeisoft (VMS project)</h3>
                                     <p class="j-text">I interned at Rikkeisoft HCM, where I built a shared Redis caching library for four NestJS services and became a top contributor on the team.</p>
-                                    <img class="j-img" src="./assets/img/proofs/cert-ojt-fpt.jpg" alt="" loading="lazy">
+                                    <a class="j-media" href="./assets/img/journey/rikkeisoft.jpg" data-lightbox="journey"
+                                        data-title="OJT at Rikkeisoft HCM (VMS project)">
+                                        <img class="j-img" src="./assets/img/journey/rikkeisoft-thumb.jpg" alt="OJT at Rikkeisoft HCM (VMS project)" loading="lazy">
+                                    </a>
                                 </div>
                             </li>
-                            <li class="j-item right">
+                            <li class="j-item left">
                                 <div class="j-card">
                                     <span class="j-date">May 2026</span>
-                                    <h3 class="j-title">AnSite begins as my capstone</h3>
-                                    <p class="j-text">I started AnSite as my capstone project, inspired by the VMS work at Rikkeisoft: an AI vision platform that turns factory CCTV into safety alerts.</p>
-                                    <img class="j-img" src="./assets/img/featured/ansite-dashboard.jpg" alt="" loading="lazy">
-                                </div>
-                            </li>
-                            <li class="j-item left">
-                                <div class="j-card">
-                                    <span class="j-date">Jun – Jul 2026</span>
-                                    <h3 class="j-title">Calendar Shop with a team of 5</h3>
-                                    <p class="j-text">I was a backend developer on a team of five building Calendar Shop, a mobile e-commerce platform with VNPay payments and a Flutter client.</p>
-                                    <a class="j-link" href="https://github.com/AinzleKhoa/calendar-shop" target="_blank" rel="noopener noreferrer">View on GitHub</a>
+                                    <h3 class="j-title">AnSite as my capstone project</h3>
+                                    <p class="j-text">I started AnSite as my capstone project, inspired by my OJT work on VMS at Rikkeisoft: an AI vision platform that turns factory CCTV into safety alerts.</p>
+                                    <a class="j-media" href="./assets/img/journey/ansite-capstone.jpg" data-lightbox="journey"
+                                        data-title="AnSite as my capstone project">
+                                        <img class="j-img" src="./assets/img/journey/ansite-capstone-thumb.jpg" alt="AnSite as my capstone project" loading="lazy">
+                                    </a>
                                 </div>
                             </li>
                             <li class="j-item right">
-                                <div class="j-card">
-                                    <span class="j-date">2026</span>
-                                    <h3 class="j-title">AnSite becomes a startup</h3>
-                                    <p class="j-text">I ran on-site surveys at four manufacturing companies and helped turn AnSite into a startup, now online at ansite.vn.</p>
-                                    <img class="j-img" src="./assets/img/featured/ansite-login.jpg" alt="" loading="lazy">
-                                    <a class="j-link" href="https://ansite.vn" target="_blank" rel="noopener noreferrer">Visit ansite.vn</a>
-                                </div>
-                            </li>
-                            <li class="j-item left">
                                 <div class="j-card">
                                     <span class="j-date">Dec 2026</span>
                                     <h3 class="j-title">Graduation (expected)</h3>
