@@ -97,7 +97,12 @@ async function renderEarlierWork() {
   Main initializer
 -----------------------------------------*/
 function initPage() {
-    AOS.init();
+    // ?noaos: static capture mode (screenshots). Real visitors never pass this.
+    if (new URLSearchParams(window.location.search).has('noaos')) {
+        document.querySelectorAll('[data-aos]').forEach(el => el.removeAttribute('data-aos'));
+    } else {
+        AOS.init();
+    }
     initBackground('main-background');
     initScrollSpy();
     renderEarlierWork();
