@@ -22,7 +22,7 @@
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
-<body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
+<body tabindex="0">
 
     <div id="main-background" data-bg="./assets/img/background.jpg">
         <!-- Navbar Start -->
@@ -216,6 +216,7 @@
                         <!-- Earlier Work (collapsed by default) -->
                         <div class="earlier-wrap">
                             <h3 class="earlier-heading">Earlier Work</h3>
+                            <!-- TODO: add a GitHub button for "An Empty Frame" once github.com/AinzleKhoa/EmptyFrameHorrorGame has code -->
                             <div id="earlier-list" class="earlier-grid">
                                 <!-- Rendered from assets/data/projects.json -->
                             </div>
@@ -383,8 +384,10 @@
                 <div class="container">
                     <div class="journey-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
                         <h2 class="section-heading">My Journey</h2>
+<ul class="j-legend"><li class="j-cat-education"><span class="j-legend-dot"><i class="fas fa-graduation-cap"></i></span>Education</li><li class="j-cat-award"><span class="j-legend-dot"><i class="fas fa-trophy"></i></span>Award</li><li class="j-cat-work"><span class="j-legend-dot"><i class="fas fa-briefcase"></i></span>Work</li><li class="j-cat-project"><span class="j-legend-dot"><i class="fas fa-code"></i></span>Project</li><li class="j-cat-personal"><span class="j-legend-dot"><i class="fas fa-heart"></i></span>Personal & community</li></ul>
                         <ol class="journey">
-                            <li class="j-item left">
+                            <li class="j-item left j-cat-personal">
+                                <span class="j-node" title="Personal & community"><i class="fas fa-heart"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">2014 – 2018</span>
                                     <h3 class="j-title">Where it started: Plazma Burst 2 map design</h3>
@@ -396,7 +399,8 @@
                                     <a class="j-link" href="https://www.plazmaburst2.com/?a=&s=7&ac=leanhkhoa&id=1333791" target="_blank" rel="noopener noreferrer">My profile on PlazmaBurst 2</a>
                                 </div>
                             </li>
-                            <li class="j-item right">
+                            <li class="j-item right j-cat-award">
+                                <span class="j-node" title="Award"><i class="fas fa-trophy"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">2016 – 2023</span>
                                     <h3 class="j-title">Pre-university academic awards</h3>
@@ -407,7 +411,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item left">
+                            <li class="j-item left j-cat-education">
+                                <span class="j-node" title="Education"><i class="fas fa-graduation-cap"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Sep 2023</span>
                                     <h3 class="j-title">Enrolled at FPT University, Can Tho</h3>
@@ -418,18 +423,20 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item right">
+                            <li class="j-item right j-cat-education">
+                                <span class="j-node" title="Education"><i class="fas fa-graduation-cap"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Nov – Dec 2023</span>
                                     <h3 class="j-title">English Edu-Tourism Program, UniKL MIIT</h3>
                                     <p class="j-text">I spent three weeks at Universiti Kuala Lumpur (UniKL MIIT), practicing English daily with locals and exploring the culture.</p>
-                                    <a class="j-media" href="./assets/img/journey/malaysia-cert.jpg" data-lightbox="journey"
-                                        data-title="English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)">
-                                        <img class="j-img" src="./assets/img/journey/malaysia-cert-thumb.jpg" alt="English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)" loading="lazy">
+                                    <a class="j-media" href="./assets/img/journey/malaysia-photo.jpg" data-lightbox="journey"
+                                        data-title="Khoa in front of Universiti Kuala Lumpur (UniKL MIIT), Malaysia — English Edu-Tourism Program, Nov–Dec 2023">
+                                        <img class="j-img" src="./assets/img/journey/malaysia-photo-thumb.jpg" alt="Khoa in front of Universiti Kuala Lumpur (UniKL MIIT), Malaysia — English Edu-Tourism Program, Nov–Dec 2023" loading="lazy">
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item left">
+                            <li class="j-item left j-cat-personal">
+                                <span class="j-node" title="Personal & community"><i class="fas fa-heart"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Jul 2024</span>
                                     <h3 class="j-title">Completed Vovinam martial arts training</h3>
@@ -440,7 +447,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item right j-major">
+                            <li class="j-item right j-cat-personal">
+                                <span class="j-node" title="Personal & community"><i class="fas fa-heart"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Oct 2024</span>
                                     <h3 class="j-title">Joined FEL — FPTU Can Tho English Club</h3>
@@ -451,7 +459,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item left">
+                            <li class="j-item left j-cat-award">
+                                <span class="j-node" title="Award"><i class="fas fa-trophy"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Fall 2024</span>
                                     <h3 class="j-title">Top 5, Engineering &amp; Technology Faculty Group</h3>
@@ -462,7 +471,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item right">
+                            <li class="j-item right j-cat-project">
+                                <span class="j-node" title="Project"><i class="fas fa-code"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Jan 2025</span>
                                     <h3 class="j-title">Arduino autonomous robot project</h3>
@@ -473,7 +483,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item left">
+                            <li class="j-item left j-cat-project">
+                                <span class="j-node" title="Project"><i class="fas fa-code"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Apr 2025</span>
                                     <h3 class="j-title">FEL Club website</h3>
@@ -485,7 +496,8 @@
                                     <a class="j-link" href="https://ainzlekhoa.github.io/FEL/" target="_blank" rel="noopener noreferrer">Visit the FEL website</a>
                                 </div>
                             </li>
-                            <li class="j-item right">
+                            <li class="j-item right j-cat-work">
+                                <span class="j-node" title="Work"><i class="fas fa-briefcase"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Sep 2025 – Jan 2026</span>
                                     <h3 class="j-title">OJT at Rikkeisoft (VMS project)</h3>
@@ -496,7 +508,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item left">
+                            <li class="j-item left j-cat-project">
+                                <span class="j-node" title="Project"><i class="fas fa-code"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">May 2026</span>
                                     <h3 class="j-title">AnSite as my capstone project</h3>
@@ -507,7 +520,8 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item right">
+                            <li class="j-item right j-cat-education">
+                                <span class="j-node" title="Education"><i class="fas fa-graduation-cap"></i></span>
                                 <div class="j-card">
                                     <span class="j-date">Dec 2026</span>
                                     <h3 class="j-title">Graduation (expected)</h3>

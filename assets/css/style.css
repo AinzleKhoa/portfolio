@@ -3806,3 +3806,160 @@ header {
 .capture .hero-section {
     min-height: 0 !important;
 }
+
+/*=======================================
+  ROUND 5 - vibrant journey (categories, nodes, legend), earlier work tweaks
+=======================================*/
+
+/* S2: journey categories */
+.j-cat-education { --c: #4da6ff; }
+.j-cat-award { --c: #f5b942; }
+.j-cat-work { --c: #34d399; }
+.j-cat-project { --c: #a78bfa; }
+.j-cat-personal { --c: #f472b6; }
+
+.j-legend {
+    list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px 14px;
+    margin: 0 0 44px;
+    padding: 0;
+}
+
+.j-legend li {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    padding: 5px 14px 5px 5px;
+    border-radius: 999px;
+    border: 1px solid var(--c);
+    background: rgba(6, 18, 40, 0.85);
+    color: #e6f1fb;
+    font-size: 0.95rem;
+}
+
+.j-legend-dot {
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    background: var(--c);
+    color: #061a33;
+    font-size: 0.8rem;
+}
+
+.journey::before {
+    background: linear-gradient(180deg, #4da6ff 0%, #a78bfa 28%, #f472b6 50%, #34d399 74%, #f5b942 100%);
+    box-shadow: 0 0 12px rgba(167, 139, 250, 0.55);
+}
+
+.j-item {
+    padding: 0 44px 56px;
+}
+
+.j-item::after {
+    content: none;
+}
+
+/* timeline node with category icon */
+.j-node {
+    position: absolute;
+    top: 14px;
+    z-index: 2;
+    width: 42px;
+    height: 42px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: #061a33;
+    border: 2px solid var(--c);
+    color: var(--c);
+    font-size: 1rem;
+    box-shadow: 0 0 0 4px rgba(6, 18, 40, 0.9), 0 0 16px var(--c);
+}
+
+.j-item.left .j-node {
+    right: -21px;
+}
+
+.j-item.right .j-node {
+    left: -21px;
+}
+
+/* cards: accent top/left, hover lift + glow */
+.j-card {
+    border: 1px solid rgba(125, 221, 244, 0.18);
+    border-top: 3px solid var(--c);
+    border-left: 3px solid var(--c);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.j-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 36px -8px var(--c), 0 0 22px -6px var(--c);
+}
+
+.j-date {
+    background: var(--c);
+    color: #061a33;
+}
+
+.j-title {
+    font-size: 20px;
+}
+
+/* images: full card width, 16:10, cover */
+.j-media {
+    display: block;
+    width: 100%;
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    border-radius: 10px;
+    margin: 8px 0 12px;
+}
+
+.j-media .j-img {
+    width: 100%;
+    height: 100%;
+    max-height: none;
+    margin: 0;
+    object-fit: cover;
+    background: none;
+}
+
+.j-media[href*="plazma"] .j-img {
+    object-fit: contain;
+    background: rgba(0, 0, 0, 0.35);
+}
+
+.j-media:hover .j-img {
+    box-shadow: none;
+}
+
+@media (max-width: 767.5px) {
+    .journey::before {
+        left: 20px;
+    }
+
+    .j-item,
+    .j-item.left,
+    .j-item.right {
+        padding: 0 0 36px 58px;
+    }
+
+    .j-node,
+    .j-item.left .j-node,
+    .j-item.right .j-node {
+        left: 0;
+        right: auto;
+    }
+
+    .j-legend {
+        gap: 8px;
+    }
+}

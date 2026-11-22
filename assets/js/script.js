@@ -32,13 +32,31 @@ function copyText(event) {
 }
 
 /*---------------------------------------
-  Bootstrap ScrollSpy
+  Nav highlight from scroll position (replaces Bootstrap ScrollSpy)
 -----------------------------------------*/
 function initScrollSpy() {
-    new bootstrap.ScrollSpy(document.body, {
-        target: '#navbarNav',
-        offset: 70
-    });
+    const links = [...document.querySelectorAll('#navbarNav .nav-link[href^="#"]')];
+    const sections = links
+        .map(a => document.getElementById(a.getAttribute('href').slice(1)))
+        .filter(Boolean);
+    if (!sections.length) return;
+
+    function update() {
+        const atBottom = window.scrollY > 0 && window.innerHeight + window.scrollY >= document.documentElement.scrollHeight - 4;
+        let current = sections[0];
+        if (atBottom) {
+            current = sections[sections.length - 1]; // last section wins at the bottom of the page
+        } else {
+            const line = window.scrollY + 120; // just below the floating navbar
+            sections.forEach(sec => {
+                if (sec.getBoundingClientRect().top + window.scrollY <= line) current = sec;
+            });
+        }
+        links.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + current.id));
+    }
+    window.addEventListener('scroll', update, { passive: true }); // cheap: only 7 section offsets
+    window.addEventListener('resize', update);
+    update();
 }
 
 /*---------------------------------------
