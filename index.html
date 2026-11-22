@@ -4,7 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Portfolio</title>
+    <title>Lê Anh Khoa | Backend Software Engineer (.NET / NestJS)</title>
+    <meta name="description" content="Lê Anh Khoa - Backend Software Engineer (.NET / NestJS). AnSite SafetyOps, EventHub, Calendar Shop, and OJT at Rikkeisoft.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,27 +16,18 @@
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
     <link rel="stylesheet" href="./assets/css/aos.css">
     <link rel="stylesheet" href="./assets/css/lightbox.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@v2.15.1/devicon.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
-    <link href="https://vjs.zencdn.net/8.22.0/video-js.css" rel="stylesheet" />
 
     <link rel="stylesheet" href="./assets/css/style.css">
 </head>
 
 <body data-bs-spy="scroll" data-bs-target="#navbarNav" data-bs-offset="70" tabindex="0">
 
-    <section class="preloader">
-        <div class="spinner">
-            <img src="./assets/img/loading.gif" alt="Loading..." />
-            <h1 class="loading-text">Loading<span class="dots"></span></h1>
-        </div>
-    </section>
-
-    <div id="main-background" data-bg="./assets/img/background.png">
+    <div id="main-background" data-bg="./assets/img/background.jpg">
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top">
             <div class="container">
-                <a class="navbar-brand" href="#">Ainzle Khoa's Portfolio</a>
+                <a class="navbar-brand" href="#hero">Lê Anh Khoa</a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
                     aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -44,22 +36,19 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item">
-                            <a class="nav-link" href="#hero" onclick="scrollToTop(event)">Hero</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#about">About</a>
+                            <a class="nav-link" href="#hero">Home</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#projects">Projects</a>
                         </li>
                         <li class="nav-item">
-                            <a class="nav-link" href="#sideProjects">Side</a>
+                            <a class="nav-link" href="#experience">Experience</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="#awards">Awards</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#skills">Skills</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#experiences">Experiences</a>
                         </li>
                         <li class="nav-item">
                             <a class="nav-link" href="#contact">Contact</a>
@@ -69,53 +58,46 @@
             </div>
         </nav>
 
-        <img src="./assets/img/blue-planet.png" alt="" class="fixed-img-left">
-        <img src="./assets/img/spaceship.png" alt="" class="fixed-img-right">
+        <img src="./assets/img/blue-planet.webp" alt="" class="fixed-img-left">
+        <img src="./assets/img/spaceship.webp" alt="" class="fixed-img-right">
 
         <header id="hero" class="hero-section">
             <div class="container">
                 <div class="row hero-wrapper align-items-center">
 
                     <!-- Text Column -->
-                    <div class="hero-text col-md-4 col-lg-4">
+                    <div class="hero-text col-md-6 col-lg-6">
                         <div class="intro-content">
                             <h2 class="intro-subtitle">Hello! I'm</h2>
                             <h1 class="intro-name">Lê Anh Khoa</h1>
-                            <h5 class="intro-name">(Ainzle Khoa)</h5>
-                            <h6 class="intro-role">Software Engineering</h6>
+                            <h6 class="intro-role">Backend Software Engineer (.NET / NestJS)</h6>
+                            <p class="intro-description">
+                                I build backend systems that hold up in production — from Redis caching at Rikkeisoft
+                                to AnSite, an edge–cloud safety platform turned startup.
+                            </p>
                         </div>
                     </div>
 
                     <!-- Image Column -->
-                    <div class="hero-image col-md-5 col-lg-4 text-center">
+                    <div class="hero-image col-md-6 col-lg-6 text-center">
                         <div class="corner-frame">
-                            <img src="./assets/img/hero.png" alt="Illustration of Lê Anh Khoa"
+                            <img src="./assets/img/hero.webp" alt="Illustration of Lê Anh Khoa"
                                 class="hero-illustration">
-                        </div>
-                    </div>
-
-                    <!-- Text Column -->
-                    <div class="hero-text col-md-3 col-lg-4">
-                        <div class="intro-content">
-                            <p class="intro-description">“Where <span>Innovation</span> Meets <span>Execution</span>
-                                —
-                                One Pixel at a
-                                Time.”</p>
                         </div>
                     </div>
                 </div>
                 <div class="row align-items-center mt-1">
                     <div class="social-links">
-                        <a href="mailto:khoale1855@gmail.com" target="_blank" rel="noopener noreferrer"><i
+                        <a href="mailto:khoale1855@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i
                                 class="fas fa-envelope"></i></a>
-                        <a href="https://github.com/AinzleKhoa" target="_blank" rel="noopener noreferrer"><i
+                        <a href="https://github.com/AinzleKhoa" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
                                 class="fab fa-github"></i></a>
                         <a href="https://www.linkedin.com/in/khoa-l%C3%AA-anh-b1335a364/" target="_blank"
-                            rel="noopener noreferrer"><i class="fab fa-linkedin"></i></a>
+                            rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                     </div>
                     <div class="cta-buttons">
-                        <a href="#projects" class="btn-cta">View My Work</a>
-                        <a href="./assets/files/AinzleKhoa_CV.pdf" class="btn-cta outline" download>Download CV</a>
+                        <a href="#projects" class="btn-cta">View Projects</a>
+                        <a href="./assets/files/LE_ANH_KHOA_CV.pdf" class="btn-cta outline" download>Download CV</a>
                     </div>
                 </div>
             </div>
@@ -126,41 +108,31 @@
             <section id="about" class="about-section">
                 <div class="container">
                     <div class="row justify-content-center">
-
-                        <!-- Text Column -->
                         <div class="about-wrapper col-12" data-aos="fade-up" data-aos-offset="300"
                             data-aos-easing="ease-in-sine">
-                            <img src="./assets/img/chatgpt-planet.png" alt="" class="about-img-planet">
+                            <img src="./assets/img/chatgpt-planet.webp" alt="" class="about-img-planet">
                             <div class="about-header">
                                 <div class="col-sm-8 about-title">
                                     <h2 class="section-heading">About Me</h2>
                                     <h1 class="about-name">Lê Anh Khoa</h1>
-                                    <h6 class="about-role">Software Engineering</h6>
+                                    <h6 class="about-role">Backend Software Engineer (.NET / NestJS)</h6>
                                 </div>
                                 <div class="col-sm-4 about-hero">
-                                    <img src="./assets/img/about.png" alt="Portrait of Lê Anh Khoa"
+                                    <img src="./assets/img/about.webp" alt="Portrait of Lê Anh Khoa"
                                         class="about-img-hero">
                                 </div>
                             </div>
                             <div class="about-text">
                                 <p class="about-description">
-                                    Hi! I’m Lê Anh Khoa, also known as Ainzle Khoa—a dedicated Software Engineering
-                                    student at FPT University, Can Tho. My journey in tech has been marked by hands-on
-                                    experiences, from developing a complete Java-based game to delivering a full-stack
-                                    website for a freelance project, and recently, crafting a frontend website for my
-                                    university club.
+                                    Final-year Software Engineering student (GPA 3.76/4.0) focused on backend and
+                                    distributed systems with .NET and NestJS. Completed a 4-month on-the-job training at
+                                    Rikkeisoft on a production microservices project, and led development of AnSite, an
+                                    edge–cloud safety platform that grew from a capstone project into a startup.
                                     <br><br>
-                                    My adaptability and quick learning ability have been pivotal in tackling diverse
-                                    projects. I have a deep-seated passion for creative problem-solving and am always
-                                    eager to explore new technologies. Academically, I take pride in ranking among the
-                                    top 5 students in my major, reflecting my commitment to excellence.
-                                    <br><br>
-                                    I thrive on challenges that push me to innovate and am always open to collaborative
-                                    opportunities that allow me to contribute and grow.
+                                    Studying at FPT University, Can Tho, and graduating in December 2026.
                                 </p>
                             </div>
                         </div>
-
                     </div>
                 </div>
             </section>
@@ -170,140 +142,215 @@
                     <div class="projects-wrapper" data-aos="fade-up" data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
 
-                        <img src="./assets/img/bigspaceship.png" alt="" class="projects-decoration-spaceship">
+                        <img src="./assets/img/bigspaceship.webp" alt="" class="projects-decoration-spaceship">
 
-                        <h1 class="section-heading">Projects I've Built</h1>
-                        <p class="section-subtitle mb-5">
-                            A selection of personal and academic projects that showcase my creativity, problem-solving,
-                            and technical range—from full-stack apps to games and tools.
-                        </p>
+                        <h2 class="section-heading">Featured Projects</h2>
 
-                        <div class="project-category">
-                            <div data-category="featured" class="category-btn active">Featured</div>
-                            <div data-category="all" class="category-btn">All</div>
-                            <div data-category="website" class="category-btn">Website</div>
-                            <div data-category="game" class="category-btn">Game</div>
-                            <div data-category="application" class="category-btn">Application</div>
-                            <div data-category="robot" class="category-btn">Robot</div>
+                        <div class="feat-grid">
+
+                            <!-- 1. AnSite SafetyOps -->
+                            <article class="feat-card">
+                                <div class="feat-media">
+                                    <a href="./assets/img/featured/ansite-dashboard.jpg" data-lightbox="ansite"
+                                        data-title="AnSite SafetyOps dashboard">
+                                        <img src="./assets/img/featured/ansite-dashboard.jpg"
+                                            alt="AnSite SafetyOps dashboard" loading="lazy">
+                                    </a>
+                                    <a href="./assets/img/featured/ansite-login.jpg" data-lightbox="ansite"
+                                        data-title="AnSite SafetyOps login" class="feat-media-secondary">
+                                        <img src="./assets/img/featured/ansite-login.jpg" alt="AnSite SafetyOps login"
+                                            loading="lazy">
+                                    </a>
+                                </div>
+                                <div class="feat-body">
+                                    <span class="feat-label">Capstone → Startup</span>
+                                    <h3 class="feat-title">AnSite SafetyOps — AI Vision Safety Platform for Manufacturing SMEs</h3>
+                                    <p class="feat-meta">Lead Developer | Capstone Project → Startup | May 2026 – Present</p>
+                                    <p class="feat-stack">NestJS, React 19, PostgreSQL, Socket.IO, Python, YOLO, MediaMTX</p>
+                                    <p class="feat-origin"><em>Inspired by my OJT work on VMS at Rikkeisoft.</em></p>
+                                    <ul class="feat-bullets">
+                                        <li>Built a hybrid edge–cloud platform that turns existing factory CCTV into real-time safety alerts with stored evidence (PPE, restricted zones, falls, smoke, forklift–pedestrian proximity); validated through on-site surveys at 4 manufacturing companies.</li>
+                                        <li>Designed a resource-isolated architecture: a compute-bound Python edge agent on the factory LAN (RTSP, YOLO/VLM inference) and an I/O-bound NestJS API as the single database owner, linked by versioned alert, device-auth and live-view contracts.</li>
+                                        <li>Implemented per-device activation with authenticated HTTP/WebSocket channels and live camera viewing through a MediaMTX WebRTC/WHEP gateway relayed by the cloud.</li>
+                                        <li>Deployed to a VPS behind Caddy with a Cloudflare Pages frontend; enforced quality with GitHub Actions CI, 1,400+ edge tests, 69 cloud test suites, and backup/restore runbooks (RPO 6h, RTO 4h).</li>
+                                    </ul>
+                                    <div class="feat-links">
+                                        <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta">Visit ansite.vn</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- 2. EventHub -->
+                            <article class="feat-card">
+                                <div class="feat-body">
+                                    <h3 class="feat-title">EventHub — Microservices Event Booking Platform</h3>
+                                    <p class="feat-meta">Backend Developer | Personal Project | Mar 2025 – Jun 2025</p>
+                                    <p class="feat-stack">ASP.NET Core 8, EF Core, SQL Server, Ocelot, SignalR, Docker Compose</p>
+                                    <ul class="feat-bullets">
+                                        <li>Decomposed event booking into 10 ASP.NET Core services, each owning its SQL Server database, behind an Ocelot gateway routing authenticated REST and SignalR traffic.</li>
+                                        <li>Implemented a cross-service booking workflow validating events, ticket availability and vouchers, processing VNPay/MoMo payments, then issuing QR tickets and confirmation emails.</li>
+                                        <li>Added compensating cancellation calls to restore ticket quantities and vouchers on failure; orchestrated all services and databases with Docker Compose.</li>
+                                    </ul>
+                                    <div class="feat-links">
+                                        <a href="https://github.com/AinzleKhoa/EventManagementSystem" target="_blank"
+                                            rel="noopener noreferrer" class="btn-cta outline">GitHub</a>
+                                    </div>
+                                </div>
+                            </article>
+
+                            <!-- 3. Calendar Shop -->
+                            <article class="feat-card">
+                                <div class="feat-body">
+                                    <h3 class="feat-title">Calendar Shop — Mobile E-Commerce Platform</h3>
+                                    <p class="feat-meta">Backend Developer | Team of 5 | Jun 2026 – Jul 2026</p>
+                                    <p class="feat-stack">ASP.NET Core 8, EF Core, SQL Server, OData, JWT, VNPay, Flutter</p>
+                                    <ul class="feat-bullets">
+                                        <li>Hardened the VNPay order lifecycle by validating callback signatures, amounts, expiry and current order state, with a hosted worker that expires unpaid orders after 15 minutes and restores inventory and coupons.</li>
+                                        <li>Implemented multi-device refresh-token rotation and revocation across logout, password reset and account lock, integrated with automatic retry in the Flutter Dio client.</li>
+                                        <li>Exposed filterable, pageable OData endpoints via AutoMapper <code>ProjectTo</code> and standardized errors with FluentValidation and RFC 7807 ProblemDetails.</li>
+                                    </ul>
+                                    <div class="feat-links">
+                                        <a href="https://github.com/AinzleKhoa/calendar-shop" target="_blank"
+                                            rel="noopener noreferrer" class="btn-cta outline">GitHub</a>
+                                    </div>
+                                </div>
+                            </article>
                         </div>
 
-                        <div id="project-list" class="row project-list">
-                            <!-- Dynamically generating -->
+                        <!-- Earlier Work (collapsed by default) -->
+                        <div class="earlier-wrap mt-5">
+                            <button class="btn-cta outline earlier-toggle" type="button" data-bs-toggle="collapse"
+                                data-bs-target="#earlierWork" aria-expanded="false" aria-controls="earlierWork">
+                                Show earlier projects
+                            </button>
+                            <div class="collapse" id="earlierWork">
+                                <h3 class="earlier-heading">Earlier Work</h3>
+                                <div id="earlier-list" class="earlier-grid">
+                                    <!-- Rendered from assets/data/projects.json -->
+                                </div>
+                            </div>
                         </div>
-
-                        <p style="margin: 0;">Total Project Done: <span id="total-project"></span><span
-                                class="project-dot">_</span></p>
-
-                        <!-- Pagination Controls -->
-                        <ul class="pagination" id="pagination">
-                            <!-- Add more page buttons dynamically -->
-                        </ul>
-
 
                     </div>
                 </div>
             </section>
 
-            <!-- Modal -->
-            <div class="modal fade" id="projectModal" tabindex="-1" aria-labelledby="projectModalLabel"
-                aria-hidden="true">
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="projectModalTitle">Project Title</h5>
-                            <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-                        </div>
-                        <div class="modal-body">
-                            <div id="modalContent">
-                                <div id="modalVideoContent" class="video-container">
-                                    <!-- Dynamic video content will be injected here -->
-                                </div>
-                                <div class="modal-project-details">
-                                    <div class="download-section">
-                                        <h6>More Info</h6>
+            <section id="experience" class="experience-section">
+                <div class="container">
+                    <div class="experience-wrapper" data-aos="fade-up" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <h2 class="section-heading">Experience</h2>
 
-                                        <!-- GitHub Link -->
-                                        <a href="https://github.com/yourusername/your-repository" target="_blank"
-                                            rel="noopener noreferrer" class="btn btn-primary" id="modalGithubLink">
-                                            View Source Code on GitHub
-                                        </a>
-
-                                        <!-- EXE Download Link -->
-                                        <a href="https://example.com/path-to-your-game.exe" class="btn btn-success"
-                                            target="_blank" rel="noopener noreferrer" id="modalDownloadLink">
-                                            Download Link (Windows Executable)
-                                        </a>
-
-                                        <!-- Website Link -->
-                                        <a href="https://example.com" class="btn btn-warning" target="_blank"
-                                            rel="noopener noreferrer" id="modalWebsiteLink">
-                                            Visit the Website
-                                        </a>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-md-6">
-                                            <h6>Technologies Used:</h6>
-                                            <p id="tech"></p>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <h6>Year Completed:</h6>
-                                            <p id="yearCompleted"></p>
-                                        </div>
-                                    </div>
-                                    <div class="row">
-                                        <div class="col-12 col-md-6">
-                                            <h6>Team:</h6>
-                                            <p id="team"></p>
-                                        </div>
-                                        <div class="col-12 col-md-6">
-                                            <h6>Role:</h6>
-                                            <p id="role"></p>
-                                        </div>
-                                    </div>
-                                    <h6>Purpose:</h6>
-                                    <p id="purpose"></p>
-                                    <h6>Description:</h6>
-                                    <p id="description"></p>
+                        <article class="feat-card exp-card">
+                            <div class="feat-body">
+                                <h3 class="feat-title">Software Engineer Intern (OJT) — Rikkeisoft</h3>
+                                <p class="feat-meta">Ho Chi Minh City | Sep 2025 – Jan 2026</p>
+                                <p class="feat-stack">VMS (Visitor &amp; Manpower Management System): NestJS microservices, React, Nx monorepo, Redis, TypeORM, Docker</p>
+                                <ul class="feat-bullets">
+                                    <li>Designed a shared Redis caching library adopted by 4 NestJS services, implementing cache-aside reads with a token-verified distributed lock (<code>SET NX PX</code> + Lua release) and exponential backoff with jitter to prevent cache stampedes.</li>
+                                    <li>Implemented version-based cache invalidation with per-entity Redis counters and hashed query keys; diagnosed and fixed over-invalidation bugs where one write bumped versions multiple times.</li>
+                                    <li>Delivered the User Management feature end-to-end (NestJS APIs, shared DTOs, React admin page) with 23 service-layer unit tests; top contributor with 43 commits across 20+ merged feature branches.</li>
+                                </ul>
+                                <div class="feat-links">
+                                    <a href="https://github.com/AinzleKhoa/vms-monorepo-OJT" target="_blank"
+                                        rel="noopener noreferrer" class="btn-cta outline">vms-monorepo-OJT</a>
+                                    <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="ojt"
+                                        data-title="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026"
+                                        class="btn-cta">View certificate</a>
                                 </div>
                             </div>
-                        </div>
+                        </article>
                     </div>
                 </div>
-            </div>
+            </section>
 
-            <section id="sideProjects" class="side-section mb-5">
-                <div class="container justify-content-center">
-                    <div class="side-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
+            <section id="awards" class="awards-section">
+                <div class="container">
+                    <div class="awards-wrapper" data-aos="fade-up" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <h2 class="section-heading">Awards &amp; Certificates</h2>
 
-                        <h1 class="section-heading">Side Projects</h1>
-                        <p class="section-subtitle mb-5">
-                            A selection of side projects i built for fun
-                        </p>
-
-
-                        <div class="col-lg-6 col-md-6 col-12 mb-4 d-flex">
-                            <div class="side-list">
-
-                                <a href="https://ainzlekhoa.github.io/minecraft-ainzle-origins/"
-                                    class="card-wrap d-flex w-100" target="_blank" rel="noopener noreferrer">
-                                    <div class="side-card card h-100 w-100 d-flex flex-column">
-                                        <div class="side-image">
-                                            <img data-src="./assets/img/sideprojects/sideproject1.png"
-                                                alt="Minecraft Origin Modding"
-                                                class="img-fluid side-thumbnail lazyload">
-                                        </div>
-                                        <div class="side-info flex-grow-1">
-                                            <p class="side-top">Click to see project details</p>
-                                            <h5 class="side-title">Minecraft-Origin Modding</h5>
-                                            <p class="side-des">Gaining special power</p>
-                                        </div>
-                                    </div>
+                        <div class="award-grid">
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/top5-ceremony.jpg" data-lightbox="awards"
+                                    data-title="Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024">
+                                    <img src="./assets/img/proofs/top5-ceremony.jpg" alt="Top 5 Students award ceremony, Fall 2024" loading="lazy">
                                 </a>
+                                <figcaption>Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024</figcaption>
+                            </figure>
 
-                            </div>
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="awards"
+                                    data-title="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026">
+                                    <img src="./assets/img/proofs/cert-ojt-fpt.jpg" alt="FPT University OJT certificate, Rikkeisoft HCM" loading="lazy">
+                                </a>
+                                <figcaption>On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026 (FPT University)</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-ojt-rikkei.jpg" data-lightbox="awards"
+                                    data-title="OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)">
+                                    <img src="./assets/img/proofs/cert-ojt-rikkei.jpg" alt="Rikkei Education OJT certificate" loading="lazy">
+                                </a>
+                                <figcaption>OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-excellent-fall2024.jpg" data-lightbox="awards"
+                                    data-title="Excellent Student of Trimester, Fall 2024">
+                                    <img src="./assets/img/proofs/cert-excellent-fall2024.jpg" alt="Excellent Student of Trimester, Fall 2024" loading="lazy">
+                                </a>
+                                <figcaption>Excellent Student of Trimester, Fall 2024</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-excellent-spring2025.jpg" data-lightbox="awards"
+                                    data-title="Excellent Student of Trimester, Spring 2025">
+                                    <img src="./assets/img/proofs/cert-excellent-spring2025.jpg" alt="Excellent Student of Trimester, Spring 2025" loading="lazy">
+                                </a>
+                                <figcaption>Excellent Student of Trimester, Spring 2025</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-excellent-summer2026.jpg" data-lightbox="awards"
+                                    data-title="Excellent Student of Trimester, Summer 2026">
+                                    <img src="./assets/img/proofs/cert-excellent-summer2026.jpg" alt="Excellent Student of Trimester, Summer 2026" loading="lazy">
+                                </a>
+                                <figcaption>Excellent Student of Trimester, Summer 2026</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-honorable-spring2024.jpg" data-lightbox="awards"
+                                    data-title="Honorable Student of Trimester, Spring 2024">
+                                    <img src="./assets/img/proofs/cert-honorable-spring2024.jpg" alt="Honorable Student of Trimester, Spring 2024" loading="lazy">
+                                </a>
+                                <figcaption>Honorable Student of Trimester, Spring 2024</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-honorable-summer2024.jpg" data-lightbox="awards"
+                                    data-title="Honorable Student of Trimester, Summer 2024">
+                                    <img src="./assets/img/proofs/cert-honorable-summer2024.jpg" alt="Honorable Student of Trimester, Summer 2024" loading="lazy">
+                                </a>
+                                <figcaption>Honorable Student of Trimester, Summer 2024</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-honorable-summer2025.jpg" data-lightbox="awards"
+                                    data-title="Honorable Student of Trimester, Summer 2025">
+                                    <img src="./assets/img/proofs/cert-honorable-summer2025.jpg" alt="Honorable Student of Trimester, Summer 2025" loading="lazy">
+                                </a>
+                                <figcaption>Honorable Student of Trimester, Summer 2025</figcaption>
+                            </figure>
+
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-honorable-spring2026.jpg" data-lightbox="awards"
+                                    data-title="Honorable Student of Trimester, Spring 2026">
+                                    <img src="./assets/img/proofs/cert-honorable-spring2026.jpg" alt="Honorable Student of Trimester, Spring 2026" loading="lazy">
+                                </a>
+                                <figcaption>Honorable Student of Trimester, Spring 2026</figcaption>
+                            </figure>
                         </div>
-
-
                     </div>
                 </div>
             </section>
@@ -312,291 +359,32 @@
                 <div class="container justify-content-center">
                     <div class="skills-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
 
-                        <h2 class="section-heading">Skills & Technologies</h2>
-                        <p class="section-subtitle mb-5">
-                            A collection of programming languages, tools, and technologies I've gained hands-on
-                            experience with through academic work, personal projects, and practical exploration.
-                        </p>
+                        <h2 class="section-heading">Skills</h2>
 
-                        <div class="skill-grid">
-                            <div class="skill-item">
-                                <i class="devicon-html5-plain colored skill-icon"></i>
-                                <p class="skill-label">HTML5</p>
+                        <div class="skill-groups">
+                            <div class="skill-group">
+                                <h3 class="skill-group-title">Languages</h3>
+                                <p>C#, TypeScript, SQL, Python</p>
                             </div>
-                            <div class="skill-item">
-                                <i class="devicon-css3-plain colored skill-icon"></i>
-                                <p class="skill-label">CSS3</p>
+                            <div class="skill-group">
+                                <h3 class="skill-group-title">Backend</h3>
+                                <p>ASP.NET Core 8, EF Core, NestJS, TypeORM, REST, OData, SignalR, Socket.IO, JWT/RBAC, Background Services</p>
                             </div>
-                            <div class="skill-item">
-                                <i class="devicon-javascript-plain colored skill-icon"></i>
-                                <p class="skill-label">JavaScript</p>
+                            <div class="skill-group">
+                                <h3 class="skill-group-title">Data</h3>
+                                <p>SQL Server, PostgreSQL (pgvector), Redis (caching, distributed locks)</p>
                             </div>
-                            <div class="skill-item">
-                                <i class="devicon-java-plain colored skill-icon"></i>
-                                <p class="skill-label">Java (OOP, MVC, JSP)</p>
+                            <div class="skill-group">
+                                <h3 class="skill-group-title">Architecture &amp; DevOps</h3>
+                                <p>Microservices, Database-per-Service, Ocelot, Nx Monorepo, Docker Compose, GitHub Actions, Caddy, VPS</p>
                             </div>
-                            <div class="skill-item">
-                                <i class="devicon-mysql-plain colored skill-icon"></i>
-                                <p class="skill-label">MySQL</p>
-                            </div>
-                            <div class="skill-item">
-                                <i class="devicon-microsoftsqlserver-plain colored skill-icon"></i>
-                                <p class="skill-label">SQL Server</p>
-                            </div>
-                            <div class="skill-item">
-                                <i class="devicon-cplusplus-plain colored skill-icon"></i>
-                                <p class="skill-label">Arduino Programming</p>
-                            </div>
-                            <div class="skill-item">
-                                <i class="devicon-python-plain colored skill-icon"></i>
-                                <p class="skill-label">Python</p>
-                            </div>
-
-                            <div class="skill-item">
-                                <i class="devicon-dot-net-plain colored skill-icon"></i>
-                                <p class="skill-label">.NET</p>
-                            </div>
-
-                            <div class="skill-item">
-                                <i class="devicon-csharp-plain colored skill-icon"></i>
-                                <p class="skill-label">C#</p>
+                            <div class="skill-group">
+                                <h3 class="skill-group-title">Testing &amp; Workflow</h3>
+                                <p>Jest, Vitest, Pytest, Git feature-branch workflow, AI-assisted SDLC (Codex, Claude Code, AGENTS.md)</p>
                             </div>
                         </div>
                     </div>
                 </div>
-            </section>
-
-            <section id="experiences" class="experiences-section">
-                <div class="container justify-content-center">
-                    <div class="achievements-wrapper" data-aos="fade-up" data-aos-offset="300"
-                        data-aos-easing="ease-in-sine">
-
-                        <h2 class="section-heading">My Experiences So Far</h2>
-                        <p class="section-subtitle mb-5">
-                            A timeline of my personal and academic journey — highlighting the key projects, milestones,
-                            and hands-on experiences that have shaped my growth in software development and creative
-                            problem-solving.
-                        </p>
-
-                        <div class="timeline">
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">Early Creative Exploration – Plazma Burst 2 Map Design
-                                    </h4>
-                                    <small class="timeline-date">2014 – 2018</small>
-                                    <p>Started exploring game design at a young age by creating custom maps in the 2d
-                                        platformer Plazma Burst 2. Designed nearly 100 unique maps, with over 30
-                                        becoming highly rated by the community. Collaborated with players, iterated
-                                        based on feedback, and tailored experiences to match player preferences—earning
-                                        recognition as one of the most well-known map creators in the game. Was once
-                                        invited to lead one of its largest player clans.</p>
-                                    <a href="https://www.plazmaburst2.com/?a=&s=7&ac=leanhkhoa&id=1333791"
-                                        target="_blank" rel="noopener noreferrer">My Profile on PlazmaBurst 2</a><br>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience00.png"
-                                        alt="Early Creative Exploration – Plazma Burst 2 Map Design" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content right">
-                                    <h4 class="timeline-title">Pre-University Academic Achievements</h4>
-                                    <small class="timeline-date">2016 – 2023</small>
-                                    <p>Participated in numerous academic and English competitions throughout middle and
-                                        high school, earning multiple awards. Consistently ranked among the top 10
-                                        students every semester during my entire pre-university education.</p>
-                                </div>
-                                <div class="timeline-image left">
-                                    <img data-src="./assets/img/experiences/experience0.png"
-                                        alt="Pre-University Academic Achievements" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">Custom Minecraft Origins Mod Development</h4>
-                                    <small class="timeline-date">2022 – 2024</small>
-                                    <p>Created three custom Minecraft Origins with unique lore and mechanics, using
-                                        complex JSON logic. This hands-on project enhanced my skills in modular design,
-                                        problem-solving, and creative development.</p>
-                                    <a href="https://ainzlekhoa.github.io/minecraft-ainzle-origins/" target="_blank"
-                                        rel="noopener noreferrer">
-                                        Explore the dedicated project page
-                                    </a><br>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience1.png"
-                                        alt="Pre-University Academic Achievements" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content right">
-                                    <h4 class="timeline-title">Enrolled at FPT University, Can Tho</h4>
-                                    <small class="timeline-date">September 2023</small>
-                                    <p>Chose FPT University in Can Tho over Ho Chi Minh City University of Technology
-                                        (Bach Khoa), prioritizing a modern, practical learning environment.</p>
-                                </div>
-                                <div class="timeline-image left">
-                                    <img data-src="./assets/img/experiences/experience2.jpg"
-                                        alt="Enrolled at FPT University, Can Tho" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">English Course – University of Kuala Lumpur, Malaysia
-                                    </h4>
-                                    <small class="timeline-date">November 2023</small>
-                                    <p>Completed a 3-week English immersion program. Engaged in daily communication with
-                                        locals and explored various cultural sites.</p>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience3.jpg"
-                                        alt="English Course – University of Kuala Lumpur, Malaysia" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content right">
-                                    <h4 class="timeline-title">First Java Application – Student Management System</h4>
-                                    <small class="timeline-date">May 2024</small>
-                                    <p>Built a fully functional desktop application for managing student data. Developed
-                                        entirely in Java within 4 days.</p>
-                                </div>
-                                <div class="timeline-image left">
-                                    <img data-src="./assets/img/experiences/experience4.png"
-                                        alt="AFirst Java Application – Student Management System" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">Completed Vovinam Martial Arts Program</h4>
-                                    <small class="timeline-date">July 2024</small>
-                                    <p>Finished a full 3-term Vovinam training course (6 months total), improving
-                                        discipline and physical resilience.</p>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience5.jpg"
-                                        alt="Completed Vovinam Martial Arts Program" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content right">
-                                    <h4 class="timeline-title">Game Development – Galactic Typist</h4>
-                                    <small class="timeline-date">October 2024</small>
-                                    <p>Designed and coded a playable typing-based game using Java, completed in under
-                                        one week.</p>
-                                </div>
-                                <div class="timeline-image left">
-                                    <img data-src="./assets/img/experiences/experience6.png"
-                                        alt="Game Development – Galactic Typist" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">Joined English Club and Participated in Multiple Events
-                                    </h4>
-                                    <small class="timeline-date">October 2024</small>
-                                    <p>Actively engaged in various club-organized events to enhance communication,
-                                        collaboration, and other key soft skills.</p>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience7.jpg"
-                                        alt="Joined English Club and Participated in Multiple Events"
-                                        class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content right">
-                                    <h4 class="timeline-title">Top 5 – Software Engineering Major, Fall 2024</h4>
-                                    <small class="timeline-date">November 2024</small>
-                                    <p>Achieved a GPA of 9.6, ranking among the top 5 students in the Software
-                                        Engineering program of FALL 2024 semester.</p>
-                                </div>
-                                <div class="timeline-image left">
-                                    <img data-src="./assets/img/experiences/experience8.jpg"
-                                        alt="Top 5 – Software Engineering Major, Fall 2024" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">Arduino Autonomous Robot Project</h4>
-                                    <small class="timeline-date">January 2025</small>
-                                    <p>Collaborated with a friend (Nguyen Hoang Huan) to design and build a
-                                        path-following, dust-collecting
-                                        robot using Arduino. Completed within one month.</p>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience9.png"
-                                        alt="Arduino Autonomous Robot Project" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content right">
-                                    <h4 class="timeline-title">Full-Stack Web Project – NeonRealm</h4>
-                                    <small class="timeline-date">February 2025</small>
-                                    <p>Developed a full-stack web application using the Java MVC model. Implemented both
-                                        custom frontend and backend features with a strong focus on interactivity,
-                                        structure, and design clarity.</p>
-                                </div>
-                                <div class="timeline-image left">
-                                    <img data-src="./assets/img/experiences/experience10.png"
-                                        alt="Full-Stack Web Project – NeonRealm" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">FEL Club Website (Frontend)</h4>
-                                    <small class="timeline-date">April 2025</small>
-                                    <p>Created a static frontend site for FEL Club using JSON data as requested.
-                                        Deployed via GitHub Pages.</p>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience11.png"
-                                        alt="FEL Club Website (Frontend)" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content right">
-                                    <h4 class="timeline-title">Personal Portfolio Website</h4>
-                                    <small class="timeline-date">May 2025</small>
-                                    <p>Built a responsive, animated portfolio website to showcase skills and projects
-                                        using modern frontend technologies.</p>
-                                </div>
-                                <div class="timeline-image left">
-                                    <img data-src="./assets/img/experiences/experience12.png"
-                                        alt="Personal Portfolio Website" class="lazyload" />
-                                </div>
-                            </div>
-
-                            <div class="timeline-item">
-                                <div class="timeline-content left">
-                                    <h4 class="timeline-title">Cosmora Celestica — Game & Accessory Store</h4>
-                                    <small class="timeline-date">May 2025 (Work in Progress)</small>
-                                    <p>Building a secure, user-friendly e-commerce platform for digital games and
-                                        accessories with full admin and user features. Project is actively in
-                                        development.</p>
-                                </div>
-                                <div class="timeline-image right">
-                                    <img data-src="./assets/img/experiences/experience13.png"
-                                        alt="Personal Portfolio Website" class="lazyload" />
-                                </div>
-                            </div>
-
-                        </div>
-
-                    </div>
             </section>
 
             <section id="contact" class="contact-section">
@@ -606,8 +394,7 @@
 
                         <h2 class="section-heading">Reach Out to Me</h2>
                         <p class="section-subtitle">
-                            I'm always open to new connections, collaborations, or just a friendly chat. Feel free to
-                            reach out through any of the platforms below.
+                            Feel free to reach out through any of the platforms below.
                         </p>
 
                         <div class="contact-grid">
@@ -621,7 +408,7 @@
                                             <p class="contact-info" id="copy-text">khoale1855@gmail.com</p>
                                         </div>
                                     </a>
-                                    <button class="copy-btn" onclick="copyText(event)">
+                                    <button class="copy-btn" onclick="copyText(event)" aria-label="Copy email">
                                         <i class="fas fa-copy"></i>
                                     </button>
                                 </div>
@@ -633,12 +420,9 @@
                                         <i class="fab fa-github contact-icon"></i>
                                         <div class="contact-text">
                                             <p class="contact-label">Github</p>
-                                            <p class="contact-info" id="copy-text">AinzleKhoa</p>
+                                            <p class="contact-info">AinzleKhoa</p>
                                         </div>
                                     </a>
-                                    <button class="copy-btn" onclick="copyText(event)">
-                                        <i class="fas fa-copy"></i>
-                                    </button>
                                 </div>
                             </div>
 
@@ -649,12 +433,9 @@
                                         <i class="fab fa-linkedin contact-icon"></i>
                                         <div class="contact-text">
                                             <p class="contact-label">Linkedin</p>
-                                            <p class="contact-info" id="copy-text">AinzleKhoa</p>
+                                            <p class="contact-info">Lê Anh Khoa</p>
                                         </div>
                                     </a>
-                                    <button class="copy-btn" onclick="copyText(event)">
-                                        <i class="fas fa-copy"></i>
-                                    </button>
                                 </div>
                             </div>
 
@@ -667,46 +448,43 @@
 
         <footer class="site-footer text-center mt-5">
             <div class="container py-5">
-                <h4 class="footer-brand mb-3" style="color: #7dddf4;">Ainzle Khoa</h4>
-                <p class="footer-subtext mb-4 text-light">An Ordinary Software Engineering Student</p>
+                <h4 class="footer-brand mb-3" style="color: #7dddf4;">Lê Anh Khoa</h4>
+                <p class="footer-subtext mb-4 text-light">Backend Software Engineer (.NET / NestJS)</p>
 
                 <ul class="footer-menu list-unstyled d-flex justify-content-center flex-wrap mb-4">
-                    <li class="mx-3"><a href="#hero" class="footer-link">Hero</a></li>
-                    <li class="mx-3"><a href="#about" class="footer-link">About</a></li>
+                    <li class="mx-3"><a href="#hero" class="footer-link">Home</a></li>
                     <li class="mx-3"><a href="#projects" class="footer-link">Projects</a></li>
-                    <li class="mx-3"><a href="#sideProjects" class="footer-link">Side</a></li>
+                    <li class="mx-3"><a href="#experience" class="footer-link">Experience</a></li>
+                    <li class="mx-3"><a href="#awards" class="footer-link">Awards</a></li>
                     <li class="mx-3"><a href="#skills" class="footer-link">Skills</a></li>
-                    <li class="mx-3"><a href="#experiences" class="footer-link">Experiences</a></li>
                     <li class="mx-3"><a href="#contact" class="footer-link">Contact</a></li>
                 </ul>
 
                 <div class="social-links mb-4">
-                    <a href="mailto:khoale1855@gmail.com" target="_blank" rel="noopener noreferrer"><i
+                    <a href="mailto:khoale1855@gmail.com" target="_blank" rel="noopener noreferrer" aria-label="Email"><i
                             class="fas fa-envelope fa-lg mx-2"></i></a>
-                    <a href="https://github.com/AinzleKhoa" target="_blank" rel="noopener noreferrer"><i
+                    <a href="https://github.com/AinzleKhoa" target="_blank" rel="noopener noreferrer" aria-label="GitHub"><i
                             class="fab fa-github fa-lg mx-2"></i></a>
                     <a href="https://www.linkedin.com/in/khoa-l%C3%AA-anh-b1335a364/" target="_blank"
-                        rel="noopener noreferrer"><i class="fab fa-linkedin fa-lg mx-2"></i></a>
+                        rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin fa-lg mx-2"></i></a>
                 </div>
 
                 <p class="small mb-0">
-                    © 2025 <strong>Ainzle Khoa</strong>. All rights reserved.
+                    © 2026 <strong>Lê Anh Khoa</strong>. All rights reserved.
                 </p>
             </div>
         </footer>
 
-
     </div>
     <!-- Background End -->
-
     <!-- Navbar End -->
+
+    <script src="./assets/js/bootstrap.bundle.min.js"></script>
+    <script src="./assets/js/jquery-3.7.1.min.js"></script>
+    <script src="./assets/js/lightbox.js"></script>
+    <script src="./assets/js/aos.js"></script>
+    <script src="./assets/js/lazysizes.min.js"></script>
+    <script src="./assets/js/script.js"></script>
 </body>
 
 </html>
-
-<script src="./assets/js/bootstrap.bundle.min.js"></script>
-<script src="./assets/js/lightbox.js"></script>
-<script src="./assets/js/aos.js"></script>
-<script src="https://vjs.zencdn.net/8.22.0/video.min.js"></script>
-<script src="./assets/js/lazysizes.min.js"></script>
-<script src="./assets/js/script.js"></script>

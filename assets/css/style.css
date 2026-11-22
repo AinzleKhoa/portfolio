@@ -2343,3 +2343,316 @@ nav button {
     color: #00f0ff;
     transform: scale(1.2);
 }
+/*=======================================
+  REDESIGN 2026 - Backend portfolio
+=======================================*/
+
+/* Featured project / experience cards */
+.feat-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 28px;
+}
+
+.feat-card {
+    display: flex;
+    flex-direction: column;
+    background: rgba(0, 33, 56, 0.72);
+    border: 1px solid rgba(125, 221, 244, 0.25);
+    border-radius: 14px;
+    overflow: hidden;
+    text-align: left;
+    box-shadow: 0 0 24px rgba(0, 0, 0, 0.35);
+}
+
+.feat-media {
+    display: flex;
+    gap: 8px;
+    padding: 12px;
+    background: rgba(0, 0, 0, 0.25);
+}
+
+.feat-media>a {
+    flex: 1 1 60%;
+    display: block;
+}
+
+.feat-media>a.feat-media-secondary {
+    flex: 1 1 40%;
+}
+
+.feat-media img {
+    width: 100%;
+    height: auto;
+    display: block;
+    border-radius: 8px;
+}
+
+.feat-body {
+    padding: 22px 24px 26px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.feat-label {
+    align-self: flex-start;
+    font-size: 0.75rem;
+    letter-spacing: 0.06em;
+    text-transform: uppercase;
+    color: #062c43;
+    background: #7dddf4;
+    border-radius: 999px;
+    padding: 3px 12px;
+    margin-bottom: 10px;
+}
+
+.feat-title {
+    font-size: 1.35rem;
+    font-weight: 700;
+    color: #7dddf4;
+    margin-bottom: 6px;
+}
+
+.feat-meta {
+    color: #ced7e0;
+    font-size: 0.95rem;
+    margin-bottom: 4px;
+}
+
+.feat-stack {
+    color: #9ccddc;
+    font-size: 0.9rem;
+    font-style: italic;
+    margin-bottom: 8px;
+}
+
+.feat-origin {
+    color: #ced7e0;
+    font-size: 0.9rem;
+    margin-bottom: 8px;
+}
+
+.feat-bullets {
+    color: #ced7e0;
+    padding-left: 1.2rem;
+    margin-bottom: 16px;
+    font-size: 0.95rem;
+    line-height: 1.55;
+}
+
+.feat-bullets li {
+    margin-bottom: 6px;
+}
+
+.feat-bullets code {
+    color: #7dddf4;
+    background: rgba(0, 0, 0, 0.35);
+    padding: 0 4px;
+    border-radius: 4px;
+}
+
+.feat-links {
+    margin-top: auto;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.feat-links .btn-cta {
+    font-size: 0.9rem;
+    padding: 8px 18px;
+}
+
+.exp-card {
+    max-width: 100%;
+}
+
+/* Earlier work (collapsed) */
+.earlier-wrap {
+    text-align: center;
+}
+
+.earlier-toggle {
+    cursor: pointer;
+}
+
+.earlier-heading {
+    color: #7dddf4;
+    font-size: 1.4rem;
+    margin: 24px 0 16px;
+    text-align: center;
+}
+
+.earlier-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
+    gap: 16px;
+    text-align: left;
+}
+
+.earlier-card {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    background: rgba(0, 33, 56, 0.72);
+    border: 1px solid rgba(125, 221, 244, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    color: #ced7e0;
+    text-decoration: none;
+}
+
+.earlier-card:hover {
+    border-color: #7dddf4;
+    color: #ffffff;
+}
+
+.earlier-media {
+    aspect-ratio: 16 / 10;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.earlier-thumb {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+}
+
+.earlier-info {
+    padding: 10px 12px 12px;
+}
+
+.earlier-title {
+    font-size: 1rem;
+    margin: 0 0 4px;
+    color: #7dddf4;
+}
+
+.earlier-meta {
+    font-size: 0.8rem;
+    margin: 0;
+    color: #9ccddc;
+}
+
+/* Experience + awards sections */
+.experience-section,
+.awards-section {
+    padding: 40px 0 20px;
+}
+
+.experience-wrapper,
+.awards-wrapper {
+    max-width: 1000px;
+    margin: 0 auto;
+    padding: 0 16px;
+}
+
+.experience-wrapper .section-heading,
+.awards-wrapper .section-heading {
+    text-align: center;
+    margin-bottom: 28px;
+}
+
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(240px, 1fr));
+    gap: 20px;
+}
+
+.award-item {
+    margin: 0;
+    background: rgba(0, 33, 56, 0.72);
+    border: 1px solid rgba(125, 221, 244, 0.2);
+    border-radius: 10px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.award-item a {
+    display: block;
+}
+
+.award-item img {
+    width: 100%;
+    height: auto;
+    display: block;
+    min-height: 140px;
+    background: rgba(0, 0, 0, 0.3);
+}
+
+.award-item figcaption {
+    padding: 10px 12px 12px;
+    font-size: 0.85rem;
+    color: #ced7e0;
+    line-height: 1.4;
+}
+
+/* Skills (5 groups) */
+.skill-groups {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+    gap: 18px;
+    text-align: left;
+}
+
+.skill-group {
+    background: rgba(0, 33, 56, 0.72);
+    border: 1px solid rgba(125, 221, 244, 0.2);
+    border-radius: 10px;
+    padding: 18px 20px;
+    color: #ced7e0;
+}
+
+.skill-group-title {
+    font-size: 1.05rem;
+    color: #7dddf4;
+    margin-bottom: 8px;
+}
+
+.skill-group p {
+    margin: 0;
+    font-size: 0.95rem;
+    line-height: 1.5;
+}
+
+/* Mobile: 16px gutter, no horizontal scroll */
+@media (max-width: 767.5px) {
+    .feat-media {
+        flex-direction: column;
+    }
+
+    .feat-body {
+        padding: 18px 16px 22px;
+    }
+
+    .feat-title {
+        font-size: 1.15rem;
+    }
+
+    .experience-wrapper,
+    .awards-wrapper,
+    .projects-wrapper,
+    .skills-wrapper {
+        padding-left: 16px;
+        padding-right: 16px;
+    }
+
+    .award-grid {
+        grid-template-columns: 1fr 1fr;
+        gap: 12px;
+    }
+}
+
+@media (max-width: 480px) {
+    .award-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+html,
+body {
+    overflow-x: hidden;
+}
