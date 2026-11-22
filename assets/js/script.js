@@ -9,7 +9,7 @@ function initBackground(headerId) {
     if (!bg) return;
 
     header.style.background = `
-        linear-gradient(to top, rgba(0, 0, 0, 0.8) 0%, rgba(0, 0, 0, 0.4) 40%, rgba(0, 0, 0, 0) 100%),
+        linear-gradient(180deg, rgba(4, 20, 48, 0.72), rgba(6, 32, 72, 0.78)),
         url('${bg}')
     `;
     header.style.backgroundSize = "cover";

@@ -2652,7 +2652,451 @@ nav button {
     }
 }
 
-html,
+
+/*=======================================
+  ROUND 2 - layout, typography, contrast
+=======================================*/
+
+/* F3: Inter for body text, Orbitron only for hero name and section titles */
+body,
+p,
+li,
+a,
+span,
+div,
+button,
+small,
+figcaption,
+label,
+code {
+    font-family: 'Inter', sans-serif !important;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    font-family: 'Inter', sans-serif !important;
+}
+
+.intro-name,
+.about-name,
+.section-heading,
+.footer-brand {
+    font-family: 'Orbitron', sans-serif !important;
+}
+
 body {
-    overflow-x: hidden;
+    font-size: 17.5px;
+    line-height: 1.6;
+    color: #e6f1fb;
+    background-color: #0b1f3a;
+}
+
+p,
+li {
+    font-size: 17px;
+    line-height: 1.6;
+}
+
+@media (max-width: 767.5px) {
+    body {
+        font-size: 16px;
+    }
+
+    p,
+    li {
+        font-size: 16px;
+    }
+}
+
+.section-heading {
+    font-size: clamp(1.9rem, 4.2vw, 2.5rem);
+    line-height: 1.2;
+    animation: none;
+    text-align: center;
+}
+
+.section-subtitle {
+    font-size: 1.1rem;
+    color: #d4e6f2;
+}
+
+/* F2: blue tint is applied in assets/js/script.js (initBackground) */
+
+/* F4: navbar always visible, blurred, with solid mobile dropdown */
+.navbar {
+    background: rgba(5, 15, 35, 0.75) !important;
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-bottom: 1px solid rgba(125, 221, 244, 0.25);
+}
+
+.navbar .navbar-brand {
+    color: #ffffff;
+    font-weight: 700;
+    font-size: 1.1rem;
+}
+
+.navbar .navbar-nav .nav-link {
+    color: #e6f1fb !important;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.navbar .navbar-nav .nav-link:hover,
+.navbar .navbar-nav .nav-link.active {
+    color: #7dddf4 !important;
+}
+
+.navbar-toggler {
+    border: 1px solid #7dddf4;
+    padding: 6px 10px;
+}
+
+@media (max-width: 991.5px) {
+    .navbar-collapse {
+        background: rgba(5, 15, 35, 0.97);
+        border: 1px solid rgba(125, 221, 244, 0.25);
+        border-radius: 0 0 12px 12px;
+        padding: 12px 16px;
+        margin-top: 8px;
+    }
+}
+
+/* F1: hero, balanced two columns, capped portrait */
+.hero-section {
+    margin-top: 90px;
+    padding-bottom: 12px;
+}
+
+.hero-text,
+.hero-text h2,
+.corner-frame::before,
+.corner-frame::after {
+    animation: none;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.intro-subtitle {
+    color: #a8e8f8;
+    font-size: 1.25rem;
+    font-weight: 600;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+    margin-bottom: 6px;
+}
+
+.intro-name {
+    font-size: clamp(2rem, 8vw, 4.5rem);
+    line-height: 1.1;
+    color: #ffffff;
+    font-weight: 900;
+    text-shadow: 0 2px 12px rgba(0, 0, 0, 0.6);
+    overflow-wrap: anywhere;
+    margin-bottom: 10px;
+}
+
+.intro-role {
+    color: #ffffff;
+    font-size: 1.2rem;
+    font-weight: 600;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+    margin-bottom: 14px;
+}
+
+.intro-description {
+    color: #e6f1fb;
+    font-size: 1.15rem;
+    line-height: 1.6;
+    max-width: 36rem;
+    margin: 0 auto;
+    text-shadow: 0 1px 6px rgba(0, 0, 0, 0.85);
+}
+
+.hero-image {
+    animation: none;
+}
+
+.hero-image img {
+    max-width: 360px;
+    width: 100%;
+    height: auto;
+    margin: 0 auto;
+    display: block;
+    border-radius: 24px;
+}
+
+.cta-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 12px;
+    margin-top: 16px;
+}
+
+.btn-cta {
+    font-family: 'Inter', sans-serif !important;
+    font-size: 1rem;
+    font-weight: 600;
+    line-height: 1.3;
+    padding: 10px 22px;
+    white-space: normal;
+    text-align: center;
+}
+
+.social-links a {
+    font-size: 1.6rem;
+    margin: 0 8px;
+    animation: none;
+}
+
+@media (max-width: 767.5px) {
+    .hero-section {
+        margin-top: 84px;
+    }
+
+    .hero-wrapper {
+        gap: 24px;
+    }
+
+    .hero-image {
+        width: 100%;
+    }
+
+    .hero-image img {
+        max-width: 240px;
+    }
+
+    .hero-text h2,
+    .intro-subtitle {
+        font-size: 1.1rem;
+    }
+}
+
+/* Decorative images: behind content, never blocking clicks, hidden on smaller screens */
+.fixed-img-left,
+.fixed-img-right,
+.projects-decoration-spaceship,
+.about-img-planet {
+    pointer-events: none;
+    z-index: 0;
+}
+
+.projects-wrapper {
+    position: relative;
+}
+
+.section-heading,
+.feat-grid,
+.earlier-wrap,
+.award-grid,
+.award-group-title,
+.skill-groups,
+.contact-grid,
+.hero-text,
+.hero-image {
+    position: relative;
+    z-index: 1;
+}
+
+@media (max-width: 991.5px) {
+    .fixed-img-left,
+    .fixed-img-right,
+    .projects-decoration-spaceship,
+    .about-img-planet {
+        display: none;
+    }
+}
+
+/* F5: featured projects, one large 16:9 image per card */
+.feat-card {
+    position: relative;
+    z-index: 1;
+}
+
+.feat-media {
+    padding: 0;
+    gap: 0;
+    background: none;
+    display: block;
+}
+
+.feat-media>a {
+    display: block;
+    aspect-ratio: 16 / 9;
+    overflow: hidden;
+    border-radius: 0;
+}
+
+.feat-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 0;
+    display: block;
+}
+
+.feat-placeholder {
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    padding: 16px;
+    text-align: center;
+    background: linear-gradient(135deg, #0d3b66 0%, #124e7e 55%, #0b2a4a 100%);
+    color: #ffffff;
+}
+
+.feat-ph-name {
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.feat-ph-stack {
+    font-size: 1rem;
+    color: #a8e8f8;
+}
+
+.feat-body {
+    padding: 24px 26px 28px;
+}
+
+.feat-title {
+    font-size: 1.45rem;
+    line-height: 1.3;
+    font-weight: 700;
+}
+
+.feat-meta,
+.feat-stack,
+.feat-origin {
+    font-size: 1rem;
+}
+
+.feat-bullets {
+    font-size: 16.5px;
+    line-height: 1.6;
+}
+
+/* F6: awards, grouped with uniform thumbnails */
+.award-group-title {
+    font-size: 1.25rem;
+    font-weight: 600;
+    color: #7dddf4;
+    margin: 28px 0 14px;
+    text-align: left;
+}
+
+.award-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    gap: 18px;
+    align-items: stretch;
+}
+
+.award-item {
+    margin: 0;
+    display: flex;
+    flex-direction: column;
+    background: rgba(5, 20, 42, 0.85);
+    border: 1px solid rgba(125, 221, 244, 0.25);
+    border-radius: 12px;
+    overflow: hidden;
+    min-width: 0;
+}
+
+.award-item a {
+    display: block;
+}
+
+.award-thumb {
+    aspect-ratio: 4 / 3;
+    background: #061a33;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.award-thumb img {
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
+    display: block;
+    min-height: 0;
+}
+
+.award-item-wide .award-thumb img {
+    object-fit: cover;
+}
+
+.award-item figcaption {
+    flex-grow: 1;
+    padding: 12px 14px 14px;
+    font-size: 0.95rem;
+    line-height: 1.4;
+    color: #e6f1fb;
+}
+
+.award-item-wide {
+    grid-column: span 2;
+}
+
+@media (max-width: 1199.5px) {
+    .award-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 991.5px) {
+    .award-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 575.5px) {
+    .award-grid {
+        grid-template-columns: minmax(0, 1fr);
+    }
+
+    .award-item-wide {
+        grid-column: span 1;
+    }
+}
+
+/* F7: no page-level overflow hiding; keep everything within the viewport */
+img,
+video,
+iframe {
+    max-width: 100%;
+}
+
+.experience-wrapper,
+.awards-wrapper,
+.projects-wrapper,
+.skills-wrapper,
+.section-wrapper {
+    max-width: 100%;
+}
+
+/* Round 2 follow-up: project decor hidden (it overlapped the featured cards); featured grid 2 columns on desktop */
+.projects-decoration-spaceship {
+    display: none !important;
+}
+
+@media (min-width: 992px) {
+    .feat-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
+    .feat-grid>.feat-card:first-child {
+        grid-column: 1 / -1;
+    }
 }

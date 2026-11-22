@@ -10,7 +10,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Orbitron:wght@400..900&family=Sixtyfour+Convergence&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Orbitron:wght@400..900&display=swap"
         rel="stylesheet">
 
     <link rel="stylesheet" href="./assets/css/bootstrap.min.css">
@@ -66,7 +66,7 @@
                 <div class="row hero-wrapper align-items-center">
 
                     <!-- Text Column -->
-                    <div class="hero-text col-md-6 col-lg-6">
+                    <div class="hero-text col-md-7 col-lg-7">
                         <div class="intro-content">
                             <h2 class="intro-subtitle">Hello! I'm</h2>
                             <h1 class="intro-name">Lê Anh Khoa</h1>
@@ -79,7 +79,7 @@
                     </div>
 
                     <!-- Image Column -->
-                    <div class="hero-image col-md-6 col-lg-6 text-center">
+                    <div class="hero-image col-md-5 col-lg-5 text-center">
                         <div class="corner-frame">
                             <img src="./assets/img/hero.webp" alt="Illustration of Lê Anh Khoa"
                                 class="hero-illustration">
@@ -156,11 +156,6 @@
                                         <img src="./assets/img/featured/ansite-dashboard.jpg"
                                             alt="AnSite SafetyOps dashboard" loading="lazy">
                                     </a>
-                                    <a href="./assets/img/featured/ansite-login.jpg" data-lightbox="ansite"
-                                        data-title="AnSite SafetyOps login" class="feat-media-secondary">
-                                        <img src="./assets/img/featured/ansite-login.jpg" alt="AnSite SafetyOps login"
-                                            loading="lazy">
-                                    </a>
                                 </div>
                                 <div class="feat-body">
                                     <span class="feat-label">Capstone → Startup</span>
@@ -176,12 +171,18 @@
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta">Visit ansite.vn</a>
+                                        <a href="./assets/img/featured/ansite-login.jpg" data-lightbox="ansite"
+                                            data-title="AnSite SafetyOps login" class="btn-cta outline">More screenshots</a>
                                     </div>
                                 </div>
                             </article>
 
                             <!-- 2. EventHub -->
                             <article class="feat-card">
+                                <div class="feat-placeholder" aria-hidden="true">
+                                    <span class="feat-ph-name">EventHub</span>
+                                    <span class="feat-ph-stack">ASP.NET Core 8 · Ocelot · SQL Server · Docker Compose</span>
+                                </div>
                                 <div class="feat-body">
                                     <h3 class="feat-title">EventHub — Microservices Event Booking Platform</h3>
                                     <p class="feat-meta">Backend Developer | Personal Project | Mar 2025 – Jun 2025</p>
@@ -200,6 +201,10 @@
 
                             <!-- 3. Calendar Shop -->
                             <article class="feat-card">
+                                <div class="feat-placeholder" aria-hidden="true">
+                                    <span class="feat-ph-name">Calendar Shop</span>
+                                    <span class="feat-ph-stack">ASP.NET Core 8 · OData · Flutter · VNPay</span>
+                                </div>
                                 <div class="feat-body">
                                     <h3 class="feat-title">Calendar Shop — Mobile E-Commerce Platform</h3>
                                     <p class="feat-meta">Backend Developer | Team of 5 | Jun 2026 – Jul 2026</p>
@@ -270,85 +275,75 @@
                         data-aos-easing="ease-in-sine">
                         <h2 class="section-heading">Awards &amp; Certificates</h2>
 
+                        <h3 class="award-group-title">Highlights</h3>
+                        <div class="award-grid">
+                            <figure class="award-item award-item-wide">
+                                <a href="./assets/img/proofs/top5-ceremony.jpg" data-lightbox="awards" data-title="Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/top5-ceremony.jpg" alt="Top 5 Students award ceremony, Fall 2024" loading="lazy"></div>
+                                </a>
+                                <figcaption>Top 5 Students, Engineering &amp; Technology — Fall 2024</figcaption>
+                            </figure>
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="awards" data-title="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026 (FPT University)">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-ojt-fpt.jpg" alt="FPT University OJT certificate" loading="lazy"></div>
+                                </a>
+                                <figcaption>OJT — Rikkeisoft HCM (FPT University)</figcaption>
+                            </figure>
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-ojt-rikkei.jpg" data-lightbox="awards" data-title="OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-ojt-rikkei.jpg" alt="Rikkei Education OJT certificate" loading="lazy"></div>
+                                </a>
+                                <figcaption>OJT — OneConnect, Rikkei Education</figcaption>
+                            </figure>
+                        </div>
+
+                        <h3 class="award-group-title">Excellent Student of Trimester</h3>
                         <div class="award-grid">
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/top5-ceremony.jpg" data-lightbox="awards"
-                                    data-title="Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024">
-                                    <img src="./assets/img/proofs/top5-ceremony.jpg" alt="Top 5 Students award ceremony, Fall 2024" loading="lazy">
+                                <a href="./assets/img/proofs/cert-excellent-fall2024.jpg" data-lightbox="awards" data-title="Excellent Student of Trimester, Fall 2024">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-fall2024.jpg" alt="Excellent Student of Trimester, Fall 2024" loading="lazy"></div>
                                 </a>
-                                <figcaption>Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024</figcaption>
+                                <figcaption>Excellent Student — Fall 2024</figcaption>
                             </figure>
-
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="awards"
-                                    data-title="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026">
-                                    <img src="./assets/img/proofs/cert-ojt-fpt.jpg" alt="FPT University OJT certificate, Rikkeisoft HCM" loading="lazy">
+                                <a href="./assets/img/proofs/cert-excellent-spring2025.jpg" data-lightbox="awards" data-title="Excellent Student of Trimester, Spring 2025">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-spring2025.jpg" alt="Excellent Student of Trimester, Spring 2025" loading="lazy"></div>
                                 </a>
-                                <figcaption>On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026 (FPT University)</figcaption>
+                                <figcaption>Excellent Student — Spring 2025</figcaption>
                             </figure>
-
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-ojt-rikkei.jpg" data-lightbox="awards"
-                                    data-title="OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)">
-                                    <img src="./assets/img/proofs/cert-ojt-rikkei.jpg" alt="Rikkei Education OJT certificate" loading="lazy">
+                                <a href="./assets/img/proofs/cert-excellent-summer2026.jpg" data-lightbox="awards" data-title="Excellent Student of Trimester, Summer 2026">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-summer2026.jpg" alt="Excellent Student of Trimester, Summer 2026" loading="lazy"></div>
                                 </a>
-                                <figcaption>OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)</figcaption>
+                                <figcaption>Excellent Student — Summer 2026</figcaption>
                             </figure>
+                        </div>
 
+                        <h3 class="award-group-title">Honorable Student of Trimester</h3>
+                        <div class="award-grid">
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-excellent-fall2024.jpg" data-lightbox="awards"
-                                    data-title="Excellent Student of Trimester, Fall 2024">
-                                    <img src="./assets/img/proofs/cert-excellent-fall2024.jpg" alt="Excellent Student of Trimester, Fall 2024" loading="lazy">
+                                <a href="./assets/img/proofs/cert-honorable-spring2024.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Spring 2024">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-spring2024.jpg" alt="Honorable Student of Trimester, Spring 2024" loading="lazy"></div>
                                 </a>
-                                <figcaption>Excellent Student of Trimester, Fall 2024</figcaption>
+                                <figcaption>Honorable Student — Spring 2024</figcaption>
                             </figure>
-
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-excellent-spring2025.jpg" data-lightbox="awards"
-                                    data-title="Excellent Student of Trimester, Spring 2025">
-                                    <img src="./assets/img/proofs/cert-excellent-spring2025.jpg" alt="Excellent Student of Trimester, Spring 2025" loading="lazy">
+                                <a href="./assets/img/proofs/cert-honorable-summer2024.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Summer 2024">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-summer2024.jpg" alt="Honorable Student of Trimester, Summer 2024" loading="lazy"></div>
                                 </a>
-                                <figcaption>Excellent Student of Trimester, Spring 2025</figcaption>
+                                <figcaption>Honorable Student — Summer 2024</figcaption>
                             </figure>
-
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-excellent-summer2026.jpg" data-lightbox="awards"
-                                    data-title="Excellent Student of Trimester, Summer 2026">
-                                    <img src="./assets/img/proofs/cert-excellent-summer2026.jpg" alt="Excellent Student of Trimester, Summer 2026" loading="lazy">
+                                <a href="./assets/img/proofs/cert-honorable-summer2025.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Summer 2025">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-summer2025.jpg" alt="Honorable Student of Trimester, Summer 2025" loading="lazy"></div>
                                 </a>
-                                <figcaption>Excellent Student of Trimester, Summer 2026</figcaption>
+                                <figcaption>Honorable Student — Summer 2025</figcaption>
                             </figure>
-
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-spring2024.jpg" data-lightbox="awards"
-                                    data-title="Honorable Student of Trimester, Spring 2024">
-                                    <img src="./assets/img/proofs/cert-honorable-spring2024.jpg" alt="Honorable Student of Trimester, Spring 2024" loading="lazy">
+                                <a href="./assets/img/proofs/cert-honorable-spring2026.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Spring 2026">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-spring2026.jpg" alt="Honorable Student of Trimester, Spring 2026" loading="lazy"></div>
                                 </a>
-                                <figcaption>Honorable Student of Trimester, Spring 2024</figcaption>
-                            </figure>
-
-                            <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-summer2024.jpg" data-lightbox="awards"
-                                    data-title="Honorable Student of Trimester, Summer 2024">
-                                    <img src="./assets/img/proofs/cert-honorable-summer2024.jpg" alt="Honorable Student of Trimester, Summer 2024" loading="lazy">
-                                </a>
-                                <figcaption>Honorable Student of Trimester, Summer 2024</figcaption>
-                            </figure>
-
-                            <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-summer2025.jpg" data-lightbox="awards"
-                                    data-title="Honorable Student of Trimester, Summer 2025">
-                                    <img src="./assets/img/proofs/cert-honorable-summer2025.jpg" alt="Honorable Student of Trimester, Summer 2025" loading="lazy">
-                                </a>
-                                <figcaption>Honorable Student of Trimester, Summer 2025</figcaption>
-                            </figure>
-
-                            <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-spring2026.jpg" data-lightbox="awards"
-                                    data-title="Honorable Student of Trimester, Spring 2026">
-                                    <img src="./assets/img/proofs/cert-honorable-spring2026.jpg" alt="Honorable Student of Trimester, Spring 2026" loading="lazy">
-                                </a>
-                                <figcaption>Honorable Student of Trimester, Spring 2026</figcaption>
+                                <figcaption>Honorable Student — Spring 2026</figcaption>
                             </figure>
                         </div>
                     </div>
