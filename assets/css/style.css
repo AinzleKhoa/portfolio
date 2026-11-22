@@ -4058,6 +4058,48 @@ header {
 }
 
 /* An Empty Frame thumbnail is letterboxed on purpose (keeps the title visible) */
-.earlier-thumb img[src*="empty-frame"] {
-    object-fit: contain;
+
+/* Round 7: Earlier Work rows line up; buttons sit on the same line per row */
+.earlier-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.earlier-thumb {
+    position: relative;
+    aspect-ratio: 16 / 9;
+    width: 100%;
+    height: auto;
+    overflow: hidden;
+    background: #061a33;
+}
+
+.earlier-thumb img {
+    position: absolute;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+.earlier-year {
+    min-height: 1.4em;
+    margin: 0 0 6px;
+}
+
+.earlier-title {
+    min-height: 2.6em;
+}
+
+.earlier-meta {
+    min-height: 3.2em;
+}
+
+.earlier-summary {
+    flex-grow: 1;
+}
+
+.earlier-links {
+    margin-top: 0;
 }
