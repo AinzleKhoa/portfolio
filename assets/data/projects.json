@@ -1,12 +1,12 @@
 [
   {
-    "title": "An Empty Frame — Horror Game",
+    "title": "An Empty Frame — Psychological Horror Game",
     "image": "./assets/img/projects/thumbs/empty-frame.jpg",
     "thumb": "./assets/img/projects/thumbs/empty-frame.jpg",
-    "tech": "Game Development, C#",
+    "tech": "Unity, C#, URP, AI Navigation, ProBuilder, Input System",
     "video": "none",
     "youtube": "none",
-    "team": "",
+    "team": "5 Person",
     "role": "",
     "purpose": "",
     "description": "",
@@ -16,11 +16,15 @@
     "yearCompleted": "",
     "category": "game",
     "featured": "false",
-    "meta": "Team project · Spring 2026",
-    "summary": "A first-person horror game with a lantern-lit, atmospheric setting.",
+    "meta": "Team of 5 · Spring 2026",
+    "summary": "A first-person psychological horror game built in Unity (URP), where the player moves through five memory-themed levels to collect photo fragments and survive without combat. Core systems include a Polaroid camera (flash to stun, viewfinder to reveal hidden entities), a 3-slot inventory, a stamina system and VHS-style static that warns of nearby threats, while enemy AI on Unity AI Navigation grows more aware as fragments are found.",
     "chips": [
-      "Game Development",
-      "C#"
+      "Unity",
+      "C#",
+      "URP",
+      "AI Navigation",
+      "ProBuilder",
+      "Input System"
     ]
   },
   {
