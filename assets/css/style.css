@@ -4334,3 +4334,248 @@ header {
         right: 0.45rem;
     }
 }
+
+/*=======================================
+  ROUND 9 - CV menu (desktop dropdown, mobile stacked buttons), About text size
+=======================================*/
+
+.cv-menu {
+    position: relative;
+    margin-left: 12px;
+}
+
+.cv-toggle {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    min-height: 44px;
+    padding: 0 18px;
+    border-radius: 999px;
+    border: 1px solid #7dddf4;
+    background: #7dddf4;
+    color: #062c43;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.92rem;
+    font-weight: 600;
+    line-height: 1.2;
+    white-space: nowrap;
+    box-shadow: 0 0 14px rgba(125, 221, 244, 0.45);
+    cursor: pointer;
+}
+
+.cv-toggle::after {
+    content: "";
+    width: 7px;
+    height: 7px;
+    border-right: 2px solid currentColor;
+    border-bottom: 2px solid currentColor;
+    transform: rotate(45deg) translate(-2px, -2px);
+    transition: transform 0.2s ease;
+}
+
+.cv-menu.open .cv-toggle::after {
+    transform: rotate(225deg) translate(-2px, -2px);
+}
+
+.cv-toggle:hover,
+.cv-menu.open .cv-toggle {
+    background: #00f0ff;
+    border-color: #00f0ff;
+}
+
+.cv-toggle:focus-visible,
+.cv-item:focus-visible {
+    outline: 2px solid #00f0ff;
+    outline-offset: 2px;
+}
+
+.cv-heading {
+    display: none;
+}
+
+.cv-panel {
+    display: none;
+    position: absolute;
+    top: calc(100% + 10px);
+    right: 0;
+    z-index: 1100;
+    min-width: 240px;
+    padding: 8px;
+    border-radius: 14px;
+    background: rgba(6, 18, 40, 0.97);
+    border: 1px solid rgba(125, 221, 244, 0.3);
+    box-shadow: 0 12px 32px rgba(0, 0, 0, 0.45);
+}
+
+.cv-menu.open .cv-panel {
+    display: block;
+}
+
+.cv-item {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    min-height: 44px;
+    padding: 8px 12px;
+    border-radius: 10px;
+    color: #e6f1fb !important;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.95rem;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.cv-item:hover {
+    background: rgba(125, 221, 244, 0.14);
+    color: #7dddf4 !important;
+}
+
+.cv-item .flag {
+    width: 24px;
+    height: 16px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
+    flex: 0 0 auto;
+}
+
+/* Mobile / tablet (collapsed menu): heading + two full-width buttons, no toggle */
+@media (max-width: 991.5px) {
+    .cv-menu {
+        margin: 14px 0 0;
+    }
+
+    .cv-toggle {
+        display: none;
+    }
+
+    .cv-heading {
+        display: block;
+        margin: 0 0 8px;
+        color: #7dddf4;
+        font-family: 'Inter', sans-serif;
+        font-size: 0.95rem;
+        font-weight: 700;
+        letter-spacing: 0.02em;
+    }
+
+    .cv-panel {
+        display: block;
+        position: static;
+        min-width: 0;
+        padding: 0;
+        background: none;
+        border: 0;
+        box-shadow: none;
+    }
+
+    .cv-item {
+        justify-content: center;
+        width: 100%;
+        min-height: 44px;
+        margin-bottom: 10px;
+        border: 1px solid rgba(125, 221, 244, 0.55);
+        background: rgba(125, 221, 244, 0.12);
+        font-size: 1rem;
+    }
+
+    .cv-item:last-child {
+        margin-bottom: 0;
+    }
+}
+
+/* About: larger, centred, easier to read (text unchanged) */
+.about-description {
+    font-size: 17px;
+    line-height: 1.75;
+    max-width: 860px;
+    margin: 0 auto;
+    text-align: left;
+}
+
+@media (min-width: 576px) {
+    .about-description {
+        font-size: 18px;
+    }
+}
+
+@media (min-width: 992px) {
+    .about-description {
+        font-size: 19px;
+    }
+}
+
+/* About card: inner padding so the text never touches the rounded border */
+.about-wrapper {
+    padding: 44px 44px 52px;
+}
+
+.about-text {
+    padding: 0;
+    margin-top: 28px;
+}
+
+.about-description {
+    line-height: 1.75;
+    text-align: left;
+    overflow: visible;
+}
+
+@media (max-width: 991.5px) {
+    .about-wrapper {
+        padding: 28px 26px 34px;
+    }
+
+    .about-text {
+        margin-top: 22px;
+    }
+}
+
+@media (max-width: 575.5px) {
+    .about-wrapper {
+        padding: 20px 18px 26px;
+    }
+
+    .about-text {
+        margin-top: 18px;
+    }
+}
+
+/* Navbar fit: tighter language pill at 360-400 (hamburger must stay on the name's row) and at 992-1199 (desktop, longer VI labels) */
+@media (max-width: 400px) {
+    .navbar.floating-nav .lang-switch {
+        margin-left: 6px;
+    }
+
+    .navbar.floating-nav .lang-btn {
+        min-width: 44px;
+        padding: 0 7px;
+        gap: 4px;
+    }
+
+    .navbar.floating-nav .navbar-brand {
+        font-size: 0.9rem;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar.floating-nav .lang-btn {
+        min-width: 48px;
+        padding: 0 8px;
+    }
+
+    .navbar.floating-nav .cv-toggle {
+        padding: 0 12px;
+    }
+
+    .navbar.floating-nav .lang-switch {
+        margin-left: 8px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar.floating-nav .container-fluid {
+        padding-left: 10px !important;
+        padding-right: 10px !important;
+    }
+}

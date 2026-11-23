@@ -77,13 +77,6 @@ function updateLanguageUi(lang) {
         btn.classList.toggle('active', active);
         btn.setAttribute('aria-pressed', active ? 'true' : 'false');
     });
-    // Navbar CV button follows the language; the hero keeps both explicit buttons
-    const navCv = document.getElementById('nav-cv');
-    if (navCv) {
-        const file = lang === 'vi' ? 'LE_ANH_KHOA_CV_VI.pdf' : 'LE_ANH_KHOA_CV_EN.pdf';
-        navCv.setAttribute('href', `./assets/files/${file}`);
-        navCv.setAttribute('download', file);
-    }
 }
 
 async function setLanguage(lang) {
@@ -247,7 +240,53 @@ async function initPage() {
     initBackground('main-background');
     initScrollSpy();
     initLanguageSwitch();
+    initCvMenu();
     await setLanguage(detectLang());
+
+    // Test-only flags for screenshots: ?menu=open opens the mobile menu, ?cvmenu=open the desktop CV dropdown
+    const params = new URLSearchParams(window.location.search);
+    if (params.get('menu') === 'open') {
+        bootstrap.Collapse.getOrCreateInstance(document.getElementById('navbarNav'), { toggle: false }).show();
+    }
+    if (params.get('cvmenu') === 'open') {
+        setCvMenuOpen(true);
+    }
+}
+
+/*---------------------------------------
+  CV menu: desktop dropdown (mobile shows the buttons directly via CSS)
+-----------------------------------------*/
+function setCvMenuOpen(open, focusToggle) {
+    const menu = document.getElementById('cv-menu');
+    const toggle = document.getElementById('cv-toggle');
+    if (!menu || !toggle) return;
+    menu.classList.toggle('open', open);
+    toggle.setAttribute('aria-expanded', open ? 'true' : 'false');
+    if (focusToggle) toggle.focus();
+}
+
+function initCvMenu() {
+    const menu = document.getElementById('cv-menu');
+    const toggle = document.getElementById('cv-toggle');
+    if (!menu || !toggle) return;
+
+    toggle.addEventListener('click', (event) => {
+        event.stopPropagation();
+        setCvMenuOpen(!menu.classList.contains('open'));
+    });
+    document.addEventListener('click', (event) => {
+        if (!menu.contains(event.target)) setCvMenuOpen(false);
+    });
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && menu.classList.contains('open')) setCvMenuOpen(false, true);
+    });
+    // Tabbing out of the dropdown closes it
+    menu.addEventListener('focusout', (event) => {
+        if (!menu.contains(event.relatedTarget)) setCvMenuOpen(false);
+    });
+    menu.querySelectorAll('.cv-item').forEach(link => {
+        link.addEventListener('click', () => setCvMenuOpen(false));
+    });
 }
 
 // DOMContentLoaded, not onload: the language switch must not wait for slow external CDN files.

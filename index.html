@@ -24,6 +24,26 @@
 
 <body tabindex="0">
 
+    <!-- Flag sprites (defined once, referenced with <use>) -->
+    <svg width="0" height="0" style="position:absolute" aria-hidden="true" focusable="false">
+        <symbol id="flag-uk" viewBox="0 0 60 30">
+            <clipPath id="flag-uk-s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+            <clipPath id="flag-uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+            <g clip-path="url(#flag-uk-s)">
+                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#flag-uk-t)" stroke="#C8102E" stroke-width="4"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+            </g>
+        </symbol>
+        <symbol id="flag-vn" viewBox="0 0 60 40">
+            <rect width="60" height="40" fill="#DA251D"/>
+            <polygon fill="#FFFF00" points="30,9 32.70,16.28 40.46,16.60 34.37,21.42 36.47,28.90 30,24.60 23.53,28.90 25.63,21.42 19.54,16.60 27.30,16.28"/>
+        </symbol>
+    </svg>
+
+
     <div id="main-background" data-bg="./assets/img/background.jpg">
         <!-- Navbar Start -->
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top floating-nav">
@@ -33,24 +53,11 @@
                 <!-- Language switch: always visible (outside the collapsed menu) -->
                 <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.group">
                     <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="Switch to English" data-i18n-attr="aria-label:lang.en">
-                        <svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false">
-                            <clipPath id="flag-uk-s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
-                            <clipPath id="flag-uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
-                            <g clip-path="url(#flag-uk-s)">
-                                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
-                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
-                                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#flag-uk-t)" stroke="#C8102E" stroke-width="4"/>
-                                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
-                                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
-                            </g>
-                        </svg>
+                        <svg class="flag" aria-hidden="true" focusable="false"><use href="#flag-uk"/></svg>
                         <span class="lang-code">EN</span>
                     </button>
                     <button type="button" class="lang-btn" data-lang="vi" aria-pressed="false" aria-label="Switch to Vietnamese" data-i18n-attr="aria-label:lang.vi">
-                        <svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false">
-                            <rect width="60" height="40" fill="#DA251D"/>
-                            <polygon fill="#FFFF00" points="30,9 32.70,16.28 40.46,16.60 34.37,21.42 36.47,28.90 30,24.60 23.53,28.90 25.63,21.42 19.54,16.60 27.30,16.28"/>
-                        </svg>
+                        <svg class="flag" aria-hidden="true" focusable="false"><use href="#flag-vn"/></svg>
                         <span class="lang-code">VI</span>
                     </button>
                 </div>
@@ -70,7 +77,15 @@
                         <li class="nav-item"><a class="nav-link" href="#journey" data-i18n="nav.journey">Journey</a></li>
                         <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
-                    <a id="nav-cv" href="./assets/files/LE_ANH_KHOA_CV_EN.pdf" class="nav-cv" download="LE_ANH_KHOA_CV_EN.pdf" data-i18n="nav.cv">Download CV</a>
+                    <div class="cv-menu" id="cv-menu">
+                        <!-- Desktop: dropdown toggle. Mobile: hidden, the heading and both buttons below are shown instead -->
+                        <button type="button" class="cv-toggle" id="cv-toggle" aria-expanded="false" aria-controls="cv-panel" data-i18n="nav.cv">Download CV</button>
+                        <div class="cv-heading" data-i18n="nav.cv">Download CV</div>
+                        <div class="cv-panel" id="cv-panel">
+                            <a class="cv-item" href="./assets/files/LE_ANH_KHOA_CV_EN.pdf" download="Le_Anh_Khoa_CV_EN.pdf"><svg class="flag" aria-hidden="true" focusable="false"><use href="#flag-uk"/></svg><span>English CV</span></a>
+                            <a class="cv-item" href="./assets/files/LE_ANH_KHOA_CV_VI.pdf" download="Le_Anh_Khoa_CV_VI.pdf"><svg class="flag" aria-hidden="true" focusable="false"><use href="#flag-vn"/></svg><span>CV Tiếng Việt</span></a>
+                        </div>
+                    </div>
                 </div>
             </div>
         </nav>
@@ -141,7 +156,7 @@
                             </div>
                             <div class="about-text">
                                 <p class="about-description" data-i18n="about.summary">
-                                    I studied Software Engineering at FPT University, Can Tho (2023–2026) and work across the full software development lifecycle: turning requirements into specs and acceptance criteria, designing APIs and data models, building and testing services, then deploying and maintaining them. I've done this in a company team at Rikkeisoft, in group projects, and on AnSite, a platform I took from idea to deployment. I adapt quickly to new stacks and domains, from .NET and Node.js to Python and mobile integration, and I use AI coding agents inside a disciplined workflow: plan first, review every change, test before merge. The projects below show the details.
+                                    I hold a Bachelor of Software Engineering from FPT University, Can Tho (2023–2026) and work across the full software development lifecycle: turning requirements into specs and acceptance criteria, designing APIs and data models, building and testing services, then deploying and maintaining them. I've done this in a company team at Rikkeisoft, in group projects, and on AnSite, a platform I took from idea to deployment. I adapt quickly to new stacks and domains, from .NET and Node.js to Python and mobile integration, and I use AI coding agents inside a disciplined workflow: plan first, review every change, test before merge. The projects below show the details.
                                 </p>
                             </div>
                         </div>
