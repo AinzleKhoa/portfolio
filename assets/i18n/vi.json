@@ -1,7 +1,7 @@
 {
   "about.summary": "Tôi là Cử nhân Kỹ thuật Phần mềm, Đại học FPT Cần Thơ (2023–2026), và làm việc xuyên suốt vòng đời phát triển phần mềm: chuyển yêu cầu thành đặc tả và tiêu chí nghiệm thu, thiết kế API và mô hình dữ liệu, xây dựng và kiểm thử service, rồi triển khai và bảo trì. Tôi đã làm như vậy trong team công ty tại Rikkeisoft, trong các dự án nhóm, và với AnSite, nền tảng tôi phát triển từ ý tưởng đến khi triển khai. Tôi thích ứng nhanh với công nghệ và lĩnh vực mới, từ .NET, Node.js đến Python và tích hợp mobile, và dùng AI agent trong một quy trình có kỷ luật: lập kế hoạch trước, review mọi thay đổi, có test rồi mới merge. Chi tiết nằm ở các dự án bên dưới.",
   "feat.ansite.title": "AnSite: Nền tảng giám sát an toàn nhà máy qua camera",
-  "feat.ansite.meta": "Lead Developer | Đồ án tốt nghiệp & Startup | NestJS, PostgreSQL, TypeORM, Socket.IO, Docker, Python",
+  "feat.ansite.meta": "Lead Developer | Đồ án tốt nghiệp & Startup | NestJS, TypeScript, PostgreSQL, TypeORM, Socket.IO, React, Python, MediaMTX, Docker, Caddy, GitHub Actions",
   "feat.ansite.date": "05/2026 - nay",
   "feat.ansite.b1": "Tách hệ thống theo khối lượng công việc: edge agent Python trong mạng LAN nhà máy xử lý luồng camera và nhận diện YOLO/VLM, còn cloud API NestJS là nơi duy nhất truy cập database, nên AI quá tải cũng không làm sập dashboard.",
   "feat.ansite.b2": "Tìm ra lỗi concurrency: một lock bị giữ trong lúc làm việc chậm (xử lý ảnh, upload) làm cập nhật cấu hình trễ 71 giây; thu hẹp phạm vi lock giúp giảm còn dưới 0.4 giây, kèm regression test.",
