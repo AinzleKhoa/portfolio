@@ -1,4 +1,112 @@
 /*---------------------------------------
+  Language (EN / VI): dictionaries in assets/i18n, choice remembered
+-----------------------------------------*/
+const LANG_STORAGE_KEY = 'site-lang';
+const I18N = { current: 'en', dict: {}, cache: {} };
+let earlierProjects = null; // parsed projects.json, kept for re-rendering on language change
+
+function t(key) {
+    const value = I18N.dict[key];
+    return value === undefined ? key : value;
+}
+
+function readStoredLang() {
+    try {
+        const v = window.localStorage.getItem(LANG_STORAGE_KEY);
+        return v === 'en' || v === 'vi' ? v : null;
+    } catch (e) {
+        return null; // storage blocked (private window, cleared site data)
+    }
+}
+
+function writeStoredLang(lang) {
+    try {
+        window.localStorage.setItem(LANG_STORAGE_KEY, lang);
+    } catch (e) {
+        /* ignore: the choice still applies for this page view */
+    }
+}
+
+function detectLang() {
+    // ?lang=en|vi overrides for testing; not persisted
+    const param = new URLSearchParams(window.location.search).get('lang');
+    if (param === 'en' || param === 'vi') return param;
+    const stored = readStoredLang();
+    if (stored) return stored;
+    return (navigator.language || '').toLowerCase().startsWith('vi') ? 'vi' : 'en';
+}
+
+async function loadDict(lang) {
+    if (I18N.cache[lang]) return I18N.cache[lang];
+    try {
+        const response = await fetch(`./assets/i18n/${lang}.json`);
+        if (!response.ok) throw new Error(response.status);
+        I18N.cache[lang] = await response.json();
+    } catch (error) {
+        console.error(`Could not load ${lang} strings:`, error);
+        I18N.cache[lang] = null;
+    }
+    return I18N.cache[lang];
+}
+
+// Attribute values may contain entities such as &amp; (lightbox titles); decode them for setAttribute.
+function decodeEntities(text) {
+    const area = document.createElement('textarea');
+    area.innerHTML = text;
+    return area.value;
+}
+
+function applyStaticStrings(dict) {
+    document.querySelectorAll('[data-i18n]').forEach(el => {
+        const value = dict[el.getAttribute('data-i18n')];
+        if (value !== undefined) el.innerHTML = value;
+    });
+    // data-i18n-attr="alt:key;data-title:key" sets attributes (alt, aria-label, meta content, lightbox title)
+    document.querySelectorAll('[data-i18n-attr]').forEach(el => {
+        el.getAttribute('data-i18n-attr').split(';').forEach(pair => {
+            const [attr, key] = pair.split(':').map(s => s.trim());
+            if (attr && key && dict[key] !== undefined) el.setAttribute(attr, decodeEntities(dict[key]));
+        });
+    });
+}
+
+function updateLanguageUi(lang) {
+    document.documentElement.lang = lang;
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        const active = btn.getAttribute('data-lang') === lang;
+        btn.classList.toggle('active', active);
+        btn.setAttribute('aria-pressed', active ? 'true' : 'false');
+    });
+    // Navbar CV button follows the language; the hero keeps both explicit buttons
+    const navCv = document.getElementById('nav-cv');
+    if (navCv) {
+        const file = lang === 'vi' ? 'LE_ANH_KHOA_CV_VI.pdf' : 'LE_ANH_KHOA_CV_EN.pdf';
+        navCv.setAttribute('href', `./assets/files/${file}`);
+        navCv.setAttribute('download', file);
+    }
+}
+
+async function setLanguage(lang) {
+    const dict = await loadDict(lang);
+    if (!dict) return; // keep the current language if the file cannot load
+    I18N.current = lang;
+    I18N.dict = dict;
+    applyStaticStrings(dict);
+    updateLanguageUi(lang);
+    renderEarlierWork();
+}
+
+function initLanguageSwitch() {
+    document.querySelectorAll('.lang-btn').forEach(btn => {
+        btn.addEventListener('click', () => {
+            const lang = btn.getAttribute('data-lang');
+            writeStoredLang(lang);
+            setLanguage(lang);
+        });
+    });
+}
+
+/*---------------------------------------
   Initialize the hero background image with overlay
 -----------------------------------------*/
 function initBackground(headerId) {
@@ -27,7 +135,7 @@ function copyText(event) {
 
     const copyText = document.getElementById('copy-text').innerText;
     navigator.clipboard.writeText(copyText)
-        .then(() => alert("Text copied to clipboard!"))
+        .then(() => alert(t('alert.copied')))
         .catch(err => console.error("Copy failed:", err));
 }
 
@@ -71,25 +179,32 @@ function escapeHtml(value) {
         .replace(/'/g, '&#39;');
 }
 
+// Vietnamese fields are optional in projects.json (title_vi, meta_vi, ...); English is the fallback.
+function localField(project, field) {
+    if (I18N.current === 'vi' && project[field + '_vi']) return project[field + '_vi'];
+    return project[field];
+}
+
 function createEarlierCard(project) {
     const link = (url) => url && url !== 'none';
     const buttons = [];
-    if (link(project.githubLink)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> GitHub</a>`);
-    if (link(project.websiteLink)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.websiteLink)}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> Website</a>`);
-    if (link(project.youtube)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.youtube)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> Demo video</a>`);
+    if (link(project.githubLink)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.githubLink)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-github"></i> ${escapeHtml(t('earlier.github'))}</a>`);
+    if (link(project.websiteLink)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.websiteLink)}" target="_blank" rel="noopener noreferrer"><i class="fas fa-globe"></i> ${escapeHtml(t('earlier.website'))}</a>`);
+    if (link(project.youtube)) buttons.push(`<a class="btn-cta outline btn-sm" href="${escapeHtml(project.youtube)}" target="_blank" rel="noopener noreferrer"><i class="fab fa-youtube"></i> ${escapeHtml(t('earlier.demo'))}</a>`);
 
     const chips = (project.chips || []).map(c => `<span class="earlier-chip">${escapeHtml(c)}</span>`).join('');
+    const title = localField(project, 'title');
 
     return `
     <article class="earlier-card">
         <div class="earlier-thumb">
-            <img src="${escapeHtml(project.thumb)}" alt="${escapeHtml(project.title)} screenshot" loading="lazy">
+            <img src="${escapeHtml(project.thumb)}" alt="${escapeHtml(title)} - ${escapeHtml(t('earlier.shot'))}" loading="lazy">
         </div>
         <div class="earlier-body">
-            <p class="earlier-year">${escapeHtml(project.yearCompleted) || '&nbsp;'}</p>
-            <h3 class="earlier-title">${escapeHtml(project.title)}</h3>
-            <p class="earlier-meta">${escapeHtml(project.meta)}</p>
-            <p class="earlier-summary">${escapeHtml(project.summary)}</p>
+            <p class="earlier-year">${escapeHtml(localField(project, 'yearCompleted')) || '&nbsp;'}</p>
+            <h3 class="earlier-title">${escapeHtml(title)}</h3>
+            <p class="earlier-meta">${escapeHtml(localField(project, 'meta'))}</p>
+            <p class="earlier-summary">${escapeHtml(localField(project, 'summary'))}</p>
             <div class="earlier-chips">${chips}</div>
             <div class="earlier-links">${buttons.join('')}</div>
         </div>
@@ -101,15 +216,18 @@ async function renderEarlierWork() {
     if (!list) return;
 
     try {
-        const response = await fetch('./assets/data/projects.json');
-        const data = await response.json();
+        if (!earlierProjects) {
+            const response = await fetch('./assets/data/projects.json');
+            const data = await response.json();
 
-        if (!Array.isArray(data)) {
-            console.error('Project data is not an array.');
-            return;
+            if (!Array.isArray(data)) {
+                console.error('Project data is not an array.');
+                return;
+            }
+            earlierProjects = data;
         }
 
-        list.innerHTML = data.map(createEarlierCard).join('');
+        list.innerHTML = earlierProjects.map(createEarlierCard).join('');
     } catch (error) {
         console.error('Error fetching JSON data:', error);
     }
@@ -118,7 +236,7 @@ async function renderEarlierWork() {
 /*---------------------------------------
   Main initializer
 -----------------------------------------*/
-function initPage() {
+async function initPage() {
     // ?noaos: static capture mode (screenshots). Real visitors never pass this.
     if (new URLSearchParams(window.location.search).has('noaos')) {
         document.querySelectorAll('[data-aos]').forEach(el => el.removeAttribute('data-aos'));
@@ -128,7 +246,9 @@ function initPage() {
     }
     initBackground('main-background');
     initScrollSpy();
-    renderEarlierWork();
+    initLanguageSwitch();
+    await setLanguage(detectLang());
 }
 
-window.onload = initPage;
+// DOMContentLoaded, not onload: the language switch must not wait for slow external CDN files.
+document.addEventListener('DOMContentLoaded', initPage);

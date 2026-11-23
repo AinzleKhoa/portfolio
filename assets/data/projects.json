@@ -25,7 +25,11 @@
       "AI Navigation",
       "ProBuilder",
       "Input System"
-    ]
+    ],
+    "title_vi": "An Empty Frame — Game kinh dị tâm lý",
+    "yearCompleted_vi": "Năm 3",
+    "meta_vi": "Nhóm 5 người · Spring 2026",
+    "summary_vi": "Game kinh dị tâm lý góc nhìn thứ nhất xây bằng Unity (URP). Người chơi đi qua năm màn chơi lấy cảm hứng từ ký ức để thu thập các mảnh ảnh và sống sót mà không chiến đấu. Hệ thống chính gồm máy ảnh Polaroid (đèn flash để làm choáng, khung ngắm để hiện thực thể ẩn), kho đồ 3 ô, hệ thống thể lực và nhiễu kiểu VHS cảnh báo kẻ địch gần đó; AI kẻ địch dùng Unity AI Navigation và trở nên nhạy hơn khi người chơi tìm thêm mảnh ảnh."
   },
   {
     "title": "Cosmora Celestica — Game & Accessory Store",
@@ -53,7 +57,11 @@
       "SQL Server",
       "Google OAuth",
       "Maven"
-    ]
+    ],
+    "title_vi": "Cosmora Celestica — Cửa hàng game & phụ kiện",
+    "yearCompleted_vi": "Năm 3",
+    "meta_vi": "Lead Developer · Nhóm 5 người · Summer 2025",
+    "summary_vi": "Ứng dụng web Java Servlet/JSP theo MVC trên SQL Server, có đăng nhập Google OAuth và đặt lại mật khẩu qua email. Khách hàng có giỏ hàng, thanh toán với voucher và danh mục key game cùng phụ kiện; nhân viên và quản trị viên dùng dashboard với bộ lọc theo vai trò."
   },
   {
     "title": "FEL Club Website",
@@ -80,7 +88,11 @@
       "JavaScript",
       "Bootstrap",
       "JSON"
-    ]
+    ],
+    "title_vi": "Website CLB FEL",
+    "yearCompleted_vi": "Năm 2",
+    "meta_vi": "Phát triển một mình",
+    "summary_vi": "Website tĩnh cho CLB tiếng Anh FPTU, giới thiệu các sự kiện và hoạt động, triển khai trên GitHub Pages. Dữ liệu sự kiện đọc từ file JSON nên CLB có thể cập nhật mà không cần tên miền hay cấu hình phức tạp."
   },
   {
     "title": "NeonRealm",
@@ -106,7 +118,11 @@
       "SQL Server",
       "OAuth 2.0",
       "Bootstrap"
-    ]
+    ],
+    "title_vi": "NeonRealm",
+    "yearCompleted_vi": "Năm 2",
+    "meta_vi": "Trưởng nhóm & lập trình viên chính · Nhóm 6 người",
+    "summary_vi": "Cửa hàng game số theo MVC viết bằng Java, dùng SQL Server. Có đăng nhập và đăng ký an toàn, duyệt game và hồ sơ người dùng. Với vai trò trưởng nhóm, tôi xây dựng trang chủ, trang danh mục, mô hình MVC và luồng xác thực."
   },
   {
     "title": "Arduino Rover",
@@ -132,7 +148,11 @@
       "ESP32",
       "C/C++",
       "Ultrasonic sensors"
-    ]
+    ],
+    "title_vi": "Arduino Rover",
+    "yearCompleted_vi": "Năm 2",
+    "meta_vi": "Cộng tác viên · Nhóm 2 người",
+    "summary_vi": "Robot tự hành dùng Arduino và ESP32, có cảm biến siêu âm phát hiện vật cản. Có thể điều khiển thủ công hoặc tự di chuyển. Tôi cùng bạn thiết kế, vẽ sơ đồ khối và sơ đồ nguyên lý, viết logic điều khiển và hỗ trợ đấu nối phần cứng."
   },
   {
     "title": "Galactic Typist",
@@ -158,7 +178,11 @@
       "Swing",
       "Multi-threading",
       "OOP"
-    ]
+    ],
+    "title_vi": "Galactic Typist",
+    "yearCompleted_vi": "Năm 1",
+    "meta_vi": "Phát triển một mình",
+    "summary_vi": "Game gõ phím nhịp nhanh viết bằng Java. Người chơi bảo vệ Trái Đất khỏi đế chế ngoài hành tinh bằng các lệnh gõ phím. Mỗi phím gõ đúng giúp game tiến tới và cải thiện tốc độ, độ chính xác khi gõ."
   },
   {
     "title": "Student Management System",
@@ -183,6 +207,10 @@
       "Java",
       "Swing",
       "OOP"
-    ]
+    ],
+    "title_vi": "Hệ thống quản lý sinh viên",
+    "yearCompleted_vi": "Năm 1",
+    "meta_vi": "Phát triển một mình",
+    "summary_vi": "Ứng dụng desktop viết bằng Java Swing giúp giáo viên quản lý hồ sơ sinh viên. Thiết kế đơn giản, và tôi hoàn thành trong 4 ngày như một bài tập đại học cá nhân."
   }
 ]

@@ -4,8 +4,8 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lê Anh Khoa | Backend Software Engineer (.NET / NestJS)</title>
-    <meta name="description" content="Lê Anh Khoa - Backend Software Engineer (.NET / NestJS). AnSite SafetyOps, EventHub, Calendar Shop, and OJT at Rikkeisoft.">
+    <title data-i18n="meta.title">Lê Anh Khoa | Backend Developer</title>
+    <meta name="description" data-i18n-attr="content:meta.description" content="Lê Anh Khoa - Backend Developer (.NET / NestJS). AnSite, EventHub, Calendar Shop, and OJT at Rikkeisoft.">
 
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,22 +29,48 @@
         <nav class="navbar navbar-expand-lg navbar-dark fixed-top floating-nav">
             <div class="container-fluid px-3">
                 <a class="navbar-brand" href="#hero"><span class="brand-name">Lê Anh Khoa</span></a>
+
+                <!-- Language switch: always visible (outside the collapsed menu) -->
+                <div class="lang-switch" role="group" aria-label="Language" data-i18n-attr="aria-label:lang.group">
+                    <button type="button" class="lang-btn" data-lang="en" aria-pressed="false" aria-label="Switch to English" data-i18n-attr="aria-label:lang.en">
+                        <svg class="flag" viewBox="0 0 60 30" aria-hidden="true" focusable="false">
+                            <clipPath id="flag-uk-s"><path d="M0,0 v30 h60 v-30 z"/></clipPath>
+                            <clipPath id="flag-uk-t"><path d="M30,15 h30 v15 z v15 h-30 z h-30 v-15 z v-15 h30 z"/></clipPath>
+                            <g clip-path="url(#flag-uk-s)">
+                                <path d="M0,0 v30 h60 v-30 z" fill="#012169"/>
+                                <path d="M0,0 L60,30 M60,0 L0,30" stroke="#fff" stroke-width="6"/>
+                                <path d="M0,0 L60,30 M60,0 L0,30" clip-path="url(#flag-uk-t)" stroke="#C8102E" stroke-width="4"/>
+                                <path d="M30,0 v30 M0,15 h60" stroke="#fff" stroke-width="10"/>
+                                <path d="M30,0 v30 M0,15 h60" stroke="#C8102E" stroke-width="6"/>
+                            </g>
+                        </svg>
+                        <span class="lang-code">EN</span>
+                    </button>
+                    <button type="button" class="lang-btn" data-lang="vi" aria-pressed="false" aria-label="Switch to Vietnamese" data-i18n-attr="aria-label:lang.vi">
+                        <svg class="flag" viewBox="0 0 60 40" aria-hidden="true" focusable="false">
+                            <rect width="60" height="40" fill="#DA251D"/>
+                            <polygon fill="#FFFF00" points="30,9 32.70,16.28 40.46,16.60 34.37,21.42 36.47,28.90 30,24.60 23.53,28.90 25.63,21.42 19.54,16.60 27.30,16.28"/>
+                        </svg>
+                        <span class="lang-code">VI</span>
+                    </button>
+                </div>
+
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation" data-i18n-attr="aria-label:nav.toggle">
                     <span class="navbar-toggler-icon"></span>
                 </button>
 
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" href="#hero">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#projects">Projects</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#experience">Experience</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#awards">Awards</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#skills">Skills</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#journey">Journey</a></li>
-                        <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#hero" data-i18n="nav.home">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#projects" data-i18n="nav.projects">Projects</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#experience" data-i18n="nav.experience">Experience</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#awards" data-i18n="nav.awards">Awards</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#skills" data-i18n="nav.skills">Skills</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#journey" data-i18n="nav.journey">Journey</a></li>
+                        <li class="nav-item"><a class="nav-link" href="#contact" data-i18n="nav.contact">Contact</a></li>
                     </ul>
-                    <a href="./assets/files/LE_ANH_KHOA_CV.pdf" class="nav-cv" download>Download CV</a>
+                    <a id="nav-cv" href="./assets/files/LE_ANH_KHOA_CV_EN.pdf" class="nav-cv" download="LE_ANH_KHOA_CV_EN.pdf" data-i18n="nav.cv">Download CV</a>
                 </div>
             </div>
         </nav>
@@ -59,12 +85,11 @@
                     <!-- Text Column -->
                     <div class="hero-text col-md-7 col-lg-7">
                         <div class="intro-content">
-                            <h2 class="intro-subtitle">Hello! I'm</h2>
+                            <h2 class="intro-subtitle" data-i18n="hero.hello">Hello! I'm</h2>
                             <h1 class="intro-name">Lê Anh Khoa</h1>
-                            <h6 class="intro-role">Backend Software Engineer (.NET / NestJS)</h6>
-                            <p class="intro-description">
-                                I build backend systems that hold up in production — from Redis caching at Rikkeisoft
-                                to AnSite, an edge–cloud safety platform turned startup.
+                            <h6 class="intro-role" data-i18n="hero.role">Backend Developer</h6>
+                            <p class="intro-description" data-i18n="hero.tagline">
+                                I build backend systems with .NET and NestJS, from a Redis caching library during my Rikkeisoft internship to AnSite, a camera-based safety platform that started as my capstone.
                             </p>
                         </div>
                         <div class="hero-actions">
@@ -77,8 +102,9 @@
                                     rel="noopener noreferrer" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
                             </div>
                             <div class="cta-buttons">
-                                <a href="#projects" class="btn-cta">View Projects</a>
-                                <a href="./assets/files/LE_ANH_KHOA_CV.pdf" class="btn-cta outline" download>Download CV</a>
+                                <a href="#projects" class="btn-cta" data-i18n="hero.viewProjects">View Projects</a>
+                                <a href="./assets/files/LE_ANH_KHOA_CV_EN.pdf" class="btn-cta outline" download="LE_ANH_KHOA_CV_EN.pdf">Download CV (English)</a>
+                                <a href="./assets/files/LE_ANH_KHOA_CV_VI.pdf" class="btn-cta outline" download="LE_ANH_KHOA_CV_VI.pdf">Tải CV (Tiếng Việt)</a>
                             </div>
                         </div>
                     </div>
@@ -86,7 +112,7 @@
                     <!-- Image Column -->
                     <div class="hero-image col-md-5 col-lg-5 text-center">
                         <div class="corner-frame">
-                            <img src="./assets/img/hero.webp" alt="Illustration of Lê Anh Khoa"
+                            <img src="./assets/img/hero.webp" alt="Illustration of Lê Anh Khoa" data-i18n-attr="alt:hero.alt"
                                 class="hero-illustration">
                         </div>
                     </div>
@@ -104,9 +130,9 @@
                             <img src="./assets/img/chatgpt-planet.webp" alt="" class="about-img-planet">
                             <div class="about-header">
                                 <div class="col-sm-8 about-title">
-                                    <h2 class="section-heading">About Me</h2>
+                                    <h2 class="section-heading" data-i18n="about.heading">About Me</h2>
                                     <h1 class="about-name">Lê Anh Khoa</h1>
-                                    <h6 class="about-role">Backend Software Engineer (.NET / NestJS)</h6>
+                                    <h6 class="about-role" data-i18n="about.role">Backend Developer</h6>
                                 </div>
                                 <div class="col-sm-4 about-hero">
                                     <img src="./assets/img/about-avatar.jpg" alt="Lê Anh Khoa"
@@ -114,13 +140,8 @@
                                 </div>
                             </div>
                             <div class="about-text">
-                                <p class="about-description">
-                                    Final-year Software Engineering student (GPA 3.76/4.0) focused on backend and
-                                    distributed systems with .NET and NestJS. Completed a 4-month on-the-job training at
-                                    Rikkeisoft on a production microservices project, and led development of AnSite, an
-                                    edge–cloud safety platform that grew from a capstone project into a startup.
-                                    <br><br>
-                                    Studying at FPT University, Can Tho, and graduating in December 2026.
+                                <p class="about-description" data-i18n="about.summary">
+                                    Final-year Software Engineering student (graduating Dec 2026) who builds backend systems with .NET and NestJS. Spent 4 months on a Rikkeisoft team shipping caching and user-management features, and built most of AnSite, a camera-based factory safety platform that started as my capstone.
                                 </p>
                             </div>
                         </div>
@@ -135,35 +156,36 @@
 
                         <img src="./assets/img/bigspaceship.webp" alt="" class="projects-decoration-spaceship">
 
-                        <h2 class="section-heading">Featured Projects</h2>
+                        <h2 class="section-heading" data-i18n="projects.heading">Featured Projects</h2>
 
                         <div class="feat-grid">
 
-                            <!-- 1. AnSite SafetyOps -->
+                            <!-- 1. AnSite -->
                             <article class="feat-card">
                                 <div class="feat-media">
                                     <a href="./assets/img/featured/ansite-dashboard.jpg" data-lightbox="ansite"
-                                        data-title="AnSite SafetyOps dashboard">
+                                        data-i18n-attr="data-title:feat.ansite.alt">
                                         <img src="./assets/img/featured/ansite-dashboard.jpg"
-                                            alt="AnSite SafetyOps dashboard" loading="lazy">
+                                            alt="AnSite SafetyOps dashboard" data-i18n-attr="alt:feat.ansite.alt" loading="lazy">
                                     </a>
                                 </div>
                                 <div class="feat-body">
-                                    <span class="feat-label">Capstone → Startup</span>
-                                    <h3 class="feat-title">AnSite SafetyOps — AI Vision Safety Platform for Manufacturing SMEs</h3>
-                                    <p class="feat-meta">Lead Developer | Capstone Project → Startup | May 2026 – Present</p>
-                                    <p class="feat-stack">NestJS, React 19, PostgreSQL, Socket.IO, Python, YOLO, MediaMTX</p>
-                                    <p class="feat-origin"><em>Inspired by my OJT work on VMS at Rikkeisoft.</em></p>
+                                    <span class="feat-label" data-i18n="feat.ansite.label">Capstone → Startup</span>
+                                    <h3 class="feat-title" data-i18n="feat.ansite.title">AnSite: Camera-Based Safety Platform for Factories</h3>
+                                    <p class="feat-meta" data-i18n="feat.ansite.meta">Lead Developer | Capstone Project & Startup | NestJS, PostgreSQL, TypeORM, Socket.IO, Docker, Python</p>
+                                    <p class="feat-date" data-i18n="feat.ansite.date">May 2026 - Present</p>
+                                    <p class="feat-origin"><em data-i18n="feat.ansite.origin">Inspired by my OJT work on VMS at Rikkeisoft.</em></p>
                                     <ul class="feat-bullets">
-                                        <li>Built a hybrid edge–cloud platform that turns existing factory CCTV into real-time safety alerts with stored evidence (PPE, restricted zones, falls, smoke, forklift–pedestrian proximity); validated through on-site surveys at 4 manufacturing companies.</li>
-                                        <li>Designed a resource-isolated architecture: a compute-bound Python edge agent on the factory LAN (RTSP, YOLO/VLM inference) and an I/O-bound NestJS API as the single database owner, linked by versioned alert, device-auth and live-view contracts.</li>
-                                        <li>Implemented per-device activation with authenticated HTTP/WebSocket channels and live camera viewing through a MediaMTX WebRTC/WHEP gateway relayed by the cloud.</li>
-                                        <li>Deployed to a VPS behind Caddy with a Cloudflare Pages frontend; enforced quality with GitHub Actions CI, 1,400+ edge tests, 69 cloud test suites, and backup/restore runbooks (RPO 6h, RTO 4h).</li>
+                                        <li data-i18n="feat.ansite.b1">Split the system by workload: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API owns the database, so heavy AI load cannot take down the dashboard.</li>
+                                        <li data-i18n="feat.ansite.b2">Diagnosed a concurrency bug where a lock held during slow work (image processing, uploads) blocked config updates for 71 s; narrowing the lock cut the delay to under 0.4 s, with a regression test.</li>
+                                        <li data-i18n="feat.ansite.b3">Built the NestJS alert ingestion API with idempotent writes (retries with the same event ID never duplicate an alert), composite PostgreSQL indexes for per-organization queries, and real-time push via Socket.IO rooms.</li>
+                                        <li data-i18n="feat.ansite.b4">Secured edge devices with per-device activation and SHA-256-hashed credentials compared in constant time.</li>
+                                        <li data-i18n="feat.ansite.b5">Deployed to a Linux VPS with GitHub Actions CI and 2,800+ automated tests across API, web and edge; changes follow a written plan with acceptance checks before AI agents implement them, then a separate review.</li>
                                     </ul>
                                     <div class="feat-links">
-                                        <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta">Visit ansite.vn</a>
+                                        <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta" data-i18n="feat.ansite.visit">Visit ansite.vn</a>
                                         <a href="https://www.facebook.com/profile.php?id=61590629583410" target="_blank"
-                                            rel="noopener noreferrer" class="btn-cta outline"><i class="fa-brands fa-facebook"></i> Facebook fanpage</a>
+                                            rel="noopener noreferrer" class="btn-cta outline"><i class="fa-brands fa-facebook"></i> <span data-i18n="feat.ansite.fb">Facebook fanpage</span></a>
                                     </div>
                                 </div>
                             </article>
@@ -172,18 +194,17 @@
                             <article class="feat-card">
                                 <div class="feat-shot">
                                     <a href="./assets/img/featured/eventhub-home.jpg" data-lightbox="eventhub"
-                                        data-title="EventHub — home page">
-                                        <img src="./assets/img/featured/eventhub-home.jpg" alt="EventHub home page screenshot" loading="lazy">
+                                        data-i18n-attr="data-title:feat.eh.alt">
+                                        <img src="./assets/img/featured/eventhub-home.jpg" alt="EventHub home page" data-i18n-attr="alt:feat.eh.alt" loading="lazy">
                                     </a>
                                 </div>
                                 <div class="feat-body">
-                                    <h3 class="feat-title">EventHub — Microservices Event Booking Platform</h3>
-                                    <p class="feat-meta">Backend Developer | Personal Project | Mar 2025 – Jun 2025</p>
-                                    <p class="feat-stack">ASP.NET Core 8, EF Core, SQL Server, Ocelot, SignalR, Docker Compose</p>
+                                    <h3 class="feat-title" data-i18n="feat.eh.title">EventHub: Event Booking Platform</h3>
+                                    <p class="feat-meta" data-i18n="feat.eh.meta">Backend Developer | Personal Project | ASP.NET Core 8, EF Core, SQL Server, Ocelot, SignalR, Docker</p>
+                                    <p class="feat-date" data-i18n="feat.eh.date">Mar 2025 - Jun 2025</p>
                                     <ul class="feat-bullets">
-                                        <li>Decomposed event booking into 10 ASP.NET Core services, each owning its SQL Server database, behind an Ocelot gateway routing authenticated REST and SignalR traffic.</li>
-                                        <li>Implemented a cross-service booking workflow validating events, ticket availability and vouchers, processing VNPay/MoMo payments, then issuing QR tickets and confirmation emails.</li>
-                                        <li>Added compensating cancellation calls to restore ticket quantities and vouchers on failure; orchestrated all services and databases with Docker Compose.</li>
+                                        <li data-i18n="feat.eh.b1">Decomposed event booking into 10 ASP.NET Core services, each with its own SQL Server database, behind an Ocelot gateway that routes authenticated REST and SignalR traffic.</li>
+                                        <li data-i18n="feat.eh.b2">Kept bookings consistent without a shared database: the booking flow validates tickets and vouchers, takes VNPay/MoMo payment, and on failure calls compensating actions that restore tickets and vouchers.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://github.com/AinzleKhoa/EventManagementSystem" target="_blank"
@@ -197,18 +218,18 @@
                                 <div class="feat-shot feat-shot-phone">
                                     <img class="feat-shot-backdrop" src="./assets/img/featured/calendarshop-login-mobile.jpg" alt="" aria-hidden="true">
                                     <a class="phone" href="./assets/img/featured/calendarshop-login-mobile.jpg" data-lightbox="calendarshop"
-                                        data-title="Calendar Shop — mobile login screen">
-                                        <img src="./assets/img/featured/calendarshop-login-mobile.jpg" alt="Calendar Shop mobile login screen" loading="lazy">
+                                        data-i18n-attr="data-title:feat.cs.alt">
+                                        <img src="./assets/img/featured/calendarshop-login-mobile.jpg" alt="Calendar Shop mobile login screen" data-i18n-attr="alt:feat.cs.alt" loading="lazy">
                                     </a>
                                 </div>
                                 <div class="feat-body">
-                                    <h3 class="feat-title">Calendar Shop — Mobile E-Commerce Platform</h3>
-                                    <p class="feat-meta">Backend Developer | Team of 5 | Jun 2026 – Jul 2026</p>
-                                    <p class="feat-stack">ASP.NET Core 8, EF Core, SQL Server, OData, JWT, VNPay, Flutter</p>
+                                    <h3 class="feat-title" data-i18n="feat.cs.title">Calendar Shop: Mobile E-Commerce App</h3>
+                                    <p class="feat-meta" data-i18n="feat.cs.meta">Backend Developer | Team of 5 | ASP.NET Core 8, EF Core, SQL Server, OData, JWT, VNPay, Flutter</p>
+                                    <p class="feat-date" data-i18n="feat.cs.date">Jun 2026 - Jul 2026</p>
                                     <ul class="feat-bullets">
-                                        <li>Hardened the VNPay order lifecycle by validating callback signatures, amounts, expiry and current order state, with a hosted worker that expires unpaid orders after 15 minutes and restores inventory and coupons.</li>
-                                        <li>Implemented multi-device refresh-token rotation and revocation across logout, password reset and account lock, integrated with automatic retry in the Flutter Dio client.</li>
-                                        <li>Exposed filterable, pageable OData endpoints via AutoMapper <code>ProjectTo</code> and standardized errors with FluentValidation and RFC 7807 ProblemDetails.</li>
+                                        <li data-i18n="feat.cs.b1">Hardened the VNPay payment flow by verifying the callback signature, amount and current order state before marking an order paid, with a background worker that cancels orders left unpaid after 15 minutes.</li>
+                                        <li data-i18n="feat.cs.b2">Designed one query endpoint per resource that lets the mobile app filter, page and pick fields itself, so new screens needed no new endpoints; queries compile to SQL that selects only the requested columns (OData, EF Core projection).</li>
+                                        <li data-i18n="feat.cs.b3">Implemented refresh-token rotation with revocation on logout, password reset and account lock, used by the Flutter app for silent re-login.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://github.com/AinzleKhoa/calendar-shop" target="_blank"
@@ -218,9 +239,9 @@
                             </article>
                         </div>
 
-                        <!-- Earlier Work (collapsed by default) -->
+                        <!-- Earlier Work (rendered from assets/data/projects.json) -->
                         <div class="earlier-wrap">
-                            <h3 class="earlier-heading">Earlier Work</h3>
+                            <h3 class="earlier-heading" data-i18n="earlier.heading">Earlier Work</h3>
                             <div id="earlier-list" class="earlier-grid">
                                 <!-- Rendered from assets/data/projects.json -->
                             </div>
@@ -234,24 +255,24 @@
                 <div class="container">
                     <div class="experience-wrapper" data-aos="fade-up" data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
-                        <h2 class="section-heading">Experience</h2>
+                        <h2 class="section-heading" data-i18n="exp.heading">Experience</h2>
 
                         <article class="feat-card exp-card">
                             <div class="feat-body">
-                                <h3 class="feat-title">Software Engineer Intern (OJT) — Rikkeisoft</h3>
-                                <p class="feat-meta">Ho Chi Minh City | Sep 2025 – Jan 2026</p>
-                                <p class="feat-stack">VMS (Visitor &amp; Manpower Management System): NestJS microservices, React, Nx monorepo, Redis, TypeORM, Docker</p>
+                                <h3 class="feat-title" data-i18n="exp.title">Software Engineer Intern (OJT)</h3>
+                                <p class="feat-meta" data-i18n="exp.meta">Rikkeisoft | Ho Chi Minh City | VMS (Visitor & Manpower Management System)</p>
+                                <p class="feat-date" data-i18n="exp.date">Sep 2025 - Jan 2026</p>
                                 <ul class="feat-bullets">
-                                    <li>Designed a shared Redis caching library adopted by 4 NestJS services, implementing cache-aside reads with a token-verified distributed lock (<code>SET NX PX</code> + Lua release) and exponential backoff with jitter to prevent cache stampedes.</li>
-                                    <li>Implemented version-based cache invalidation with per-entity Redis counters and hashed query keys; diagnosed and fixed over-invalidation bugs where one write bumped versions multiple times.</li>
-                                    <li>Delivered the User Management feature end-to-end (NestJS APIs, shared DTOs, React admin page) with 23 service-layer unit tests; top contributor with 43 commits across 20+ merged feature branches.</li>
+                                    <li data-i18n="exp.b1">Prevented cache stampedes in a shared Redis caching module for 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter.</li>
+                                    <li data-i18n="exp.b2">Kept cached data correct after writes with version-based invalidation (one Redis counter per entity, hashed query keys); traced and fixed a bug where one write bumped versions several times and emptied the cache too often.</li>
+                                    <li data-i18n="exp.b3">Built User Management end-to-end (NestJS API, DTOs, React admin page, unit tests).</li>
                                 </ul>
                                 <div class="feat-links">
                                     <a href="https://github.com/AinzleKhoa/vms-monorepo-OJT" target="_blank"
                                         rel="noopener noreferrer" class="btn-cta outline">vms-monorepo-OJT</a>
                                     <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="ojt"
-                                        data-title="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026"
-                                        class="btn-cta">View certificate</a>
+                                        data-i18n-attr="data-title:exp.cert.lb"
+                                        class="btn-cta" data-i18n="exp.cert">View certificate</a>
                                 </div>
                             </div>
                         </article>
@@ -263,85 +284,84 @@
                 <div class="container">
                     <div class="awards-wrapper" data-aos="fade-up" data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
-                        <h2 class="section-heading">Awards &amp; Certificates</h2>
+                        <h2 class="section-heading" data-i18n="awards.heading">Awards &amp; Certificates</h2>
 
-                        <h3 class="award-group-title">Highlights</h3>
+                        <h3 class="award-group-title" data-i18n="awards.highlights">Highlights</h3>
                         <div class="award-grid">
                             <figure class="award-item award-feature">
                                 <a href="./assets/img/proofs/top5-ceremony.jpg" data-lightbox="awards"
-                                    data-title="Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024">
-                                    <div class="award-thumb award-thumb-wide"><img src="./assets/img/proofs/top5-ceremony.jpg" alt="Top 5 Students award ceremony, Fall 2024" loading="lazy"></div>
+                                    data-i18n-attr="data-title:aw.top5.cap">
+                                    <div class="award-thumb award-thumb-wide"><img src="./assets/img/proofs/top5-ceremony.jpg" alt="Top 5 Students award ceremony, Fall 2024" data-i18n-attr="alt:aw.top5.alt" loading="lazy"></div>
                                 </a>
-                                <figcaption class="award-caption-lg">Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024</figcaption>
+                                <figcaption class="award-caption-lg" data-i18n="aw.top5.cap">Top 5 Students, Engineering &amp; Technology Faculty Group — Student Achievement Awards, Fall 2024</figcaption>
                             </figure>
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="awards" data-title="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026 (FPT University)">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-ojt-fpt-thumb.jpg" alt="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026 (FPT University)" loading="lazy"></div>
+                                <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ojtfpt.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-ojt-fpt-thumb.jpg" alt="On the job training at Rikkeisoft HCM, 08/09/2025 – 04/01/2026 (FPT University)" data-i18n-attr="alt:aw.ojtfpt.lb" loading="lazy"></div>
                                 </a>
-                                <figcaption>OJT — Rikkeisoft HCM (FPT University)</figcaption>
+                                <figcaption data-i18n="aw.ojtfpt.cap">OJT — Rikkeisoft HCM (FPT University)</figcaption>
                             </figure>
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-ojt-rikkei.jpg" data-lightbox="awards" data-title="OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-ojt-rikkei-thumb.jpg" alt="OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)" loading="lazy"></div>
+                                <a href="./assets/img/proofs/cert-ojt-rikkei.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ojtrikkei.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-ojt-rikkei-thumb.jpg" alt="OJT – Internship OneConnect Program, Rikkei Education (05/12/2025)" data-i18n-attr="alt:aw.ojtrikkei.lb" loading="lazy"></div>
                                 </a>
-                                <figcaption>OJT — OneConnect, Rikkei Education</figcaption>
+                                <figcaption data-i18n="aw.ojtrikkei.cap">OJT — OneConnect, Rikkei Education</figcaption>
                             </figure>
                             <figure class="award-item">
-                                <a href="./assets/img/journey/malaysia-cert.jpg" data-lightbox="awards"
-                                    data-title="English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/malaysia-cert-thumb.jpg" alt="English Edu-Tourism Program certificate, UniKL MIIT, Malaysia" loading="lazy"></div>
+                                <a href="./assets/img/journey/malaysia-cert.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.malaysia.cap">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/malaysia-cert-thumb.jpg" alt="English Edu-Tourism Program certificate, UniKL MIIT, Malaysia" data-i18n-attr="alt:aw.malaysia.alt" loading="lazy"></div>
                                 </a>
-                                <figcaption>English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)</figcaption>
-                            </figure>
-                        </div>
-
-                        <h3 class="award-group-title">Excellent Student of Trimester</h3>
-                        <div class="award-grid">
-                            <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-excellent-fall2024.jpg" data-lightbox="awards" data-title="Excellent Student of Trimester, Fall 2024">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-fall2024-thumb.jpg" alt="Excellent Student of Trimester, Fall 2024" loading="lazy"></div>
-                                </a>
-                                <figcaption>Excellent Student — Fall 2024</figcaption>
-                            </figure>
-                            <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-excellent-spring2025.jpg" data-lightbox="awards" data-title="Excellent Student of Trimester, Spring 2025">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-spring2025-thumb.jpg" alt="Excellent Student of Trimester, Spring 2025" loading="lazy"></div>
-                                </a>
-                                <figcaption>Excellent Student — Spring 2025</figcaption>
-                            </figure>
-                            <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-excellent-summer2026.jpg" data-lightbox="awards" data-title="Excellent Student of Trimester, Summer 2026">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-summer2026-thumb.jpg" alt="Excellent Student of Trimester, Summer 2026" loading="lazy"></div>
-                                </a>
-                                <figcaption>Excellent Student — Summer 2026</figcaption>
+                                <figcaption data-i18n="aw.malaysia.cap">English Edu-Tourism Program — UniKL MIIT, Malaysia (Nov–Dec 2023)</figcaption>
                             </figure>
                         </div>
 
-                        <h3 class="award-group-title">Honorable Student of Trimester</h3>
+                        <h3 class="award-group-title" data-i18n="awards.excellent">Excellent Student of Trimester</h3>
                         <div class="award-grid">
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-spring2024.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Spring 2024">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-spring2024-thumb.jpg" alt="Honorable Student of Trimester, Spring 2024" loading="lazy"></div>
+                                <a href="./assets/img/proofs/cert-excellent-fall2024.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ex.f24.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-fall2024-thumb.jpg" alt="Excellent Student of Trimester, Fall 2024" data-i18n-attr="alt:aw.ex.f24.lb" loading="lazy"></div>
                                 </a>
-                                <figcaption>Honorable Student — Spring 2024</figcaption>
+                                <figcaption data-i18n="aw.ex.f24.cap">Excellent Student — Fall 2024</figcaption>
                             </figure>
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-summer2024.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Summer 2024">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-summer2024-thumb.jpg" alt="Honorable Student of Trimester, Summer 2024" loading="lazy"></div>
+                                <a href="./assets/img/proofs/cert-excellent-spring2025.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ex.s25.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-spring2025-thumb.jpg" alt="Excellent Student of Trimester, Spring 2025" data-i18n-attr="alt:aw.ex.s25.lb" loading="lazy"></div>
                                 </a>
-                                <figcaption>Honorable Student — Summer 2024</figcaption>
+                                <figcaption data-i18n="aw.ex.s25.cap">Excellent Student — Spring 2025</figcaption>
                             </figure>
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-summer2025.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Summer 2025">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-summer2025-thumb.jpg" alt="Honorable Student of Trimester, Summer 2025" loading="lazy"></div>
+                                <a href="./assets/img/proofs/cert-excellent-summer2026.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ex.su26.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-excellent-summer2026-thumb.jpg" alt="Excellent Student of Trimester, Summer 2026" data-i18n-attr="alt:aw.ex.su26.lb" loading="lazy"></div>
                                 </a>
-                                <figcaption>Honorable Student — Summer 2025</figcaption>
+                                <figcaption data-i18n="aw.ex.su26.cap">Excellent Student — Summer 2026</figcaption>
+                            </figure>
+                        </div>
+
+                        <h3 class="award-group-title" data-i18n="awards.honorable">Honorable Student of Trimester</h3>
+                        <div class="award-grid">
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-honorable-spring2024.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ho.sp24.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-spring2024-thumb.jpg" alt="Honorable Student of Trimester, Spring 2024" data-i18n-attr="alt:aw.ho.sp24.lb" loading="lazy"></div>
+                                </a>
+                                <figcaption data-i18n="aw.ho.sp24.cap">Honorable Student — Spring 2024</figcaption>
                             </figure>
                             <figure class="award-item">
-                                <a href="./assets/img/proofs/cert-honorable-spring2026.jpg" data-lightbox="awards" data-title="Honorable Student of Trimester, Spring 2026">
-                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-spring2026-thumb.jpg" alt="Honorable Student of Trimester, Spring 2026" loading="lazy"></div>
+                                <a href="./assets/img/proofs/cert-honorable-summer2024.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ho.su24.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-summer2024-thumb.jpg" alt="Honorable Student of Trimester, Summer 2024" data-i18n-attr="alt:aw.ho.su24.lb" loading="lazy"></div>
                                 </a>
-                                <figcaption>Honorable Student — Spring 2026</figcaption>
+                                <figcaption data-i18n="aw.ho.su24.cap">Honorable Student — Summer 2024</figcaption>
+                            </figure>
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-honorable-summer2025.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ho.su25.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-summer2025-thumb.jpg" alt="Honorable Student of Trimester, Summer 2025" data-i18n-attr="alt:aw.ho.su25.lb" loading="lazy"></div>
+                                </a>
+                                <figcaption data-i18n="aw.ho.su25.cap">Honorable Student — Summer 2025</figcaption>
+                            </figure>
+                            <figure class="award-item">
+                                <a href="./assets/img/proofs/cert-honorable-spring2026.jpg" data-lightbox="awards" data-i18n-attr="data-title:aw.ho.sp26.lb">
+                                    <div class="award-thumb"><img src="./assets/img/proofs/cert-honorable-spring2026-thumb.jpg" alt="Honorable Student of Trimester, Spring 2026" data-i18n-attr="alt:aw.ho.sp26.lb" loading="lazy"></div>
+                                </a>
+                                <figcaption data-i18n="aw.ho.sp26.cap">Honorable Student — Spring 2026</figcaption>
                             </figure>
                         </div>
                     </div>
@@ -352,32 +372,37 @@
                 <div class="container justify-content-center">
                     <div class="skills-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
 
-                        <h2 class="section-heading">Skills</h2>
+                        <h2 class="section-heading" data-i18n="skills.heading">Skills</h2>
 
                         <div class="skill-groups">
                             <div class="skill-group accent-cyan">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-code"></i></span><h3 class="skill-group-title">Languages</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-csharp-plain colored"></i>C#</span><span class="skill-chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span><span class="skill-chip"><i class="devicon-javascript-plain colored"></i>JavaScript</span><span class="skill-chip">SQL</span><span class="skill-chip"><i class="devicon-python-plain colored"></i>Python</span><span class="skill-chip"><i class="devicon-java-plain colored"></i>Java</span></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-code"></i></span><h3 class="skill-group-title" data-i18n="skills.g1">Languages</h3></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-csharp-plain colored"></i>C#</span><span class="skill-chip"><i class="devicon-typescript-plain colored"></i>TypeScript</span><span class="skill-chip"><i class="devicon-java-plain colored"></i>Java</span><span class="skill-chip">SQL</span><span class="skill-chip"><i class="devicon-python-plain colored"></i>Python</span></div>
                             </div>
                             <div class="skill-group accent-blue">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-server"></i></span><h3 class="skill-group-title">Backend</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-dotnetcore-plain colored"></i>ASP.NET Core</span><span class="skill-chip">EF Core</span><span class="skill-chip"><i class="devicon-nestjs-plain colored"></i>NestJS</span><span class="skill-chip">TypeORM</span><span class="skill-chip">REST APIs</span><span class="skill-chip">OData</span><span class="skill-chip">SignalR</span><span class="skill-chip"><i class="devicon-socketio-original colored"></i>Socket.IO</span><span class="skill-chip">JWT</span></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-server"></i></span><h3 class="skill-group-title" data-i18n="skills.g2">Backend</h3></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-dotnetcore-plain colored"></i>ASP.NET Core</span><span class="skill-chip">EF Core</span><span class="skill-chip"><i class="devicon-nestjs-plain colored"></i>NestJS</span><span class="skill-chip">TypeORM</span><span class="skill-chip">REST</span><span class="skill-chip">OData</span><span class="skill-chip">SignalR</span><span class="skill-chip"><i class="devicon-socketio-original colored"></i>Socket.IO</span><span class="skill-chip">JWT</span><span class="skill-chip">AutoMapper</span><span class="skill-chip"><i class="devicon-swagger-plain colored"></i>Swagger/OpenAPI</span></div>
                             </div>
                             <div class="skill-group accent-violet">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-window-maximize"></i></span><h3 class="skill-group-title">Frontend</h3></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-window-maximize"></i></span><h3 class="skill-group-title" data-i18n="skills.gfe">Frontend</h3></div>
                                 <div class="skill-chips"><span class="skill-chip"><i class="devicon-react-original colored"></i>React</span><span class="skill-chip"><i class="devicon-redux-original colored"></i>Redux Toolkit</span><span class="skill-chip">TanStack Query</span><span class="skill-chip"><i class="devicon-html5-plain colored"></i>HTML</span><span class="skill-chip"><i class="devicon-css3-plain colored"></i>CSS</span><span class="skill-chip"><i class="devicon-bootstrap-plain colored"></i>Bootstrap</span><span class="skill-chip"><i class="devicon-flutter-plain colored"></i>Flutter</span></div>
                             </div>
                             <div class="skill-group accent-teal">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-database"></i></span><h3 class="skill-group-title">Databases</h3></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-database"></i></span><h3 class="skill-group-title" data-i18n="skills.g3">Data</h3></div>
                                 <div class="skill-chips"><span class="skill-chip"><i class="devicon-microsoftsqlserver-plain colored"></i>SQL Server</span><span class="skill-chip"><i class="devicon-postgresql-plain colored"></i>PostgreSQL</span><span class="skill-chip"><i class="devicon-redis-plain colored"></i>Redis</span></div>
                             </div>
                             <div class="skill-group accent-amber">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-diagram-project"></i></span><h3 class="skill-group-title">DevOps & Tools</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker</span><span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker Compose</span><span class="skill-chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span><span class="skill-chip">Nx</span><span class="skill-chip"><i class="devicon-git-plain colored"></i>Git</span><span class="skill-chip"><i class="devicon-linux-plain colored"></i>Linux VPS</span><span class="skill-chip">Caddy</span></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-lightbulb"></i></span><h3 class="skill-group-title" data-i18n="skills.g4">Concepts</h3></div>
+                                <div class="skill-chips"><span class="skill-chip">Microservices</span><span class="skill-chip">API Gateway</span><span class="skill-chip">Caching</span><span class="skill-chip">Distributed Locks</span><span class="skill-chip">Idempotency</span><span class="skill-chip">Concurrency</span><span class="skill-chip">Background Jobs</span></div>
                             </div>
                             <div class="skill-group accent-rose">
-                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-flask-vial"></i></span><h3 class="skill-group-title">Testing & Practices</h3></div>
-                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-jest-plain colored"></i>Jest</span><span class="skill-chip"><i class="devicon-vitest-plain colored"></i>Vitest</span><span class="skill-chip"><i class="devicon-pytest-plain colored"></i>Pytest</span><span class="skill-chip"><i class="devicon-postman-plain colored"></i>Postman</span><span class="skill-chip"><i class="devicon-swagger-plain colored"></i>Swagger</span><span class="skill-chip">Microservices</span><span class="skill-chip">Clean layering</span><span class="skill-chip">AI coding agents</span></div>
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-flask-vial"></i></span><h3 class="skill-group-title" data-i18n="skills.g5">DevOps &amp; Testing</h3></div>
+                                <div class="skill-chips"><span class="skill-chip"><i class="devicon-git-plain colored"></i>Git</span><span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker</span><span class="skill-chip"><i class="devicon-docker-plain colored"></i>Docker Compose</span><span class="skill-chip"><i class="devicon-githubactions-plain colored"></i>GitHub Actions</span><span class="skill-chip"><i class="devicon-linux-plain colored"></i>Linux VPS</span><span class="skill-chip"><i class="devicon-jest-plain colored"></i>Jest</span><span class="skill-chip"><i class="devicon-vitest-plain colored"></i>Vitest</span><span class="skill-chip"><i class="devicon-pytest-plain colored"></i>Pytest</span></div>
+                            </div>
+                            <div class="skill-group accent-cyan skill-group-ai">
+                                <div class="skill-group-head"><span class="skill-group-icon"><i class="fas fa-robot"></i></span><h3 class="skill-group-title" data-i18n="skills.g6">AI-assisted development</h3></div>
+                                <div class="skill-chips"><span class="skill-chip">Codex</span><span class="skill-chip">Claude Code</span></div>
+                                <p class="skill-note" data-i18n="skills.ainote">written plan, review and tests before merge</p>
                             </div>
                         </div>
                     </div>
@@ -387,149 +412,149 @@
             <section id="journey" class="journey-section">
                 <div class="container">
                     <div class="journey-wrapper" data-aos="fade-up" data-aos-offset="300" data-aos-easing="ease-in-sine">
-                        <h2 class="section-heading">My Journey</h2>
-<ul class="j-legend"><li class="j-cat-education"><span class="j-legend-dot"><i class="fas fa-graduation-cap"></i></span>Education</li><li class="j-cat-award"><span class="j-legend-dot"><i class="fas fa-trophy"></i></span>Award</li><li class="j-cat-work"><span class="j-legend-dot"><i class="fas fa-briefcase"></i></span>Work</li><li class="j-cat-project"><span class="j-legend-dot"><i class="fas fa-code"></i></span>Project</li><li class="j-cat-personal"><span class="j-legend-dot"><i class="fas fa-heart"></i></span>Personal & community</li></ul>
+                        <h2 class="section-heading" data-i18n="journey.heading">My Journey</h2>
+<ul class="j-legend"><li class="j-cat-education"><span class="j-legend-dot"><i class="fas fa-graduation-cap"></i></span><span data-i18n="journey.leg.edu">Education</span></li><li class="j-cat-award"><span class="j-legend-dot"><i class="fas fa-trophy"></i></span><span data-i18n="journey.leg.award">Award</span></li><li class="j-cat-work"><span class="j-legend-dot"><i class="fas fa-briefcase"></i></span><span data-i18n="journey.leg.work">Work</span></li><li class="j-cat-project"><span class="j-legend-dot"><i class="fas fa-code"></i></span><span data-i18n="journey.leg.project">Project</span></li><li class="j-cat-personal"><span class="j-legend-dot"><i class="fas fa-heart"></i></span><span data-i18n="journey.leg.personal">Personal & community</span></li></ul>
                         <ol class="journey">
                             <li class="j-item left j-cat-personal">
                                 <span class="j-node" title="Personal & community"><i class="fas fa-heart"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">2014 – 2018</span>
-                                    <h3 class="j-title">Where it started: Plazma Burst 2 map design</h3>
-                                    <p class="j-text">I started designing custom maps for the 2D platformer Plazma Burst 2. I made nearly 100, and over 30 became highly rated by the community.</p>
+                                    <span class="j-date" data-i18n="j1.date">2014 – 2018</span>
+                                    <h3 class="j-title" data-i18n="j1.title">Where it started: Plazma Burst 2 map design</h3>
+                                    <p class="j-text" data-i18n="j1.text">I started designing custom maps for the 2D platformer Plazma Burst 2. I made nearly 100, and over 30 became highly rated by the community.</p>
                                     <a class="j-media" href="./assets/img/journey/plazma.jpg" data-lightbox="journey"
-                                        data-title="Plazma Burst 2 map design">
-                                        <img class="j-img" src="./assets/img/journey/plazma-thumb.jpg" alt="Plazma Burst 2 map design" loading="lazy">
+                                        data-i18n-attr="data-title:j1.title">
+                                        <img class="j-img" src="./assets/img/journey/plazma-thumb.jpg" alt="Plazma Burst 2 map design" data-i18n-attr="alt:j1.title" loading="lazy">
                                     </a>
-                                    <a class="j-link" href="https://www.plazmaburst2.com/?a=&s=7&ac=leanhkhoa&id=1333791" target="_blank" rel="noopener noreferrer">My profile on PlazmaBurst 2</a>
+                                    <a class="j-link" href="https://www.plazmaburst2.com/?a=&s=7&ac=leanhkhoa&id=1333791" target="_blank" rel="noopener noreferrer" data-i18n="j1.link">My profile on PlazmaBurst 2</a>
                                 </div>
                             </li>
                             <li class="j-item right j-cat-award">
                                 <span class="j-node" title="Award"><i class="fas fa-trophy"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">2016 – 2023</span>
-                                    <h3 class="j-title">Pre-university academic awards</h3>
-                                    <p class="j-text">I took part in academic and English competitions through middle and high school, and ranked among the top 10 students every semester.</p>
+                                    <span class="j-date" data-i18n="j2.date">2016 – 2023</span>
+                                    <h3 class="j-title" data-i18n="j2.title">Pre-university academic awards</h3>
+                                    <p class="j-text" data-i18n="j2.text">I took part in academic and English competitions through middle and high school, and ranked among the top 10 students every semester.</p>
                                     <a class="j-media" href="./assets/img/journey/awards.jpg" data-lightbox="journey"
-                                        data-title="Pre-university academic awards">
-                                        <img class="j-img" src="./assets/img/journey/awards-thumb.jpg" alt="Pre-university academic awards" loading="lazy">
+                                        data-i18n-attr="data-title:j2.title">
+                                        <img class="j-img" src="./assets/img/journey/awards-thumb.jpg" alt="Pre-university academic awards" data-i18n-attr="alt:j2.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item left j-cat-education">
                                 <span class="j-node" title="Education"><i class="fas fa-graduation-cap"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Sep 2023</span>
-                                    <h3 class="j-title">Enrolled at FPT University, Can Tho</h3>
-                                    <p class="j-text">I began the Software Engineering programme at FPT University, Can Tho.</p>
+                                    <span class="j-date" data-i18n="j3.date">Sep 2023</span>
+                                    <h3 class="j-title" data-i18n="j3.title">Enrolled at FPT University, Can Tho</h3>
+                                    <p class="j-text" data-i18n="j3.text">I began the Software Engineering programme at FPT University, Can Tho.</p>
                                     <a class="j-media" href="./assets/img/journey/fpt.jpg" data-lightbox="journey"
-                                        data-title="Enrolled at FPT University, Can Tho">
-                                        <img class="j-img" src="./assets/img/journey/fpt-thumb.jpg" alt="Enrolled at FPT University, Can Tho" loading="lazy">
+                                        data-i18n-attr="data-title:j3.title">
+                                        <img class="j-img" src="./assets/img/journey/fpt-thumb.jpg" alt="Enrolled at FPT University, Can Tho" data-i18n-attr="alt:j3.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item right j-cat-education">
                                 <span class="j-node" title="Education"><i class="fas fa-graduation-cap"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Nov – Dec 2023</span>
-                                    <h3 class="j-title">English Edu-Tourism Program, UniKL MIIT</h3>
-                                    <p class="j-text">I spent three weeks at Universiti Kuala Lumpur (UniKL MIIT), practicing English daily with locals and exploring the culture.</p>
+                                    <span class="j-date" data-i18n="j4.date">Nov – Dec 2023</span>
+                                    <h3 class="j-title" data-i18n="j4.title">English Edu-Tourism Program, UniKL MIIT</h3>
+                                    <p class="j-text" data-i18n="j4.text">I spent three weeks at Universiti Kuala Lumpur (UniKL MIIT), practicing English daily with locals and exploring the culture.</p>
                                     <a class="j-media" href="./assets/img/journey/malaysia-photo.jpg" data-lightbox="journey"
-                                        data-title="Khoa in front of Universiti Kuala Lumpur (UniKL MIIT), Malaysia — English Edu-Tourism Program, Nov–Dec 2023">
-                                        <img class="j-img" src="./assets/img/journey/malaysia-photo-thumb.jpg" alt="Khoa in front of Universiti Kuala Lumpur (UniKL MIIT), Malaysia — English Edu-Tourism Program, Nov–Dec 2023" loading="lazy">
+                                        data-i18n-attr="data-title:j4.lb">
+                                        <img class="j-img" src="./assets/img/journey/malaysia-photo-thumb.jpg" alt="Khoa in front of Universiti Kuala Lumpur (UniKL MIIT), Malaysia — English Edu-Tourism Program, Nov–Dec 2023" data-i18n-attr="alt:j4.lb" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item left j-cat-personal">
                                 <span class="j-node" title="Personal & community"><i class="fas fa-heart"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Jul 2024</span>
-                                    <h3 class="j-title">Completed Vovinam martial arts training</h3>
-                                    <p class="j-text">I finished the full 3-term Vovinam course, six months in total, which built my discipline and physical resilience.</p>
+                                    <span class="j-date" data-i18n="j5.date">Jul 2024</span>
+                                    <h3 class="j-title" data-i18n="j5.title">Completed Vovinam martial arts training</h3>
+                                    <p class="j-text" data-i18n="j5.text">I finished the full 3-term Vovinam course, six months in total, which built my discipline and physical resilience.</p>
                                     <a class="j-media" href="./assets/img/journey/vovinam.jpg" data-lightbox="journey"
-                                        data-title="Completed Vovinam martial arts training">
-                                        <img class="j-img" src="./assets/img/journey/vovinam-thumb.jpg" alt="Completed Vovinam martial arts training" loading="lazy">
+                                        data-i18n-attr="data-title:j5.title">
+                                        <img class="j-img" src="./assets/img/journey/vovinam-thumb.jpg" alt="Completed Vovinam martial arts training" data-i18n-attr="alt:j5.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item right j-cat-personal">
                                 <span class="j-node" title="Personal & community"><i class="fas fa-heart"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Oct 2024</span>
-                                    <h3 class="j-title">Joined FEL — FPTU Can Tho English Club</h3>
-                                    <p class="j-text">I joined the club and took part in many of its events, building my communication, teamwork and other soft skills.</p>
+                                    <span class="j-date" data-i18n="j6.date">Oct 2024</span>
+                                    <h3 class="j-title" data-i18n="j6.title">Joined FEL — FPTU Can Tho English Club</h3>
+                                    <p class="j-text" data-i18n="j6.text">I joined the club and took part in many of its events, building my communication, teamwork and other soft skills.</p>
                                     <a class="j-media" href="./assets/img/journey/english-club.jpg" data-lightbox="journey"
-                                        data-title="Joined FEL — FPTU Can Tho English Club">
-                                        <img class="j-img" src="./assets/img/journey/english-club-thumb.jpg" alt="Joined FEL — FPTU Can Tho English Club" loading="lazy">
+                                        data-i18n-attr="data-title:j6.title">
+                                        <img class="j-img" src="./assets/img/journey/english-club-thumb.jpg" alt="Joined FEL — FPTU Can Tho English Club" data-i18n-attr="alt:j6.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item left j-cat-award">
                                 <span class="j-node" title="Award"><i class="fas fa-trophy"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Fall 2024</span>
-                                    <h3 class="j-title">Top 5, Engineering &amp; Technology Faculty Group</h3>
-                                    <p class="j-text">I was ranked top 5 in the Engineering &amp; Technology Faculty Group in Fall 2024. Seven merit certificates followed from 2024 to 2026: three Excellent and four Honorable Student of Trimester.</p>
+                                    <span class="j-date" data-i18n="j7.date">Fall 2024</span>
+                                    <h3 class="j-title" data-i18n="j7.title">Top 5, Engineering &amp; Technology Faculty Group</h3>
+                                    <p class="j-text" data-i18n="j7.text">I was ranked top 5 in the Engineering &amp; Technology Faculty Group in Fall 2024. Seven merit certificates followed from 2024 to 2026: three Excellent and four Honorable Student of Trimester.</p>
                                     <a class="j-media" href="./assets/img/journey/top5.jpg" data-lightbox="journey"
-                                        data-title="Top 5 Students, Engineering &amp; Technology Faculty Group — Fall 2024">
-                                        <img class="j-img" src="./assets/img/journey/top5-thumb.jpg" alt="Top 5 Students, Engineering &amp; Technology Faculty Group — Fall 2024" loading="lazy">
+                                        data-i18n-attr="data-title:j7.lb">
+                                        <img class="j-img" src="./assets/img/journey/top5-thumb.jpg" alt="Top 5 Students, Engineering &amp; Technology Faculty Group — Fall 2024" data-i18n-attr="alt:j7.lb" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item right j-cat-project">
                                 <span class="j-node" title="Project"><i class="fas fa-code"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Jan 2025</span>
-                                    <h3 class="j-title">Arduino autonomous robot project</h3>
-                                    <p class="j-text">With a friend, I designed and built a path-following, dust-collecting robot using Arduino. We completed it within one month.</p>
+                                    <span class="j-date" data-i18n="j8.date">Jan 2025</span>
+                                    <h3 class="j-title" data-i18n="j8.title">Arduino autonomous robot project</h3>
+                                    <p class="j-text" data-i18n="j8.text">With a friend, I designed and built a path-following, dust-collecting robot using Arduino. We completed it within one month.</p>
                                     <a class="j-media" href="./assets/img/journey/arduino.jpg" data-lightbox="journey"
-                                        data-title="Arduino autonomous robot project">
-                                        <img class="j-img" src="./assets/img/journey/arduino-thumb.jpg" alt="Arduino autonomous robot project" loading="lazy">
+                                        data-i18n-attr="data-title:j8.title">
+                                        <img class="j-img" src="./assets/img/journey/arduino-thumb.jpg" alt="Arduino autonomous robot project" data-i18n-attr="alt:j8.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item left j-cat-project">
                                 <span class="j-node" title="Project"><i class="fas fa-code"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Apr 2025</span>
-                                    <h3 class="j-title">FEL Club website</h3>
-                                    <p class="j-text">I built a static frontend site for FEL Club that loads its event data from a JSON file, deployed on GitHub Pages.</p>
+                                    <span class="j-date" data-i18n="j9.date">Apr 2025</span>
+                                    <h3 class="j-title" data-i18n="j9.title">FEL Club website</h3>
+                                    <p class="j-text" data-i18n="j9.text">I built a static frontend site for FEL Club that loads its event data from a JSON file, deployed on GitHub Pages.</p>
                                     <a class="j-media" href="./assets/img/journey/fel-website.jpg" data-lightbox="journey"
-                                        data-title="FEL Club website">
-                                        <img class="j-img" src="./assets/img/journey/fel-website-thumb.jpg" alt="FEL Club website" loading="lazy">
+                                        data-i18n-attr="data-title:j9.title">
+                                        <img class="j-img" src="./assets/img/journey/fel-website-thumb.jpg" alt="FEL Club website" data-i18n-attr="alt:j9.title" loading="lazy">
                                     </a>
-                                    <a class="j-link" href="https://ainzlekhoa.github.io/FEL/" target="_blank" rel="noopener noreferrer">Visit the FEL website</a>
+                                    <a class="j-link" href="https://ainzlekhoa.github.io/FEL/" target="_blank" rel="noopener noreferrer" data-i18n="j9.link">Visit the FEL website</a>
                                 </div>
                             </li>
                             <li class="j-item right j-cat-work">
                                 <span class="j-node" title="Work"><i class="fas fa-briefcase"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Sep 2025 – Jan 2026</span>
-                                    <h3 class="j-title">OJT at Rikkeisoft (VMS project)</h3>
-                                    <p class="j-text">I interned at Rikkeisoft HCM, where I built a shared Redis caching library for four NestJS services and became a top contributor on the team.</p>
+                                    <span class="j-date" data-i18n="j10.date">Sep 2025 - Jan 2026</span>
+                                    <h3 class="j-title" data-i18n="j10.title">OJT at Rikkeisoft (VMS project)</h3>
+                                    <p class="j-text" data-i18n="j10.text">I interned at Rikkeisoft HCM on the VMS project: a shared Redis caching library for four NestJS services, and the User Management feature, built end to end.</p>
                                     <a class="j-media" href="./assets/img/journey/rikkeisoft.jpg" data-lightbox="journey"
-                                        data-title="OJT at Rikkeisoft HCM (VMS project)">
-                                        <img class="j-img" src="./assets/img/journey/rikkeisoft-thumb.jpg" alt="OJT at Rikkeisoft HCM (VMS project)" loading="lazy">
+                                        data-i18n-attr="data-title:j10.title">
+                                        <img class="j-img" src="./assets/img/journey/rikkeisoft-thumb.jpg" alt="OJT at Rikkeisoft (VMS project)" data-i18n-attr="alt:j10.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item left j-cat-project">
                                 <span class="j-node" title="Project"><i class="fas fa-code"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">May 2026</span>
-                                    <h3 class="j-title">AnSite as my capstone project</h3>
-                                    <p class="j-text">I started AnSite as my capstone project, inspired by my OJT work on VMS at Rikkeisoft: an AI vision platform that turns factory CCTV into safety alerts.</p>
+                                    <span class="j-date" data-i18n="j11.date">May 2026</span>
+                                    <h3 class="j-title" data-i18n="j11.title">AnSite as my capstone project</h3>
+                                    <p class="j-text" data-i18n="j11.text">I started AnSite as my capstone project, inspired by my OJT work on VMS at Rikkeisoft: an AI vision platform that turns factory CCTV into safety alerts.</p>
                                     <a class="j-media" href="./assets/img/journey/ansite-capstone.jpg" data-lightbox="journey"
-                                        data-title="AnSite as my capstone project">
-                                        <img class="j-img" src="./assets/img/journey/ansite-capstone-thumb.jpg" alt="AnSite as my capstone project" loading="lazy">
+                                        data-i18n-attr="data-title:j11.title">
+                                        <img class="j-img" src="./assets/img/journey/ansite-capstone-thumb.jpg" alt="AnSite as my capstone project" data-i18n-attr="alt:j11.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
                             <li class="j-item right j-cat-education">
                                 <span class="j-node" title="Education"><i class="fas fa-graduation-cap"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date">Dec 2026</span>
-                                    <h3 class="j-title">Graduation (expected)</h3>
-                                    <p class="j-text">I expect to graduate from FPT University, Can Tho, with a GPA of 3.76/4.0.</p>
+                                    <span class="j-date" data-i18n="j12.date">Dec 2026</span>
+                                    <h3 class="j-title" data-i18n="j12.title">Graduation (expected)</h3>
+                                    <p class="j-text" data-i18n="j12.text">I expect to graduate from FPT University, Can Tho, with a GPA of 3.76/4.0.</p>
                                 </div>
                             </li>
                         </ol>
@@ -542,8 +567,8 @@
                     <div class="section-wrapper" data-aos="fade-up" data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
 
-                        <h2 class="section-heading">Reach Out to Me</h2>
-                        <p class="section-subtitle">
+                        <h2 class="section-heading" data-i18n="contact.heading">Reach Out to Me</h2>
+                        <p class="section-subtitle" data-i18n="contact.sub">
                             Feel free to reach out through any of the platforms below.
                         </p>
 
@@ -558,7 +583,7 @@
                                             <p class="contact-info" id="copy-text">khoale1855@gmail.com</p>
                                         </div>
                                     </a>
-                                    <button class="copy-btn" onclick="copyText(event)" aria-label="Copy email">
+                                    <button class="copy-btn" onclick="copyText(event)" aria-label="Copy email" data-i18n-attr="aria-label:contact.copy">
                                         <i class="fas fa-copy"></i>
                                     </button>
                                 </div>
@@ -599,16 +624,16 @@
         <footer class="site-footer text-center mt-5">
             <div class="container py-5">
                 <h4 class="footer-brand mb-3" style="color: #7dddf4;">Lê Anh Khoa</h4>
-                <p class="footer-subtext mb-4 text-light">Backend Software Engineer (.NET / NestJS)</p>
+                <p class="footer-subtext mb-4 text-light" data-i18n="footer.role">Backend Developer</p>
 
                 <ul class="footer-menu list-unstyled d-flex justify-content-center flex-wrap mb-4">
-                    <li class="mx-3"><a href="#hero" class="footer-link">Home</a></li>
-                    <li class="mx-3"><a href="#projects" class="footer-link">Projects</a></li>
-                    <li class="mx-3"><a href="#experience" class="footer-link">Experience</a></li>
-                    <li class="mx-3"><a href="#awards" class="footer-link">Awards</a></li>
-                    <li class="mx-3"><a href="#skills" class="footer-link">Skills</a></li>
-                    <li class="mx-3"><a href="#journey" class="footer-link">Journey</a></li>
-                    <li class="mx-3"><a href="#contact" class="footer-link">Contact</a></li>
+                    <li class="mx-3"><a href="#hero" class="footer-link" data-i18n="nav.home">Home</a></li>
+                    <li class="mx-3"><a href="#projects" class="footer-link" data-i18n="nav.projects">Projects</a></li>
+                    <li class="mx-3"><a href="#experience" class="footer-link" data-i18n="nav.experience">Experience</a></li>
+                    <li class="mx-3"><a href="#awards" class="footer-link" data-i18n="nav.awards">Awards</a></li>
+                    <li class="mx-3"><a href="#skills" class="footer-link" data-i18n="nav.skills">Skills</a></li>
+                    <li class="mx-3"><a href="#journey" class="footer-link" data-i18n="nav.journey">Journey</a></li>
+                    <li class="mx-3"><a href="#contact" class="footer-link" data-i18n="nav.contact">Contact</a></li>
                 </ul>
 
                 <div class="social-links mb-4">
@@ -621,7 +646,7 @@
                 </div>
 
                 <p class="small mb-0">
-                    © 2026 <strong>Lê Anh Khoa</strong>. All rights reserved.
+                    © 2026 <strong>Lê Anh Khoa</strong>. <span data-i18n="footer.rights">All rights reserved.</span>
                 </p>
             </div>
         </footer>

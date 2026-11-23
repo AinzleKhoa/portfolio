@@ -4103,3 +4103,201 @@ header {
 .earlier-links {
     margin-top: 0;
 }
+
+/*=======================================
+  ROUND 8 - EN/VI switch, CV per language, 7 skill groups, mobile pass
+=======================================*/
+
+/* Language switch: pill with inline SVG flags, always visible in the navbar */
+.lang-switch {
+    display: inline-flex;
+    align-items: center;
+    gap: 2px;
+    padding: 3px;
+    border-radius: 999px;
+    border: 1px solid rgba(125, 221, 244, 0.45);
+    background: rgba(6, 18, 40, 0.85);
+    flex: 0 0 auto;
+}
+
+.lang-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    min-height: 44px;
+    min-width: 56px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 999px;
+    background: transparent;
+    color: #e6f1fb;
+    font-family: 'Inter', sans-serif;
+    font-size: 0.85rem;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    cursor: pointer;
+}
+
+.lang-btn .flag {
+    width: 22px;
+    height: 15px;
+    border-radius: 2px;
+    box-shadow: 0 0 0 1px rgba(255, 255, 255, 0.25);
+    flex: 0 0 auto;
+}
+
+.lang-btn:hover {
+    color: #7dddf4;
+}
+
+.lang-btn.active {
+    background: #7dddf4;
+    color: #062c43;
+    box-shadow: 0 0 12px rgba(125, 221, 244, 0.45);
+}
+
+.lang-btn:focus-visible {
+    outline: 2px solid #00f0ff;
+    outline-offset: 2px;
+}
+
+/* Mobile: brand | EN/VI | hamburger on one row; the opened menu wraps to its own line */
+@media (max-width: 991.5px) {
+    .navbar.floating-nav .navbar-brand {
+        min-width: 0;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        white-space: nowrap;
+        order: 0;
+        margin-right: auto;
+    }
+
+    .navbar.floating-nav .lang-switch {
+        order: 1;
+        margin-left: 8px;
+    }
+
+    .navbar.floating-nav .navbar-toggler {
+        order: 2;
+        min-width: 44px;
+        min-height: 44px;
+        margin-left: 6px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .navbar.floating-nav .navbar-collapse {
+        order: 3;
+        width: 100%;
+    }
+}
+
+/* Desktop: language pill sits at the far right, after the menu and CV button */
+@media (min-width: 992px) {
+    .navbar.floating-nav .lang-switch {
+        order: 4;
+        margin-left: 14px;
+    }
+}
+
+@media (max-width: 400px) {
+    .navbar.floating-nav .navbar-brand {
+        font-size: 0.95rem;
+    }
+
+    .navbar.floating-nav .lang-btn {
+        padding: 0 8px;
+    }
+}
+
+/* Featured / experience date line */
+.feat-date {
+    color: #7dddf4;
+    font-size: 0.9rem;
+    font-weight: 600;
+    margin-bottom: 8px;
+}
+
+/* Skills: 7 groups, 3 per row on desktop, last row centred, 2 on tablet, 1 on mobile */
+.skill-groups {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+}
+
+.skill-groups .skill-group {
+    flex: 0 0 calc((100% - 40px) / 3);
+    max-width: calc((100% - 40px) / 3);
+    margin: 0;
+}
+
+.skill-note {
+    margin: 10px 0 0;
+    color: #9ccddc;
+    font-size: 0.9rem;
+    font-style: italic;
+}
+
+@media (max-width: 991.5px) {
+    .skill-groups .skill-group {
+        flex: 0 0 calc((100% - 20px) / 2);
+        max-width: calc((100% - 20px) / 2);
+    }
+}
+
+@media (max-width: 575.5px) {
+    .skill-groups .skill-group {
+        flex: 0 0 100%;
+        max-width: 100%;
+    }
+}
+
+/* Mobile pass: hero buttons full width, tap targets >= 44px, body text >= 16px */
+@media (max-width: 575.5px) {
+    .hero-actions .cta-buttons {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        width: 100%;
+        gap: 12px;
+    }
+
+    .hero-actions .cta-buttons .btn-cta {
+        display: block;
+        width: 100%;
+        text-align: center;
+    }
+
+    .btn-cta,
+    .copy-btn,
+    .j-link {
+        min-height: 44px;
+    }
+
+    .hero-actions .social-links a,
+    .footer-menu a,
+    .copy-btn {
+        min-width: 44px;
+        min-height: 44px;
+        display: inline-flex;
+        align-items: center;
+        justify-content: center;
+    }
+
+    .intro-description,
+    .about-description,
+    .section-subtitle,
+    .feat-bullets li,
+    .j-text,
+    .earlier-summary,
+    .contact-info {
+        font-size: 16px;
+    }
+
+    .feat-body,
+    .j-card {
+        overflow-wrap: anywhere;
+    }
+}
