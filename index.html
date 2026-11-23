@@ -247,7 +247,9 @@
                                     <ul class="feat-bullets">
                                         <li data-i18n="feat.cs.b1">Hardened the VNPay payment flow by verifying the callback signature, amount and current order state before marking an order paid, with a background worker that cancels orders left unpaid after 15 minutes.</li>
                                         <li data-i18n="feat.cs.b2">Designed one query endpoint per resource that lets the mobile app filter, page and pick fields itself, so new screens needed no new endpoints; queries compile to SQL that selects only the requested columns (OData, EF Core projection).</li>
-                                        <li data-i18n="feat.cs.b3">Implemented refresh-token rotation with revocation on logout, password reset and account lock, used by the Flutter app for silent re-login.</li>
+                                        <li data-i18n="feat.cs.b3">Built JWT login with Google sign-in and rotating refresh tokens stored server-side: every refresh revokes the old token, and logout, password change or reset, and admin account lock revoke all of a user's sessions.</li>
+                                        <li data-i18n="feat.cs.b4">Worked with the mobile team on the Flutter Dio client: on a 401 it makes a single refresh call, queues the other failed requests, then retries them all, so users stay signed in without duplicate refreshes.</li>
+                                        <li data-i18n="feat.cs.b5">Standardized validation and errors (FluentValidation, RFC 7807 ProblemDetails) with Serilog logging.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://github.com/AinzleKhoa/calendar-shop" target="_blank"
