@@ -152,8 +152,6 @@
   "feat.eh.b3": "Built the booking flow across services: it checks the event, ticket stock and voucher over HTTP, takes payment through VNPay or MoMo, then issues a QR-code ticket and sends a confirmation email.",
   "feat.eh.b4": "Kept data consistent without a shared database: when an order is cancelled or fails, compensating calls restore ticket quantities and return the voucher to the user.",
   "feat.eh.b5": "Added real-time features with SignalR hubs for event chat, live reviews, notifications and a live dashboard.",
-  "feat.eh.b6": "Built a chatbot service on the Groq API (Llama 3.3) that uses tool calling to answer questions from live event and category data.",
-  "feat.eh.b7": "Ran the whole stack (10 services, gateway, web client and databases) with Docker Compose and one-command start, stop and reset scripts.",
   "j9b.date": "May 2025",
   "j9b.title": "Best Member of FEL, Spring 2025",
   "j9b.text": "FEL awarded me its Platinum Best Member Certificate for my contribution and commitment to the club throughout the semesters.",

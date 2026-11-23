@@ -152,8 +152,6 @@
   "feat.eh.b3": "Xây dựng luồng đặt vé xuyên nhiều service: kiểm tra sự kiện, số vé còn lại và voucher qua HTTP, thanh toán qua VNPay hoặc MoMo, rồi phát hành vé có mã QR và gửi email xác nhận.",
   "feat.eh.b4": "Giữ dữ liệu nhất quán khi không dùng chung database: khi đơn bị hủy hoặc thất bại, các lệnh bù trừ hoàn lại số vé và trả voucher cho người dùng.",
   "feat.eh.b5": "Thêm tính năng real-time bằng các SignalR hub cho chat theo sự kiện, đánh giá trực tiếp, thông báo và dashboard theo dõi.",
-  "feat.eh.b6": "Xây dựng service chatbot dùng Groq API (Llama 3.3) với tool calling để trả lời câu hỏi từ dữ liệu sự kiện và danh mục thực tế.",
-  "feat.eh.b7": "Chạy toàn bộ hệ thống (10 service, gateway, web client và các database) bằng Docker Compose cùng script khởi động, dừng và reset chỉ với một lệnh.",
   "j9b.date": "05/2025",
   "j9b.title": "Thành viên xuất sắc nhất FEL, Spring 2025",
   "j9b.text": "CLB FEL trao cho tôi Chứng nhận Thành viên xuất sắc (Platinum Best Member) vì những đóng góp và sự gắn bó với CLB qua các học kỳ.",
