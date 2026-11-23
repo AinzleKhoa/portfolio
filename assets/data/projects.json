@@ -44,7 +44,7 @@
     "githubLink": "https://github.com/AinzleKhoa/cosmora-celestica",
     "downloadLink": "none",
     "websiteLink": "none",
-    "yearCompleted": "Third Year",
+    "yearCompleted": "Second Year",
     "category": "website",
     "featured": "false",
     "thumb": "./assets/img/projects/thumbs/project7.jpg",
@@ -59,7 +59,7 @@
       "Maven"
     ],
     "title_vi": "Cosmora Celestica — Cửa hàng game & phụ kiện",
-    "yearCompleted_vi": "Năm 3",
+    "yearCompleted_vi": "Năm 2",
     "meta_vi": "Lead Developer · Nhóm 5 người · Summer 2025",
     "summary_vi": "Ứng dụng web Java Servlet/JSP theo MVC trên SQL Server, có đăng nhập Google OAuth và đặt lại mật khẩu qua email. Khách hàng có giỏ hàng, thanh toán với voucher và danh mục key game cùng phụ kiện; nhân viên và quản trị viên dùng dashboard với bộ lọc theo vai trò."
   },

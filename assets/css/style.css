@@ -4298,3 +4298,39 @@ header {
 .navbar.floating-nav span {
     text-shadow: none;
 }
+
+/* Navbar links: never wrap (Vietnamese labels are longer); tighter spacing on desktop */
+.navbar.floating-nav .navbar-nav .nav-link {
+    white-space: nowrap;
+}
+
+@media (min-width: 992px) {
+    .navbar.floating-nav .navbar-nav {
+        gap: 2px;
+    }
+
+    .navbar.floating-nav .navbar-nav .nav-link {
+        padding: 0.5rem 0.7rem;
+    }
+
+    .navbar.floating-nav .navbar-nav .nav-link::after {
+        left: 0.7rem;
+        right: 0.7rem;
+    }
+
+    .nav-cv {
+        white-space: nowrap;
+    }
+}
+
+@media (min-width: 992px) and (max-width: 1199.98px) {
+    .navbar.floating-nav .navbar-nav .nav-link {
+        padding: 0.5rem 0.45rem;
+        font-size: 15px;
+    }
+
+    .navbar.floating-nav .navbar-nav .nav-link::after {
+        left: 0.45rem;
+        right: 0.45rem;
+    }
+}

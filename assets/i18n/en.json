@@ -47,7 +47,7 @@
   "lang.vi": "Switch to Vietnamese",
   "hero.hello": "Hello! I'm",
   "hero.role": "Backend Developer",
-  "hero.tagline": "I build backend systems with .NET and NestJS, from a Redis caching library during my Rikkeisoft internship to AnSite, a camera-based safety platform that started as my capstone.",
+  "hero.tagline": "I enjoy building backend systems that are fast, correct and easy to maintain, from a shared caching module for a real team at Rikkeisoft to AnSite, a camera-based safety platform that began as my capstone.",
   "hero.alt": "Illustration of Lê Anh Khoa",
   "hero.viewProjects": "View Projects",
   "about.heading": "About Me",

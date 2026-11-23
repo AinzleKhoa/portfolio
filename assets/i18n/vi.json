@@ -47,7 +47,7 @@
   "lang.vi": "Chuyển sang tiếng Việt",
   "hero.hello": "Xin chào, tôi là",
   "hero.role": "Backend Developer",
-  "hero.tagline": "Tôi xây dựng hệ thống backend với .NET và NestJS, từ thư viện cache Redis trong thời gian thực tập tại Rikkeisoft đến AnSite, nền tảng giám sát an toàn qua camera khởi đầu từ đồ án tốt nghiệp.",
+  "hero.tagline": "Tôi thích xây dựng hệ thống backend nhanh, chính xác và dễ bảo trì, từ module cache dùng chung cho team dự án tại Rikkeisoft đến AnSite, nền tảng giám sát an toàn qua camera bắt đầu từ đồ án tốt nghiệp của tôi.",
   "hero.alt": "Hình minh họa Lê Anh Khoa",
   "hero.viewProjects": "Xem dự án",
   "about.heading": "Giới thiệu",
