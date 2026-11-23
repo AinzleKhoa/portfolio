@@ -81,7 +81,7 @@
     "featured": "true",
     "thumb": "./assets/img/projects/thumbs/project2.jpg",
     "meta": "Solo Developer",
-    "summary": "A static website for the FPTU English Club to showcase its events and activities, hosted on GitHub Pages. Event data is loaded from a JSON file, so the club can update it without a domain or a complex setup.",
+    "summary": "A static website for the FPTU English Club that showcases its events and activities, hosted on GitHub Pages. Event data lives in one JSON file, so club members can add events by editing that file, with no server or database to maintain.",
     "chips": [
       "HTML",
       "CSS",
@@ -92,7 +92,7 @@
     "title_vi": "Website CLB FEL",
     "yearCompleted_vi": "Năm 2",
     "meta_vi": "Phát triển một mình",
-    "summary_vi": "Website tĩnh cho CLB tiếng Anh FPTU, giới thiệu các sự kiện và hoạt động, triển khai trên GitHub Pages. Dữ liệu sự kiện đọc từ file JSON nên CLB có thể cập nhật mà không cần tên miền hay cấu hình phức tạp."
+    "summary_vi": "Website tĩnh cho CLB tiếng Anh FPTU, giới thiệu các sự kiện và hoạt động, triển khai trên GitHub Pages. Dữ liệu sự kiện nằm trong một file JSON, nên thành viên CLB chỉ cần sửa file đó để thêm sự kiện, không cần server hay database."
   },
   {
     "title": "NeonRealm",
@@ -142,7 +142,7 @@
     "featured": "true",
     "thumb": "./assets/img/projects/thumbs/project3.jpg",
     "meta": "Collaborator · Team of 2",
-    "summary": "An autonomous rover built with Arduino and an ESP32, with ultrasonic obstacle detection. It can be driven manually or navigate on its own. I co-designed it with a friend, drew the block and schematic diagrams, coded the logic and helped wire the hardware.",
+    "summary": "A sensor-driven rover built on Arduino and ESP32 that can be driven from a phone (Dabble app) or navigate on its own, using ultrasonic sensors to avoid obstacles, an L298N driver for the DC motors and an I2C LCD for live status. I co-designed it with a friend: I drew the block and schematic diagrams, wrote the C/C++ control logic and helped wire the hardware.",
     "chips": [
       "Arduino",
       "ESP32",
@@ -152,7 +152,7 @@
     "title_vi": "Arduino Rover",
     "yearCompleted_vi": "Năm 2",
     "meta_vi": "Cộng tác viên · Nhóm 2 người",
-    "summary_vi": "Robot tự hành dùng Arduino và ESP32, có cảm biến siêu âm phát hiện vật cản. Có thể điều khiển thủ công hoặc tự di chuyển. Tôi cùng bạn thiết kế, vẽ sơ đồ khối và sơ đồ nguyên lý, viết logic điều khiển và hỗ trợ đấu nối phần cứng."
+    "summary_vi": "Robot tự hành dùng Arduino và ESP32, có thể điều khiển từ điện thoại (ứng dụng Dabble) hoặc tự di chuyển, dùng cảm biến siêu âm để tránh vật cản, driver L298N cho động cơ DC và màn hình LCD I2C hiển thị trạng thái. Tôi cùng một người bạn thiết kế: tôi vẽ sơ đồ khối và sơ đồ nguyên lý, viết logic điều khiển bằng C/C++ và hỗ trợ đấu nối phần cứng."
   },
   {
     "title": "Galactic Typist",
@@ -172,7 +172,7 @@
     "featured": "true",
     "thumb": "./assets/img/projects/thumbs/project1.jpg",
     "meta": "Solo Developer",
-    "summary": "A fast-paced typing game in Java where players defend Earth from an alien empire with typing commands. Every correct keystroke advances the game and helps players improve their typing speed and accuracy.",
+    "summary": "A sci-fi typing game in Java Swing: players pilot Federation ships and type commands to shoot and dodge enemy fire. I built it solo, with a multi-threaded game loop (ExecutorService, timers), custom GUI components, and scoring, accuracy and difficulty levels.",
     "chips": [
       "Java",
       "Swing",
@@ -182,7 +182,7 @@
     "title_vi": "Galactic Typist",
     "yearCompleted_vi": "Năm 1",
     "meta_vi": "Phát triển một mình",
-    "summary_vi": "Game gõ phím nhịp nhanh viết bằng Java. Người chơi bảo vệ Trái Đất khỏi đế chế ngoài hành tinh bằng các lệnh gõ phím. Mỗi phím gõ đúng giúp game tiến tới và cải thiện tốc độ, độ chính xác khi gõ."
+    "summary_vi": "Game gõ phím phong cách khoa học viễn tưởng viết bằng Java Swing: người chơi điều khiển chiến hạm và gõ lệnh để bắn, né đạn địch. Tôi tự làm toàn bộ, với vòng lặp game đa luồng (ExecutorService, timer), các thành phần giao diện tự xây, cùng tính điểm, độ chính xác và nhiều mức độ khó."
   },
   {
     "title": "Student Management System",
@@ -202,7 +202,7 @@
     "featured": "false",
     "thumb": "./assets/img/projects/thumbs/project5.jpg",
     "meta": "Solo Developer",
-    "summary": "A desktop application built with Java Swing to help teachers manage student records. It is simple by design, and I completed it within 4 days as a solo university assignment.",
+    "summary": "My first full Java application: a Swing desktop app for teachers to add, update, search and list student records. It was planned as a group assignment, but I took it on alone and delivered it in four days, which taught me to scope tightly and finish on time.",
     "chips": [
       "Java",
       "Swing",
@@ -211,6 +211,6 @@
     "title_vi": "Hệ thống quản lý sinh viên",
     "yearCompleted_vi": "Năm 1",
     "meta_vi": "Phát triển một mình",
-    "summary_vi": "Ứng dụng desktop viết bằng Java Swing giúp giáo viên quản lý hồ sơ sinh viên. Thiết kế đơn giản, và tôi hoàn thành trong 4 ngày như một bài tập đại học cá nhân."
+    "summary_vi": "Ứng dụng Java hoàn chỉnh đầu tiên của tôi: phần mềm desktop Java Swing giúp giáo viên thêm, cập nhật, tìm kiếm và xem danh sách hồ sơ sinh viên. Đây vốn là bài tập nhóm nhưng tôi tự đảm nhận và hoàn thành trong 4 ngày, qua đó học cách giới hạn phạm vi và giữ đúng tiến độ."
   }
 ]
