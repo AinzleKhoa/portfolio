@@ -1,3 +1,6 @@
+// Bump on every content change so browsers fetch fresh text instead of a cached copy
+const CONTENT_VERSION = '20261123b';
+
 /*---------------------------------------
   Language (EN / VI): dictionaries in assets/i18n, choice remembered
 -----------------------------------------*/
@@ -39,7 +42,7 @@ function detectLang() {
 async function loadDict(lang) {
     if (I18N.cache[lang]) return I18N.cache[lang];
     try {
-        const response = await fetch(`./assets/i18n/${lang}.json`);
+        const response = await fetch(`./assets/i18n/${lang}.json?v=${CONTENT_VERSION}`, { cache: 'no-cache' });
         if (!response.ok) throw new Error(response.status);
         I18N.cache[lang] = await response.json();
     } catch (error) {
@@ -210,7 +213,7 @@ async function renderEarlierWork() {
 
     try {
         if (!earlierProjects) {
-            const response = await fetch('./assets/data/projects.json');
+            const response = await fetch(`./assets/data/projects.json?v=${CONTENT_VERSION}`, { cache: 'no-cache' });
             const data = await response.json();
 
             if (!Array.isArray(data)) {
