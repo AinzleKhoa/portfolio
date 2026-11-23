@@ -11,8 +11,8 @@
   "feat.eh.title": "EventHub: Event Booking Platform",
   "feat.eh.meta": "Backend Developer | Personal Project | ASP.NET Core 8, EF Core, SQL Server, Ocelot, SignalR, Docker",
   "feat.eh.date": "Mar 2025 - Jun 2025",
-  "feat.eh.b1": "Decomposed event booking into 10 ASP.NET Core services, each with its own SQL Server database, behind an Ocelot gateway that routes authenticated REST and SignalR traffic.",
-  "feat.eh.b2": "Kept bookings consistent without a shared database: the booking flow validates tickets and vouchers, takes VNPay/MoMo payment, and on failure calls compensating actions that restore tickets and vouchers.",
+  "feat.eh.b1": "Decomposed event booking into 10 ASP.NET Core services (auth, events, categories, booking, vouchers, social, chat, chatbot, notifications, withdrawals), each with its own SQL Server database.",
+  "feat.eh.b2": "Put an Ocelot API gateway in front of every service as the single entry point, forwarding JWT bearer tokens to protected APIs and routing both REST and SignalR traffic.",
   "feat.cs.title": "Calendar Shop: Mobile E-Commerce App",
   "feat.cs.meta": "Backend Developer | Team of 5 | ASP.NET Core 8, EF Core, SQL Server, OData, JWT, VNPay, Flutter",
   "feat.cs.date": "Jun 2026 - Jul 2026",
@@ -148,5 +148,14 @@
   "contact.copy": "Copy email",
   "alert.copied": "Text copied to clipboard!",
   "footer.role": "Backend Developer",
-  "footer.rights": "All rights reserved."
+  "footer.rights": "All rights reserved.",
+  "feat.eh.b3": "Built the booking flow across services: it checks the event, ticket stock and voucher over HTTP, takes payment through VNPay or MoMo, then issues a QR-code ticket and sends a confirmation email.",
+  "feat.eh.b4": "Kept data consistent without a shared database: when an order is cancelled or fails, compensating calls restore ticket quantities and return the voucher to the user.",
+  "feat.eh.b5": "Added real-time features with SignalR hubs for event chat, live reviews, notifications and a live dashboard.",
+  "feat.eh.b6": "Built a chatbot service on the Groq API (Llama 3.3) that uses tool calling to answer questions from live event and category data.",
+  "feat.eh.b7": "Ran the whole stack (10 services, gateway, web client and databases) with Docker Compose and one-command start, stop and reset scripts.",
+  "j9b.date": "May 2025",
+  "j9b.title": "Best Member of FEL, Spring 2025",
+  "j9b.text": "FEL awarded me its Platinum Best Member Certificate for my contribution and commitment to the club throughout the semesters.",
+  "exp.photo": "Rikkeisoft office, Ho Chi Minh City"
 }

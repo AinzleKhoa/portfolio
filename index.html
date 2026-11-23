@@ -218,8 +218,13 @@
                                     <p class="feat-meta" data-i18n="feat.eh.meta">Backend Developer | Personal Project | ASP.NET Core 8, EF Core, SQL Server, Ocelot, SignalR, Docker</p>
                                     <p class="feat-date" data-i18n="feat.eh.date">Mar 2025 - Jun 2025</p>
                                     <ul class="feat-bullets">
-                                        <li data-i18n="feat.eh.b1">Decomposed event booking into 10 ASP.NET Core services, each with its own SQL Server database, behind an Ocelot gateway that routes authenticated REST and SignalR traffic.</li>
-                                        <li data-i18n="feat.eh.b2">Kept bookings consistent without a shared database: the booking flow validates tickets and vouchers, takes VNPay/MoMo payment, and on failure calls compensating actions that restore tickets and vouchers.</li>
+                                        <li data-i18n="feat.eh.b1">x</li>
+                                        <li data-i18n="feat.eh.b2">x</li>
+                                        <li data-i18n="feat.eh.b3">x</li>
+                                        <li data-i18n="feat.eh.b4">x</li>
+                                        <li data-i18n="feat.eh.b5">x</li>
+                                        <li data-i18n="feat.eh.b6">x</li>
+                                        <li data-i18n="feat.eh.b7">x</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://github.com/AinzleKhoa/EventManagementSystem" target="_blank"
@@ -273,16 +278,22 @@
                         <h2 class="section-heading" data-i18n="exp.heading">Experience</h2>
 
                         <article class="feat-card exp-card">
-                            <div class="feat-body">
-                                <h3 class="feat-title" data-i18n="exp.title">Software Engineer Intern (OJT)</h3>
-                                <p class="feat-meta" data-i18n="exp.meta">Rikkeisoft | Ho Chi Minh City | VMS (Visitor & Manpower Management System)</p>
-                                <p class="feat-date" data-i18n="exp.date">Sep 2025 - Jan 2026</p>
-                                <ul class="feat-bullets">
-                                    <li data-i18n="exp.b1">Prevented cache stampedes in a shared Redis caching module for 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter.</li>
-                                    <li data-i18n="exp.b2">Kept cached data correct after writes with version-based invalidation (one Redis counter per entity, hashed query keys); traced and fixed a bug where one write bumped versions several times and emptied the cache too often.</li>
-                                    <li data-i18n="exp.b3">Built User Management end-to-end (NestJS API, DTOs, React admin page, unit tests).</li>
-                                </ul>
-                                <div class="feat-links">
+                            <div class="feat-body exp-layout">
+                                <div class="exp-main">
+                                    <h3 class="feat-title" data-i18n="exp.title">Software Engineer Intern (OJT)</h3>
+                                    <p class="feat-meta" data-i18n="exp.meta">Rikkeisoft | Ho Chi Minh City | VMS (Visitor & Manpower Management System)</p>
+                                    <p class="feat-date" data-i18n="exp.date">Sep 2025 - Jan 2026</p>
+                                    <ul class="feat-bullets">
+                                        <li data-i18n="exp.b1">Prevented cache stampedes in a shared Redis caching module for 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter.</li>
+                                        <li data-i18n="exp.b2">Kept cached data correct after writes with version-based invalidation (one Redis counter per entity, hashed query keys); traced and fixed a bug where one write bumped versions several times and emptied the cache too often.</li>
+                                        <li data-i18n="exp.b3">Built User Management end-to-end (NestJS API, DTOs, React admin page, unit tests).</li>
+                                    </ul>
+                                </div>
+                                <a class="exp-photo" href="./assets/img/experiences/rikkeisoft-office.jpg" data-lightbox="experience"
+                                    data-i18n-attr="data-title:exp.photo">
+                                    <img src="./assets/img/experiences/rikkeisoft-office-thumb.jpg" alt="Rikkeisoft office, Ho Chi Minh City" data-i18n-attr="alt:exp.photo" loading="lazy">
+                                </a>
+                                <div class="feat-links exp-links">
                                     <a href="https://github.com/AinzleKhoa/vms-monorepo-OJT" target="_blank"
                                         rel="noopener noreferrer" class="btn-cta outline">vms-monorepo-OJT</a>
                                     <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="ojt"
@@ -540,7 +551,19 @@
                                     <a class="j-link" href="https://ainzlekhoa.github.io/FEL/" target="_blank" rel="noopener noreferrer" data-i18n="j9.link">Visit the FEL website</a>
                                 </div>
                             </li>
-                            <li class="j-item right j-cat-work">
+                            <li class="j-item right j-cat-award">
+                                <span class="j-node" title="Award"><i class="fas fa-trophy"></i></span>
+                                <div class="j-card">
+                                    <span class="j-date" data-i18n="j9b.date">May 2025</span>
+                                    <h3 class="j-title" data-i18n="j9b.title">Best Member of FEL, Spring 2025</h3>
+                                    <p class="j-text" data-i18n="j9b.text">FEL awarded me its Platinum Best Member Certificate for my contribution and commitment to the club throughout the semesters.</p>
+                                    <a class="j-media" href="./assets/img/journey/fel-best-member-sp25.jpg" data-lightbox="journey"
+                                        data-i18n-attr="data-title:j9b.title">
+                                        <img class="j-img" src="./assets/img/journey/fel-best-member-sp25-thumb.jpg" alt="Best Member of FEL, Spring 2025" data-i18n-attr="alt:j9b.title" loading="lazy">
+                                    </a>
+                                </div>
+                            </li>
+                            <li class="j-item left j-cat-work">
                                 <span class="j-node" title="Work"><i class="fas fa-briefcase"></i></span>
                                 <div class="j-card">
                                     <span class="j-date" data-i18n="j10.date">Sep 2025 - Jan 2026</span>
@@ -552,19 +575,19 @@
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item left j-cat-project">
+                            <li class="j-item right j-cat-project">
                                 <span class="j-node" title="Project"><i class="fas fa-code"></i></span>
                                 <div class="j-card">
                                     <span class="j-date" data-i18n="j11.date">May 2026</span>
                                     <h3 class="j-title" data-i18n="j11.title">AnSite as my capstone project</h3>
                                     <p class="j-text" data-i18n="j11.text">I started AnSite as my capstone project, inspired by my OJT work on VMS at Rikkeisoft: an AI vision platform that turns factory CCTV into safety alerts.</p>
-                                    <a class="j-media" href="./assets/img/journey/ansite-capstone.jpg" data-lightbox="journey"
+                                    <a class="j-media" href="./assets/img/journey/ansite-team-opening.jpg" data-lightbox="journey"
                                         data-i18n-attr="data-title:j11.title">
-                                        <img class="j-img" src="./assets/img/journey/ansite-capstone-thumb.jpg" alt="AnSite as my capstone project" data-i18n-attr="alt:j11.title" loading="lazy">
+                                        <img class="j-img" src="./assets/img/journey/ansite-team-opening-thumb.jpg" alt="AnSite as my capstone project" data-i18n-attr="alt:j11.title" loading="lazy">
                                     </a>
                                 </div>
                             </li>
-                            <li class="j-item right j-cat-education">
+                            <li class="j-item left j-cat-education">
                                 <span class="j-node" title="Education"><i class="fas fa-graduation-cap"></i></span>
                                 <div class="j-card">
                                     <span class="j-date" data-i18n="j12.date">Dec 2026</span>

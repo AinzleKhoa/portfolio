@@ -4579,3 +4579,76 @@ header {
         padding-right: 10px !important;
     }
 }
+
+/*=======================================
+  ROUND 10 - OJT photo column, featured cards align their links, journey photos
+=======================================*/
+
+/* Experience (OJT): text beside a small photo on desktop, photo under the bullets on tablet/mobile */
+.exp-layout {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr);
+    grid-template-areas: "main" "photo" "links";
+    gap: 18px 28px;
+    align-items: start;
+}
+
+.exp-main {
+    grid-area: main;
+    min-width: 0;
+}
+
+.exp-photo {
+    grid-area: photo;
+    display: block;
+    min-width: 0;
+    border-radius: 14px;
+    overflow: hidden;
+    border: 1px solid rgba(125, 221, 244, 0.3);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.3);
+}
+
+.exp-photo img {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    object-fit: cover;
+    max-height: 200px;
+}
+
+.exp-links {
+    grid-area: links;
+    margin: 0;
+}
+
+@media (min-width: 992px) {
+    .exp-layout {
+        grid-template-columns: minmax(0, 1fr) 320px;
+        grid-template-areas: "main photo" "links links";
+    }
+
+    .exp-photo {
+        align-self: start;
+    }
+
+    .exp-photo img {
+        max-height: none;
+    }
+}
+
+/* Featured cards: equal-height cards, GitHub/website buttons sit at the card bottom */
+.feat-grid > .feat-card {
+    display: flex;
+    flex-direction: column;
+}
+
+.feat-grid > .feat-card > .feat-body {
+    display: flex;
+    flex-direction: column;
+    flex: 1 1 auto;
+}
+
+.feat-grid > .feat-card .feat-links {
+    margin-top: auto;
+}
