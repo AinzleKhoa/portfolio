@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261123d">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261124a">
 </head>
 
 <body tabindex="0">
@@ -105,7 +105,7 @@
                             <h1 class="intro-name">Lê Anh Khoa</h1>
                             <h6 class="intro-role" data-i18n="hero.role">Backend Developer</h6>
                             <p class="intro-description" data-i18n="hero.tagline">
-                                I take backend features through the whole software lifecycle, from requirements and design to testing, deployment and maintenance, using AI coding agents to move faster without losing control.
+                                I'm a backend developer focused on .NET and NestJS, with hands-on experience across the software lifecycle: requirements, API design, implementation, testing and deployment. I use AI coding agents with a plan-review-test workflow.
                             </p>
                         </div>
                         <div class="hero-actions">
@@ -157,7 +157,7 @@
                             </div>
                             <div class="about-text">
                                 <p class="about-description" data-i18n="about.summary">
-                                    I hold a Bachelor of Software Engineering from FPT University, Can Tho (2023–2026) and work across the full software development lifecycle: turning requirements into specs and acceptance criteria, designing APIs and data models, building and testing services, then deploying and maintaining them. I've done this in a company team at Rikkeisoft, in group projects, and on AnSite, a platform I took from idea to deployment. I adapt quickly to new stacks and domains, from .NET and Node.js to Python and mobile integration, and I use AI coding agents inside a disciplined workflow: plan first, review every change, test before merge. The projects below show the details.
+                                    I'm completing a Bachelor of Software Engineering at FPT University, Can Tho (2023-2026, expected graduation Dec 2026). I've worked across the software development lifecycle in a company team at Rikkeisoft, in group projects, and on AnSite, a capstone project I helped take from idea to deployment. I adapt quickly to new stacks and domains, from .NET and Node.js to Python and mobile integration, and I use AI coding agents with a disciplined workflow: plan first, review every change, test before merge. The projects below show the details.
                                 </p>
                             </div>
                         </div>
@@ -186,20 +186,20 @@
                                     </a>
                                 </div>
                                 <div class="feat-body">
-                                    <span class="feat-label" data-i18n="feat.ansite.label">Capstone → Startup</span>
+                                    <span class="feat-label" data-i18n="feat.ansite.label">Capstone Project</span>
                                     <h3 class="feat-title" data-i18n="feat.ansite.title">AnSite: Camera-Based Safety Platform for Factories</h3>
-                                    <p class="feat-meta" data-i18n="feat.ansite.meta">Lead Developer | Capstone Project & Startup | NestJS, TypeScript, PostgreSQL, TypeORM, Socket.IO, React, Python, MediaMTX, Docker, Caddy, GitHub Actions</p>
+                                    <p class="feat-meta" data-i18n="feat.ansite.meta">Backend Developer | Capstone Project | NestJS, TypeScript, PostgreSQL, TypeORM, Socket.IO, React, Python, MediaMTX, Docker, Caddy, GitHub Actions</p>
                                     <p class="feat-date" data-i18n="feat.ansite.date">May 2026 - Present</p>
                                     <p class="feat-origin"><em data-i18n="feat.ansite.origin">Inspired by my OJT work on VMS at Rikkeisoft.</em></p>
                                     <ul class="feat-bullets">
-                                        <li data-i18n="feat.ansite.b1">Split the system by workload: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API owns the database, so heavy AI load cannot take down the dashboard.</li>
-                                        <li data-i18n="feat.ansite.b2">Diagnosed a concurrency bug where a lock held during slow work (image processing, uploads) blocked config updates for 71 s; narrowing the lock cut the delay to under 0.4 s, with a regression test.</li>
-                                        <li data-i18n="feat.ansite.b3">Built the NestJS alert ingestion API with idempotent writes (retries with the same event ID never duplicate an alert), composite PostgreSQL indexes for per-organization queries, and real-time push via Socket.IO rooms.</li>
-                                        <li data-i18n="feat.ansite.b4">Delivered alerts beyond the dashboard: each alert keeps its evidence image and is pushed to a Zalo bot with the photo, re-sending identical bytes on retry.</li>
-                                        <li data-i18n="feat.ansite.b5">Secured live camera viewing: the API issues short-lived HMAC-signed session tokens, and the MediaMTX gateway checks every stream request against an internal auth endpoint (kept off the public internet behind Caddy) before a viewer gets video.</li>
-                                        <li data-i18n="feat.ansite.b6">Gave every edge device its own credential, stored as a SHA-256 hash and verified in constant time, and wrapped activation and revocation in database transactions so each one either completes fully or changes nothing.</li>
-                                        <li data-i18n="feat.ansite.b7">Hardened the API with role-based guards on organization-scoped data, input validation (class-validator), Helmet security headers and rate limits, with stricter limits on login and device activation.</li>
-                                        <li data-i18n="feat.ansite.b8">Deployed to a Linux VPS with GitHub Actions CI and 2,800+ automated tests across API, web and edge; changes follow a written plan with acceptance checks before AI agents implement them, then a separate review.</li>
+                                        <li data-i18n="feat.ansite.b1">Split the system by workload: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API centralizes database access, keeping AI processing isolated from the dashboard.</li>
+                                        <li data-i18n="feat.ansite.b2">Fixed a lock-scope bug where slow image processing and uploads delayed config updates by about 71 s in a reproduced case; after narrowing the lock, updates completed in 191-361 ms, with a regression test.</li>
+                                        <li data-i18n="feat.ansite.b3">Implemented the NestJS alert ingestion API with idempotent writes (a retry with the same event ID and body returns the existing alert instead of creating a duplicate), composite PostgreSQL indexes for organization-scoped queries, and real-time updates through Socket.IO rooms.</li>
+                                        <li data-i18n="feat.ansite.b4">Added alerts beyond the dashboard: each alert keeps its evidence image and is pushed to a Zalo bot with the photo, re-sending identical bytes on retry.</li>
+                                        <li data-i18n="feat.ansite.b5">Implemented live camera viewing with short-lived HMAC-signed session tokens; the MediaMTX gateway checks every stream request against an internal auth endpoint behind Caddy before delivering video.</li>
+                                        <li data-i18n="feat.ansite.b6">Implemented per-device credentials stored as SHA-256 hashes and verified in constant time; activation and revocation run in database transactions, so each operation either completes fully or changes nothing.</li>
+                                        <li data-i18n="feat.ansite.b7">Added role-based guards on organization-scoped data, input validation (class-validator), Helmet security headers and rate limits, with stricter limits on login and device activation.</li>
+                                        <li data-i18n="feat.ansite.b8">Deployed to a Linux VPS with a GitHub Actions CI pipeline and 2,000+ automated tests across API, web and edge; non-trivial changes follow a written plan with acceptance checks, then a separate review.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta" data-i18n="feat.ansite.visit">Visit ansite.vn</a>
@@ -249,11 +249,11 @@
                                     <p class="feat-meta" data-i18n="feat.cs.meta">Backend Developer | Team of 5 | ASP.NET Core 8, EF Core, SQL Server, OData, JWT, VNPay, Flutter</p>
                                     <p class="feat-date" data-i18n="feat.cs.date">Jun 2026 - Jul 2026</p>
                                     <ul class="feat-bullets">
-                                        <li data-i18n="feat.cs.b1">Hardened the VNPay payment flow by verifying the callback signature, amount and current order state before marking an order paid, with a background worker that cancels orders left unpaid after 15 minutes.</li>
-                                        <li data-i18n="feat.cs.b2">Designed one query endpoint per resource that lets the mobile app filter, page and pick fields itself, so new screens needed no new endpoints; queries compile to SQL that selects only the requested columns (OData, EF Core projection).</li>
-                                        <li data-i18n="feat.cs.b3">Built JWT login with Google sign-in and rotating refresh tokens stored server-side: every refresh revokes the old token, and logout, password change or reset, and admin account lock revoke all of a user's sessions.</li>
+                                        <li data-i18n="feat.cs.b1">Implemented the VNPay payment flow with callback signature, amount and order-state checks before confirming payment, plus a background worker that cancels orders left unpaid after a 15-minute timeout.</li>
+                                        <li data-i18n="feat.cs.b2">Designed OData query endpoints for list screens, letting the mobile app filter, page and select fields without new endpoints; order queries use EF Core projection to select only the requested columns.</li>
+                                        <li data-i18n="feat.cs.b3">Implemented JWT login with Google sign-in and server-side refresh-token rotation: every refresh revokes the old token; logout revokes the current token, while password change/reset and admin account lock revoke all sessions for that user.</li>
                                         <li data-i18n="feat.cs.b4">Worked with the mobile team on the Flutter Dio client: on a 401 it makes a single refresh call, queues the other failed requests, then retries them all, so users stay signed in without duplicate refreshes.</li>
-                                        <li data-i18n="feat.cs.b5">Standardized validation and errors (FluentValidation, RFC 7807 ProblemDetails) with Serilog logging.</li>
+                                        <li data-i18n="feat.cs.b5">Standardized validation and errors with FluentValidation and RFC 7807 ProblemDetails, and added Serilog logging.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://github.com/AinzleKhoa/calendar-shop" target="_blank"
@@ -288,9 +288,9 @@
                                     <p class="feat-meta" data-i18n="exp.meta">Rikkeisoft | Ho Chi Minh City | VMS (Visitor & Manpower Management System)</p>
                                     <p class="feat-date" data-i18n="exp.date">Sep 2025 - Jan 2026</p>
                                     <ul class="feat-bullets">
-                                        <li data-i18n="exp.b1">Prevented cache stampedes in a shared Redis caching module for 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter.</li>
-                                        <li data-i18n="exp.b2">Kept cached data correct after writes with version-based invalidation (one Redis counter per entity, hashed query keys); traced and fixed a bug where one write bumped versions several times and emptied the cache too often.</li>
-                                        <li data-i18n="exp.b3">Built User Management end-to-end (NestJS API, DTOs, React admin page, unit tests).</li>
+                                        <li data-i18n="exp.b1">Implemented cache-stampede protection in a shared Redis caching package adopted by 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter.</li>
+                                        <li data-i18n="exp.b2">Implemented version-based cache invalidation (one Redis counter per entity, hashed query keys), so a write makes the entity's older cache keys unreachable; traced and fixed a bug where one write bumped the version several times and invalidated cached entries too often.</li>
+                                        <li data-i18n="exp.b3">Built the User Management create and paginated list features (NestJS API, DTOs, React admin page, unit tests).</li>
                                     </ul>
                                 </div>
                                 <a class="exp-photo" href="./assets/img/experiences/rikkeisoft-office.jpg" data-lightbox="experience"
@@ -789,7 +789,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261123d"></script>
+    <script src="./assets/js/script.js?v=20261124a"></script>
 </body>
 
 </html>
