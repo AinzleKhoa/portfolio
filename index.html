@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261125a">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261125b">
 </head>
 
 <body tabindex="0">
@@ -188,11 +188,11 @@
                                 <div class="feat-body">
                                     <span class="feat-label" data-i18n="feat.ansite.label">Capstone Project</span>
                                     <h3 class="feat-title" data-i18n="feat.ansite.title">AnSite: Camera-Based Safety Platform for Factories</h3>
-                                    <p class="feat-meta" data-i18n="feat.ansite.meta">Backend Developer | Capstone Project | NestJS, TypeScript, PostgreSQL, TypeORM, Socket.IO, React, Python, MediaMTX, Docker, Caddy, GitHub Actions</p>
+                                    <p class="feat-meta" data-i18n="feat.ansite.meta">Backend Developer | Capstone Project | NestJS, PostgreSQL, Socket.IO, Docker, Python</p>
                                     <p class="feat-date" data-i18n="feat.ansite.date">May 2026 - Present</p>
                                     <p class="feat-origin"><em data-i18n="feat.ansite.origin">Inspired by my OJT work on VMS at Rikkeisoft.</em></p>
                                     <ul class="feat-bullets">
-                                        <li data-i18n="feat.ansite.b1">Split the system by workload: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API centralizes database access, keeping AI processing isolated from the dashboard.</li>
+                                        <li data-i18n="feat.ansite.b1">Split the system by workload because raw video is bandwidth-heavy: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API centralizes database access, keeping AI processing isolated from the dashboard.</li>
                                         <li data-i18n="feat.ansite.b2">Fixed a lock-scope bug in the camera worker: the lock was held across slow frame processing and uploads, blocking live config updates for about 71 s; narrowing the critical section brought updates to 191-361 ms, with a regression test.</li>
                                         <li data-i18n="feat.ansite.b3">Implemented the NestJS alert ingestion API with idempotent writes (a retry with the same event ID and body returns the existing alert instead of creating a duplicate), composite PostgreSQL indexes for organization-scoped queries, and real-time updates through Socket.IO rooms.</li>
                                         <li data-i18n="feat.ansite.b4">Added alerts beyond the dashboard: each alert keeps its evidence image and is pushed to a Zalo bot with the photo, re-sending identical bytes on retry.</li>
@@ -200,7 +200,7 @@
                                         <li data-i18n="feat.ansite.b6">Implemented per-device credentials stored as SHA-256 hashes and verified in constant time; activation and revocation run in database transactions, so each operation either completes fully or changes nothing.</li>
                                         <li data-i18n="feat.ansite.b7">Added role-based guards on organization-scoped data, input validation (class-validator), Helmet security headers and rate limits, with stricter limits on login and device activation.</li>
                                         <li data-i18n="feat.ansite.b8">Deployed the NestJS API to a Linux VPS with Docker Compose and Caddy, with GitHub Actions CI for API, web and edge.</li>
-                                        <li data-i18n="feat.ansite.b9">Maintained 2,000+ automated tests and a written plan/review workflow with acceptance checks for non-trivial changes.</li>
+                                        <li data-i18n="feat.ansite.b9">Added a regression test for the lock-scope bug; non-trivial changes follow a written plan with acceptance checks, then a separate review.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta" data-i18n="feat.ansite.visit">Visit ansite.vn</a>
@@ -220,7 +220,7 @@
                                 </div>
                                 <div class="feat-body">
                                     <h3 class="feat-title" data-i18n="feat.eh.title">EventHub: Event Booking Platform</h3>
-                                    <p class="feat-meta" data-i18n="feat.eh.meta">Backend Developer | Personal Project | ASP.NET Core 8, EF Core, SQL Server, Ocelot, SignalR, Docker</p>
+                                    <p class="feat-meta" data-i18n="feat.eh.meta">Backend Developer | Personal Project | ASP.NET Core 8, SQL Server, Ocelot, SignalR</p>
                                     <p class="feat-date" data-i18n="feat.eh.date">Mar 2025 - Jun 2025</p>
                                     <ul class="feat-bullets">
                                         <li data-i18n="feat.eh.b1">x</li>
@@ -247,11 +247,11 @@
                                 </div>
                                 <div class="feat-body">
                                     <h3 class="feat-title" data-i18n="feat.cs.title">Calendar Shop: Mobile E-Commerce App</h3>
-                                    <p class="feat-meta" data-i18n="feat.cs.meta">Backend Developer | Team of 5 | ASP.NET Core 8, EF Core, SQL Server, OData, JWT, VNPay, Flutter</p>
+                                    <p class="feat-meta" data-i18n="feat.cs.meta">Backend Developer | Team of 5 | ASP.NET Core 8, SQL Server, OData, VNPay</p>
                                     <p class="feat-date" data-i18n="feat.cs.date">Jun 2026 - Jul 2026</p>
                                     <ul class="feat-bullets">
                                         <li data-i18n="feat.cs.b1">Implemented the VNPay payment flow with callback signature, amount and order-state checks before confirming payment, plus a background worker that cancels orders left unpaid after a 15-minute timeout.</li>
-                                        <li data-i18n="feat.cs.b2">Designed OData query endpoints for list screens, letting the mobile app filter, page and select fields without new endpoints; order queries use EF Core projection to select only the requested columns.</li>
+                                        <li data-i18n="feat.cs.b2">Chose OData over per-screen endpoints so the mobile app could filter, page and select fields without new endpoints; order queries use EF Core projection to avoid loading full entities.</li>
                                         <li data-i18n="feat.cs.b3">Implemented JWT login with Google sign-in and server-side refresh-token rotation: every refresh revokes the old token; logout revokes the current token, while password change/reset and admin account lock revoke all sessions for that user.</li>
                                         <li data-i18n="feat.cs.b4">Worked with the mobile team on the Flutter Dio client: on a 401 it makes a single refresh call, queues the other failed requests, then retries them all, so users stay signed in without duplicate refreshes.</li>
                                         <li data-i18n="feat.cs.b5">Standardized validation and errors with FluentValidation and RFC 7807 ProblemDetails, and added Serilog logging.</li>
@@ -289,9 +289,8 @@
                                     <p class="feat-meta" data-i18n="exp.meta">Rikkeisoft | Ho Chi Minh City | VMS (Visitor & Manpower Management System)</p>
                                     <p class="feat-date" data-i18n="exp.date">Sep 2025 - Jan 2026</p>
                                     <ul class="feat-bullets">
-                                        <li data-i18n="exp.b1">Implemented cache-stampede protection in a shared Redis caching package adopted by 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter.</li>
-                                        <li data-i18n="exp.b2">Implemented version-based cache invalidation (one Redis counter per entity, hashed query keys), so a write makes the entity's older cache keys unreachable; traced and fixed a bug where one write bumped the version several times and invalidated cached entries too often.</li>
-                                        <li data-i18n="exp.b3">Built the User Management create and paginated list features (NestJS API, DTOs, React admin page, unit tests).</li>
+                                        <li data-i18n="exp.b1">Implemented cache-stampede protection in a shared Redis caching package adopted by 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter, instead of a local lock that would not coordinate across service instances.</li>
+                                        <li data-i18n="exp.b2">Implemented version-based cache invalidation (one Redis counter per entity, hashed query keys), so a write makes the entity's older cache keys unreachable, instead of scanning and deleting every query variant; traced and fixed a bug where one write bumped the version several times and invalidated cached entries too often.</li>
                                     </ul>
                                 </div>
                                 <a class="exp-photo" href="./assets/img/experiences/rikkeisoft-office.jpg" data-lightbox="experience"
@@ -790,7 +789,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261125a"></script>
+    <script src="./assets/js/script.js?v=20261125b"></script>
 </body>
 
 </html>
