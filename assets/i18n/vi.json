@@ -11,7 +11,7 @@
   "feat.ansite.b6": "Triển khai credential riêng cho từng thiết bị edge, lưu dạng hash SHA-256 và xác minh trong thời gian cố định; việc kích hoạt và thu hồi chạy trong transaction nên mỗi thao tác hoặc hoàn tất trọn vẹn, hoặc không thay đổi gì.",
   "feat.ansite.b7": "Thêm guard phân quyền theo vai trò trên dữ liệu theo từng tổ chức, kiểm tra đầu vào (class-validator), header bảo mật Helmet và giới hạn tần suất request, chặt hơn ở đăng nhập và kích hoạt thiết bị.",
   "feat.ansite.b8": "Deploy NestJS API lên Linux VPS với Docker Compose và Caddy, kèm GitHub Actions CI cho API, web và edge.",
-  "feat.ansite.b9": "Thêm regression test cho lỗi lock-scope; các thay đổi lớn có kế hoạch và tiêu chí nghiệm thu trước, sau đó review riêng.",
+  "feat.ansite.b9": "Thêm migration replay gate trên database PostgreSQL mới; các thay đổi lớn có kế hoạch và tiêu chí nghiệm thu trước, sau đó review riêng.",
   "feat.eh.title": "EventHub: Nền tảng đặt vé sự kiện",
   "feat.eh.meta": "Backend Developer | Dự án cá nhân | ASP.NET Core 8, SQL Server, Ocelot, SignalR",
   "feat.eh.date": "03/2025 - 06/2025",

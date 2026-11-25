@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261125b">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261125c">
 </head>
 
 <body tabindex="0">
@@ -200,7 +200,7 @@
                                         <li data-i18n="feat.ansite.b6">Implemented per-device credentials stored as SHA-256 hashes and verified in constant time; activation and revocation run in database transactions, so each operation either completes fully or changes nothing.</li>
                                         <li data-i18n="feat.ansite.b7">Added role-based guards on organization-scoped data, input validation (class-validator), Helmet security headers and rate limits, with stricter limits on login and device activation.</li>
                                         <li data-i18n="feat.ansite.b8">Deployed the NestJS API to a Linux VPS with Docker Compose and Caddy, with GitHub Actions CI for API, web and edge.</li>
-                                        <li data-i18n="feat.ansite.b9">Added a regression test for the lock-scope bug; non-trivial changes follow a written plan with acceptance checks, then a separate review.</li>
+                                        <li data-i18n="feat.ansite.b9">Added a migration replay gate on a fresh PostgreSQL database; non-trivial changes follow a written plan with acceptance checks, then a separate review.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta" data-i18n="feat.ansite.visit">Visit ansite.vn</a>
@@ -789,7 +789,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261125b"></script>
+    <script src="./assets/js/script.js?v=20261125c"></script>
 </body>
 
 </html>
