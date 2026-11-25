@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261125c">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261125d">
 </head>
 
 <body tabindex="0">
@@ -195,12 +195,12 @@
                                         <li data-i18n="feat.ansite.b1">Split the system by workload because raw video is bandwidth-heavy: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API centralizes database access, keeping AI processing isolated from the dashboard.</li>
                                         <li data-i18n="feat.ansite.b2">Fixed a lock-scope bug in the camera worker: the lock was held across slow frame processing and uploads, blocking live config updates for about 71 s; narrowing the critical section brought updates to 191-361 ms, with a regression test.</li>
                                         <li data-i18n="feat.ansite.b3">Implemented the NestJS alert ingestion API with idempotent writes (a retry with the same event ID and body returns the existing alert instead of creating a duplicate), composite PostgreSQL indexes for organization-scoped queries, and real-time updates through Socket.IO rooms.</li>
-                                        <li data-i18n="feat.ansite.b4">Added alerts beyond the dashboard: each alert keeps its evidence image and is pushed to a Zalo bot with the photo, re-sending identical bytes on retry.</li>
-                                        <li data-i18n="feat.ansite.b5">Implemented live camera viewing with short-lived HMAC-signed session tokens; the MediaMTX gateway checks every stream request against an internal auth endpoint behind Caddy before delivering video.</li>
-                                        <li data-i18n="feat.ansite.b6">Implemented per-device credentials stored as SHA-256 hashes and verified in constant time; activation and revocation run in database transactions, so each operation either completes fully or changes nothing.</li>
-                                        <li data-i18n="feat.ansite.b7">Added role-based guards on organization-scoped data, input validation (class-validator), Helmet security headers and rate limits, with stricter limits on login and device activation.</li>
-                                        <li data-i18n="feat.ansite.b8">Deployed the NestJS API to a Linux VPS with Docker Compose and Caddy, with GitHub Actions CI for API, web and edge.</li>
-                                        <li data-i18n="feat.ansite.b9">Added a migration replay gate on a fresh PostgreSQL database; non-trivial changes follow a written plan with acceptance checks, then a separate review.</li>
+                                        <li data-i18n="feat.ansite.b4">Added Zalo bot delivery for alerts, including the evidence image; retries reuse the same image bytes.</li>
+                                        <li data-i18n="feat.ansite.b5">Implemented live camera viewing with short-lived HMAC-signed session tokens and an internal auth check in the MediaMTX gateway.</li>
+                                        <li data-i18n="feat.ansite.b6">Implemented per-device credentials stored as SHA-256 hashes and verified in constant time; activation and revocation run in database transactions.</li>
+                                        <li data-i18n="feat.ansite.b7">Added role-based guards, input validation (class-validator), Helmet headers and rate limits on organization-scoped endpoints.</li>
+                                        <li data-i18n="feat.ansite.b8">Deployed the NestJS API to a Linux VPS with Docker Compose and Caddy, with GitHub Actions CI for API, web and edge and a migration replay gate on a fresh PostgreSQL database.</li>
+                                        <li data-i18n="feat.ansite.b9">Documented and enforced an AI-assisted delivery workflow: versioned AGENTS.md rules, plan-first changes with per-phase acceptance criteria, planner/executor separation, and an independent diff/CI audit before merge.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta" data-i18n="feat.ansite.visit">Visit ansite.vn</a>
@@ -315,8 +315,7 @@
                     <div class="news-wrapper" data-aos="fade-up" data-aos-offset="300"
                         data-aos-easing="ease-in-sine">
                         <h2 class="section-heading" data-i18n="news.heading">In the News</h2>
-                        <p class="section-subtitle" data-i18n="news.sub">AnSite's journey from capstone project to
-                            company, as covered by Vietnamese media.</p>
+                        <p class="section-subtitle" data-i18n="news.sub">AnSite's journey from a capstone project, as covered by Vietnamese media.</p>
                         <p class="news-note" data-i18n="news.note">Articles in Vietnamese</p>
 
                         <div class="news-grid">
@@ -789,7 +788,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261125c"></script>
+    <script src="./assets/js/script.js?v=20261125d"></script>
 </body>
 
 </html>

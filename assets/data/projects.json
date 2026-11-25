@@ -38,7 +38,7 @@
     "video": "none",
     "youtube": "none",
     "team": "5 Person",
-    "role": "Lead Developer",
+    "role": "Backend Developer",
     "purpose": "This project is an enhanced upgrade of my previous Neonrealm MVC Java project, developed as part of a rigorous Java MVC course assignment. With tight deadlines and concurrent academic commitments, the objective was to build a modern, secure, and user-friendly digital storefront specializing in games and gaming accessories. The focus was on implementing a robust MVC architecture, ensuring strong security measures, and delivering a seamless user experience within project constraints.",
     "description": "A work in progress project.",
     "githubLink": "https://github.com/AinzleKhoa/cosmora-celestica",
@@ -48,7 +48,7 @@
     "category": "website",
     "featured": "false",
     "thumb": "./assets/img/projects/thumbs/project7.jpg",
-    "meta": "Lead Developer · Team of 5 · Summer 2025",
+    "meta": "Backend Developer · Team of 5 · Summer 2025",
     "summary": "A Java Servlet/JSP MVC web app on SQL Server, with Google OAuth sign-in and email-based password reset. Customers get a cart, checkout with vouchers and a catalog of game keys and gaming accessories, while staff and admins use a dashboard with role-based filters.",
     "chips": [
       "Java",
@@ -60,7 +60,7 @@
     ],
     "title_vi": "Cosmora Celestica — Cửa hàng game & phụ kiện",
     "yearCompleted_vi": "Năm 2",
-    "meta_vi": "Lead Developer · Nhóm 5 người · Summer 2025",
+    "meta_vi": "Backend Developer · Nhóm 5 người · Summer 2025",
     "summary_vi": "Ứng dụng web Java Servlet/JSP theo MVC trên SQL Server, có đăng nhập Google OAuth và đặt lại mật khẩu qua email. Khách hàng có giỏ hàng, thanh toán với voucher và danh mục key game cùng phụ kiện; nhân viên và quản trị viên dùng dashboard với bộ lọc theo vai trò."
   },
   {
@@ -101,7 +101,7 @@
     "video": "none",
     "youtube": "https://youtu.be/TKT76zBKzNE",
     "team": "6 Person",
-    "role": "As the team lead and primary developer, I handled both frontend and backend development. I designed the home and category pages, implemented the MVC model, and developed the sign-in/sign-up system with security features like brute force protection. Additionally, I integrated GitHub third-party login and managed the profile section for user settings. I led the team to a near-perfect score, achieving a 10 for my contributions.",
+    "role": "Backend Developer",
     "purpose": "This project was part of a Java MVC assignment, developed under tight deadlines while managing multiple other subjects. The goal was to build a digital game store with a secure and user-friendly platform. I re-modeled an existing template to meet project requirements and time constraints.",
     "description": "NeonRealm is a Java MVC-based digital game store website, using SQL Server for the database. It features secure user authentication, game browsing, and a user profile system. The project combined frontend design with backend logic to create a functional and interactive online store.",
     "githubLink": "https://github.com/AinzleKhoa/neonrealm-website",
@@ -111,8 +111,8 @@
     "category": "website",
     "featured": "false",
     "thumb": "./assets/img/projects/thumbs/project4.jpg",
-    "meta": "Team lead & primary developer · Team of 6",
-    "summary": "A Java MVC digital game store on SQL Server, with secure sign-in and sign-up, game browsing and user profiles. As team lead I built the home and category pages, the MVC model and the authentication flow.",
+    "meta": "Backend Developer · Team of 6",
+    "summary": "A Java MVC digital game store on SQL Server, with secure sign-in and sign-up, game browsing and user profiles. I built the home and category pages, the MVC model and the authentication flow.",
     "chips": [
       "Java Servlet & JSP",
       "SQL Server",
@@ -121,8 +121,8 @@
     ],
     "title_vi": "NeonRealm",
     "yearCompleted_vi": "Năm 2",
-    "meta_vi": "Trưởng nhóm & lập trình viên chính · Nhóm 6 người",
-    "summary_vi": "Cửa hàng game số theo MVC viết bằng Java, dùng SQL Server. Có đăng nhập và đăng ký an toàn, duyệt game và hồ sơ người dùng. Với vai trò trưởng nhóm, tôi xây dựng trang chủ, trang danh mục, mô hình MVC và luồng xác thực."
+    "meta_vi": "Backend Developer · Nhóm 6 người",
+    "summary_vi": "Cửa hàng game số theo MVC viết bằng Java, dùng SQL Server. Có đăng nhập và đăng ký an toàn, duyệt game và hồ sơ người dùng. Tôi xây dựng trang chủ, trang danh mục, mô hình MVC và luồng xác thực."
   },
   {
     "title": "Arduino Rover",
