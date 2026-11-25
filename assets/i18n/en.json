@@ -4,7 +4,7 @@
   "feat.ansite.meta": "Backend Developer | Capstone Project | NestJS, TypeScript, PostgreSQL, TypeORM, Socket.IO, React, Python, MediaMTX, Docker, Caddy, GitHub Actions",
   "feat.ansite.date": "May 2026 - Present",
   "feat.ansite.b1": "Split the system by workload: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API centralizes database access, keeping AI processing isolated from the dashboard.",
-  "feat.ansite.b2": "Fixed a lock-scope bug where slow image processing and uploads delayed config updates by about 71 s in a reproduced case; after narrowing the lock, updates completed in 191-361 ms, with a regression test.",
+  "feat.ansite.b2": "Fixed a lock-scope bug in the camera worker: the lock was held across slow frame processing and uploads, blocking live config updates for about 71 s; narrowing the critical section brought updates to 191-361 ms, with a regression test.",
   "feat.ansite.b3": "Implemented the NestJS alert ingestion API with idempotent writes (a retry with the same event ID and body returns the existing alert instead of creating a duplicate), composite PostgreSQL indexes for organization-scoped queries, and real-time updates through Socket.IO rooms.",
   "feat.ansite.b4": "Added alerts beyond the dashboard: each alert keeps its evidence image and is pushed to a Zalo bot with the photo, re-sending identical bytes on retry.",
   "feat.ansite.b5": "Implemented live camera viewing with short-lived HMAC-signed session tokens; the MediaMTX gateway checks every stream request against an internal auth endpoint behind Caddy before delivering video.",

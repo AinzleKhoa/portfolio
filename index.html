@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261124d">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261125a">
 </head>
 
 <body tabindex="0">
@@ -193,7 +193,7 @@
                                     <p class="feat-origin"><em data-i18n="feat.ansite.origin">Inspired by my OJT work on VMS at Rikkeisoft.</em></p>
                                     <ul class="feat-bullets">
                                         <li data-i18n="feat.ansite.b1">Split the system by workload: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API centralizes database access, keeping AI processing isolated from the dashboard.</li>
-                                        <li data-i18n="feat.ansite.b2">Fixed a lock-scope bug where slow image processing and uploads delayed config updates by about 71 s in a reproduced case; after narrowing the lock, updates completed in 191-361 ms, with a regression test.</li>
+                                        <li data-i18n="feat.ansite.b2">Fixed a lock-scope bug in the camera worker: the lock was held across slow frame processing and uploads, blocking live config updates for about 71 s; narrowing the critical section brought updates to 191-361 ms, with a regression test.</li>
                                         <li data-i18n="feat.ansite.b3">Implemented the NestJS alert ingestion API with idempotent writes (a retry with the same event ID and body returns the existing alert instead of creating a duplicate), composite PostgreSQL indexes for organization-scoped queries, and real-time updates through Socket.IO rooms.</li>
                                         <li data-i18n="feat.ansite.b4">Added alerts beyond the dashboard: each alert keeps its evidence image and is pushed to a Zalo bot with the photo, re-sending identical bytes on retry.</li>
                                         <li data-i18n="feat.ansite.b5">Implemented live camera viewing with short-lived HMAC-signed session tokens; the MediaMTX gateway checks every stream request against an internal auth endpoint behind Caddy before delivering video.</li>
@@ -790,7 +790,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261124d"></script>
+    <script src="./assets/js/script.js?v=20261125a"></script>
 </body>
 
 </html>
