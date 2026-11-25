@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261125d">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261126a">
 </head>
 
 <body tabindex="0">
@@ -190,17 +190,13 @@
                                     <h3 class="feat-title" data-i18n="feat.ansite.title">AnSite: Camera-Based Safety Platform for Factories</h3>
                                     <p class="feat-meta" data-i18n="feat.ansite.meta">Backend Developer | Capstone Project | NestJS, PostgreSQL, Socket.IO, Docker, Python</p>
                                     <p class="feat-date" data-i18n="feat.ansite.date">May 2026 - Present</p>
-                                    <p class="feat-origin"><em data-i18n="feat.ansite.origin">Inspired by my OJT work on VMS at Rikkeisoft.</em></p>
                                     <ul class="feat-bullets">
                                         <li data-i18n="feat.ansite.b1">Split the system by workload because raw video is bandwidth-heavy: a Python edge agent on the factory LAN handles camera streams and YOLO/VLM detection, while a NestJS cloud API centralizes database access, keeping AI processing isolated from the dashboard.</li>
                                         <li data-i18n="feat.ansite.b2">Fixed a lock-scope bug in the camera worker: the lock was held across slow frame processing and uploads, blocking live config updates for about 71 s; narrowing the critical section brought updates to 191-361 ms, with a regression test.</li>
                                         <li data-i18n="feat.ansite.b3">Implemented the NestJS alert ingestion API with idempotent writes (a retry with the same event ID and body returns the existing alert instead of creating a duplicate), composite PostgreSQL indexes for organization-scoped queries, and real-time updates through Socket.IO rooms.</li>
-                                        <li data-i18n="feat.ansite.b4">Added Zalo bot delivery for alerts, including the evidence image; retries reuse the same image bytes.</li>
-                                        <li data-i18n="feat.ansite.b5">Implemented live camera viewing with short-lived HMAC-signed session tokens and an internal auth check in the MediaMTX gateway.</li>
-                                        <li data-i18n="feat.ansite.b6">Implemented per-device credentials stored as SHA-256 hashes and verified in constant time; activation and revocation run in database transactions.</li>
-                                        <li data-i18n="feat.ansite.b7">Added role-based guards, input validation (class-validator), Helmet headers and rate limits on organization-scoped endpoints.</li>
-                                        <li data-i18n="feat.ansite.b8">Deployed the NestJS API to a Linux VPS with Docker Compose and Caddy, with GitHub Actions CI for API, web and edge and a migration replay gate on a fresh PostgreSQL database.</li>
-                                        <li data-i18n="feat.ansite.b9">Documented and enforced an AI-assisted delivery workflow: versioned AGENTS.md rules, plan-first changes with per-phase acceptance criteria, planner/executor separation, and an independent diff/CI audit before merge.</li>
+                                        <li data-i18n="feat.ansite.b4">Implemented per-device activation and SHA-256-hashed device credentials with constant-time comparison.</li>
+                                        <li data-i18n="feat.ansite.b5">Deployed the NestJS API to a Linux VPS with Docker Compose and Caddy, with GitHub Actions CI for API, web and edge and a migration replay gate on a fresh PostgreSQL database.</li>
+                                        <li data-i18n="feat.ansite.b6">Documented and enforced an AI-assisted delivery workflow: versioned AGENTS.md rules, plan-first changes with per-phase acceptance criteria, planner/executor separation, and an independent diff/CI audit before merge.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://ansite.vn" target="_blank" rel="noopener noreferrer" class="btn-cta" data-i18n="feat.ansite.visit">Visit ansite.vn</a>
@@ -223,11 +219,8 @@
                                     <p class="feat-meta" data-i18n="feat.eh.meta">Backend Developer | Personal Project | ASP.NET Core 8, SQL Server, Ocelot, SignalR</p>
                                     <p class="feat-date" data-i18n="feat.eh.date">Mar 2025 - Jun 2025</p>
                                     <ul class="feat-bullets">
-                                        <li data-i18n="feat.eh.b1">x</li>
-                                        <li data-i18n="feat.eh.b2">x</li>
-                                        <li data-i18n="feat.eh.b3">x</li>
-                                        <li data-i18n="feat.eh.b4">x</li>
-                                        <li data-i18n="feat.eh.b5">x</li>
+                                        <li data-i18n="feat.eh.b1">Built an event booking system with 10 ASP.NET Core services backed by 9 SQL Server databases, behind an Ocelot gateway that routes REST and SignalR traffic and forwards JWT tokens to protected services.</li>
+                                        <li data-i18n="feat.eh.b2">Implemented a booking flow that validates tickets and vouchers, takes VNPay/MoMo payment, and calls compensating actions to restore tickets and vouchers when payment fails, instead of a distributed transaction across service databases.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://github.com/AinzleKhoa/EventManagementSystem" target="_blank"
@@ -252,9 +245,7 @@
                                     <ul class="feat-bullets">
                                         <li data-i18n="feat.cs.b1">Implemented the VNPay payment flow with callback signature, amount and order-state checks before confirming payment, plus a background worker that cancels orders left unpaid after a 15-minute timeout.</li>
                                         <li data-i18n="feat.cs.b2">Chose OData over per-screen endpoints so the mobile app could filter, page and select fields without new endpoints; order queries use EF Core projection to avoid loading full entities.</li>
-                                        <li data-i18n="feat.cs.b3">Implemented JWT login with Google sign-in and server-side refresh-token rotation: every refresh revokes the old token; logout revokes the current token, while password change/reset and admin account lock revoke all sessions for that user.</li>
-                                        <li data-i18n="feat.cs.b4">Worked with the mobile team on the Flutter Dio client: on a 401 it makes a single refresh call, queues the other failed requests, then retries them all, so users stay signed in without duplicate refreshes.</li>
-                                        <li data-i18n="feat.cs.b5">Standardized validation and errors with FluentValidation and RFC 7807 ProblemDetails, and added Serilog logging.</li>
+                                        <li data-i18n="feat.cs.b3">Implemented server-side refresh-token rotation with revocation on logout, password change/reset and account lock, used by the Flutter app for silent re-login.</li>
                                     </ul>
                                     <div class="feat-links">
                                         <a href="https://github.com/AinzleKhoa/calendar-shop" target="_blank"
@@ -788,7 +779,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261125d"></script>
+    <script src="./assets/js/script.js?v=20261126a"></script>
 </body>
 
 </html>
