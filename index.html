@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261126b">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261126d">
 </head>
 
 <body tabindex="0">
@@ -289,14 +289,56 @@
                                     <img src="./assets/img/experiences/rikkeisoft-office-thumb.jpg" alt="Rikkeisoft office, Ho Chi Minh City" data-i18n-attr="alt:exp.photo" loading="lazy">
                                 </a>
                                 <div class="feat-links exp-links">
-                                    <a href="https://github.com/AinzleKhoa/vms-monorepo-OJT" target="_blank"
-                                        rel="noopener noreferrer" class="btn-cta outline">vms-monorepo-OJT</a>
                                     <a href="./assets/img/proofs/cert-ojt-fpt.jpg" data-lightbox="ojt"
                                         data-i18n-attr="data-title:exp.cert.lb"
                                         class="btn-cta" data-i18n="exp.cert">View certificate</a>
                                 </div>
                             </div>
                         </article>
+                    </div>
+                </div>
+            </section>
+
+            <section id="case-study" class="case-study-section">
+                <div class="container">
+                    <div class="case-study-wrapper" data-aos="fade-up" data-aos-offset="300"
+                        data-aos-easing="ease-in-sine">
+                        <h2 class="section-heading" data-i18n="case.heading">Case Study</h2>
+                        <p class="section-subtitle" data-i18n="case.sub">How the shared Redis cache package handles reads, writes and cache invalidation at VMS.</p>
+
+                        <div class="case-grid">
+                            <figure class="case-card">
+                                <a class="case-frame" href="./assets/img/case-studies/vms-cache-read.svg"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/img/case-studies/vms-cache-read.png"
+                                        alt="Sequence diagram: cache-aside read path with a token-checked distributed lock"
+                                        data-i18n-attr="alt:case.read.alt" loading="lazy">
+                                </a>
+                                <figcaption class="case-caption">
+                                    <strong data-i18n="case.read.title">Read path</strong>
+                                    <span data-i18n="case.read.cap">Cache-aside reads with a token-checked distributed lock and jittered backoff.</span>
+                                    <a class="case-link" href="./assets/img/case-studies/vms-cache-read.svg"
+                                        target="_blank" rel="noopener" data-i18n="case.open">Open full diagram ↗</a>
+                                </figcaption>
+                            </figure>
+
+                            <figure class="case-card">
+                                <a class="case-frame" href="./assets/img/case-studies/vms-cache-write.svg"
+                                    target="_blank" rel="noopener">
+                                    <img src="./assets/img/case-studies/vms-cache-write.png"
+                                        alt="Sequence diagram: employee update with version-based cache invalidation"
+                                        data-i18n-attr="alt:case.write.alt" loading="lazy">
+                                </a>
+                                <figcaption class="case-caption">
+                                    <strong data-i18n="case.write.title">Write path</strong>
+                                    <span data-i18n="case.write.cap">One write commits to PostgreSQL, then bumps the entity's cache version; the next read builds a new key.</span>
+                                    <a class="case-link" href="./assets/img/case-studies/vms-cache-write.svg"
+                                        target="_blank" rel="noopener" data-i18n="case.open">Open full diagram ↗</a>
+                                </figcaption>
+                            </figure>
+                        </div>
+
+                        <p class="case-note" data-i18n="case.note">Opens full size in a new tab. Simplified diagrams; no company data or source code shown.</p>
                     </div>
                 </div>
             </section>
@@ -778,7 +820,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261126b"></script>
+    <script src="./assets/js/script.js?v=20261126d"></script>
 </body>
 
 </html>

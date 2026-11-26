@@ -166,5 +166,15 @@
   "j9b.date": "May 2025",
   "j9b.title": "Best Member of FEL, Spring 2025",
   "j9b.text": "FEL awarded me its Platinum Best Member Certificate for my contribution and commitment to the club throughout the semesters.",
-  "exp.photo": "Rikkeisoft office, Ho Chi Minh City"
+  "exp.photo": "Rikkeisoft office, Ho Chi Minh City",
+  "case.heading": "Case Study",
+  "case.sub": "How the shared Redis cache package handles reads, writes and cache invalidation at VMS.",
+  "case.read.title": "Read path",
+  "case.read.cap": "Cache-aside reads with a token-checked distributed lock and jittered backoff.",
+  "case.read.alt": "Sequence diagram: cache-aside read path with a token-checked distributed lock",
+  "case.write.title": "Write path",
+  "case.write.cap": "One write commits to PostgreSQL, then bumps the entity's cache version; the next read builds a new key.",
+  "case.write.alt": "Sequence diagram: employee update with version-based cache invalidation",
+  "case.open": "Open full diagram ↗",
+  "case.note": "Opens full size in a new tab. Simplified diagrams; no company data or source code shown."
 }

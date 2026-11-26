@@ -166,5 +166,15 @@
   "j9b.date": "05/2025",
   "j9b.title": "Thành viên xuất sắc nhất FEL, Spring 2025",
   "j9b.text": "CLB FEL trao cho tôi Chứng nhận Thành viên xuất sắc (Platinum Best Member) vì những đóng góp và sự gắn bó với CLB qua các học kỳ.",
-  "exp.photo": "Văn phòng Rikkeisoft, TP. Hồ Chí Minh"
+  "exp.photo": "Văn phòng Rikkeisoft, TP. Hồ Chí Minh",
+  "case.heading": "Case Study",
+  "case.sub": "Cách package cache Redis dùng chung xử lý đọc, ghi và invalidation tại VMS.",
+  "case.read.title": "Luồng đọc",
+  "case.read.cap": "Cache-aside với distributed lock có token và backoff có jitter.",
+  "case.read.alt": "Sequence diagram: luồng đọc cache-aside với distributed lock có token",
+  "case.write.title": "Luồng ghi",
+  "case.write.cap": "Một lần ghi commit vào PostgreSQL, sau đó bump version cache của entity; lần đọc sau dùng key mới.",
+  "case.write.alt": "Sequence diagram: cập nhật nhân viên với invalidation theo version",
+  "case.open": "Mở diagram đầy đủ ↗",
+  "case.note": "Mở kích thước đầy đủ ở tab mới. Diagram đã đơn giản hoá; không có dữ liệu công ty hay source code."
 }
