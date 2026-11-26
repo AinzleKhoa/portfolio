@@ -1,5 +1,5 @@
 // Bump on every content change so browsers fetch fresh text instead of a cached copy
-const CONTENT_VERSION = '20261126d';
+const CONTENT_VERSION = '20261126e';
 
 /*---------------------------------------
   Language (EN / VI): dictionaries in assets/i18n, choice remembered
