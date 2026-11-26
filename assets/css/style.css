@@ -4891,3 +4891,16 @@ header {
         height: 240px;
     }
 }
+
+.case-card-wide {
+    grid-column: 1 / -1;
+}
+
+.case-card-wide .case-frame {
+    height: auto;
+}
+
+.case-card-wide .case-frame img {
+    width: 100%;
+    height: auto;
+}

@@ -176,5 +176,8 @@
   "case.write.cap": "Một lần ghi commit vào PostgreSQL, sau đó bump version cache của entity; lần đọc sau dùng key mới.",
   "case.write.alt": "Sequence diagram: cập nhật nhân viên với invalidation theo version",
   "case.open": "Mở diagram đầy đủ ↗",
-  "case.note": "Mở kích thước đầy đủ ở tab mới. Diagram đã đơn giản hoá; không có dữ liệu công ty hay source code."
+  "case.note": "Mở kích thước đầy đủ ở tab mới. Diagram đã đơn giản hoá; không có dữ liệu công ty hay source code.",
+  "case.inval.title": "Hiệu ứng invalidation",
+  "case.inval.cap": "Sau khi ghi, lần đọc sau tạo key v4; key v3 cũ không còn truy cập được và tự hết hạn theo TTL.",
+  "case.inval.alt": "Sequence diagram: invalidation theo version chuyển cache key từ v3 sang v4"
 }

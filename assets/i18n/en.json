@@ -176,5 +176,8 @@
   "case.write.cap": "One write commits to PostgreSQL, then bumps the entity's cache version; the next read builds a new key.",
   "case.write.alt": "Sequence diagram: employee update with version-based cache invalidation",
   "case.open": "Open full diagram ↗",
-  "case.note": "Opens full size in a new tab. Simplified diagrams; no company data or source code shown."
+  "case.note": "Opens full size in a new tab. Simplified diagrams; no company data or source code shown.",
+  "case.inval.title": "Invalidation in effect",
+  "case.inval.cap": "After the write, the next read builds a v4 key; old v3 keys are unreachable and expire by TTL.",
+  "case.inval.alt": "Sequence diagram: version-based invalidation moves the cache key from v3 to v4"
 }
