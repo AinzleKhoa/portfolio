@@ -19,7 +19,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/devicon@2.16.0/devicon.min.css">
 
-    <link rel="stylesheet" href="./assets/css/style.css?v=20261126g">
+    <link rel="stylesheet" href="./assets/css/style.css?v=20261126h">
 </head>
 
 <body tabindex="0">
@@ -278,7 +278,8 @@
                                 <div class="exp-main">
                                     <h3 class="feat-title" data-i18n="exp.title">Software Engineer Intern (OJT)</h3>
                                     <p class="feat-meta" data-i18n="exp.meta">Rikkeisoft | Ho Chi Minh City | VMS (Visitor & Manpower Management System)</p>
-                                    <p class="feat-date" data-i18n="exp.date">Sep 2025 - Jan 2026</p>
+                                    <p class="feat-date" data-i18n="exp.date">Sep 17, 2025 - Dec 4, 2025</p>
+                                    <p class="feat-stack" data-i18n="exp.stack">NestJS | TypeScript | TypeORM | PostgreSQL | Redis | Docker | JWT | Swagger</p>
                                     <ul class="feat-bullets">
                                         <li data-i18n="exp.b1">Implemented cache-stampede protection in a shared Redis caching package adopted by 4 NestJS services: a token-checked distributed lock lets only one request rebuild an expired entry while the rest back off with jitter, instead of a local lock that would not coordinate across service instances.</li>
                                         <li data-i18n="exp.b2">Implemented version-based cache invalidation (one Redis counter per entity, hashed query keys), so a write makes the entity's older cache keys unreachable, instead of scanning and deleting every query variant; traced and fixed a bug where one write bumped the version several times and invalidated cached entries too often.</li>
@@ -308,31 +309,31 @@
 
                         <div class="case-grid">
                             <figure class="case-card">
-                                <a class="case-frame" href="./assets/img/case-studies/vms-cache-read.svg?v=20261126g"
+                                <a class="case-frame" href="./assets/img/case-studies/vms-cache-read.svg?v=20261126h"
                                     target="_blank" rel="noopener">
-                                    <img src="./assets/img/case-studies/vms-cache-read.png?v=20261126g"
+                                    <img src="./assets/img/case-studies/vms-cache-read.png?v=20261126h"
                                         alt="Sequence diagram: cache-aside read path with a token-checked distributed lock"
                                         data-i18n-attr="alt:case.read.alt" loading="lazy">
                                 </a>
                                 <figcaption class="case-caption">
                                     <strong data-i18n="case.read.title">Read path</strong>
                                     <span data-i18n="case.read.cap">Cache-aside reads with a token-checked distributed lock and jittered backoff.</span>
-                                    <a class="case-link" href="./assets/img/case-studies/vms-cache-read.svg?v=20261126g"
+                                    <a class="case-link" href="./assets/img/case-studies/vms-cache-read.svg?v=20261126h"
                                         target="_blank" rel="noopener" data-i18n="case.open">Open full diagram ↗</a>
                                 </figcaption>
                             </figure>
 
                             <figure class="case-card">
-                                <a class="case-frame" href="./assets/img/case-studies/vms-cache-write.svg?v=20261126g"
+                                <a class="case-frame" href="./assets/img/case-studies/vms-cache-write.svg?v=20261126h"
                                     target="_blank" rel="noopener">
-                                    <img src="./assets/img/case-studies/vms-cache-write.png?v=20261126g"
+                                    <img src="./assets/img/case-studies/vms-cache-write.png?v=20261126h"
                                         alt="Sequence diagram: employee update with version-based cache invalidation"
                                         data-i18n-attr="alt:case.write.alt" loading="lazy">
                                 </a>
                                 <figcaption class="case-caption">
                                     <strong data-i18n="case.write.title">Write path</strong>
                                     <span data-i18n="case.write.cap">One write commits to PostgreSQL, then increments the entity’s version counter (v3 → v4). The next read builds a v4 key; old v3 keys become unreachable and expire by TTL — no SCAN/DEL.</span>
-                                    <a class="case-link" href="./assets/img/case-studies/vms-cache-write.svg?v=20261126g"
+                                    <a class="case-link" href="./assets/img/case-studies/vms-cache-write.svg?v=20261126h"
                                         target="_blank" rel="noopener" data-i18n="case.open">Open full diagram ↗</a>
                                 </figcaption>
                             </figure>
@@ -685,7 +686,7 @@
                             <li class="j-item left j-cat-work">
                                 <span class="j-node" title="Work"><i class="fas fa-briefcase"></i></span>
                                 <div class="j-card">
-                                    <span class="j-date" data-i18n="j10.date">Sep 2025 - Jan 2026</span>
+                                    <span class="j-date" data-i18n="j10.date">Sep 17, 2025 - Dec 4, 2025</span>
                                     <h3 class="j-title" data-i18n="j10.title">OJT at Rikkeisoft (VMS project)</h3>
                                     <p class="j-text" data-i18n="j10.text">I interned at Rikkeisoft HCM on the VMS project: a shared Redis caching library for four NestJS services, and the User Management feature, built end to end.</p>
                                     <a class="j-media" href="./assets/img/journey/rikkeisoft.jpg" data-lightbox="journey"
@@ -818,7 +819,7 @@
     <script src="./assets/js/lightbox.js"></script>
     <script src="./assets/js/aos.js"></script>
     <script src="./assets/js/lazysizes.min.js"></script>
-    <script src="./assets/js/script.js?v=20261126g"></script>
+    <script src="./assets/js/script.js?v=20261126h"></script>
 </body>
 
 </html>
