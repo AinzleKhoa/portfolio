@@ -173,11 +173,7 @@
   "case.read.cap": "Cache-aside reads with a token-checked distributed lock and jittered backoff.",
   "case.read.alt": "Sequence diagram: cache-aside read path with a token-checked distributed lock",
   "case.write.title": "Write path",
-  "case.write.cap": "One write commits to PostgreSQL, then bumps the entity's cache version; the next read builds a new key.",
+  "case.write.cap": "One write commits to PostgreSQL, then increments the entity’s version counter (v3 → v4). The next read builds a v4 key; old v3 keys become unreachable and expire by TTL — no SCAN/DEL.",
   "case.write.alt": "Sequence diagram: employee update with version-based cache invalidation",
-  "case.open": "Open full diagram ↗",
-  "case.note": "Opens full size in a new tab. Simplified diagrams; no company data or source code shown.",
-  "case.inval.title": "Invalidation in effect",
-  "case.inval.cap": "After the write, the next read builds a v4 key; old v3 keys are unreachable and expire by TTL.",
-  "case.inval.alt": "Sequence diagram: version-based invalidation moves the cache key from v3 to v4"
+  "case.open": "Open full diagram ↗"
 }

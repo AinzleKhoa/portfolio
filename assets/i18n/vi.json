@@ -173,11 +173,7 @@
   "case.read.cap": "Cache-aside với distributed lock có token và backoff có jitter.",
   "case.read.alt": "Sequence diagram: luồng đọc cache-aside với distributed lock có token",
   "case.write.title": "Luồng ghi",
-  "case.write.cap": "Một lần ghi commit vào PostgreSQL, sau đó bump version cache của entity; lần đọc sau dùng key mới.",
+  "case.write.cap": "Một lần ghi commit vào PostgreSQL, sau đó tăng version counter của entity (v3 → v4). Lần đọc sau tạo key v4; các key v3 cũ không còn truy cập được và tự hết hạn theo TTL — không SCAN/DEL.",
   "case.write.alt": "Sequence diagram: cập nhật nhân viên với invalidation theo version",
-  "case.open": "Mở diagram đầy đủ ↗",
-  "case.note": "Mở kích thước đầy đủ ở tab mới. Diagram đã đơn giản hoá; không có dữ liệu công ty hay source code.",
-  "case.inval.title": "Hiệu ứng invalidation",
-  "case.inval.cap": "Sau khi ghi, lần đọc sau tạo key v4; key v3 cũ không còn truy cập được và tự hết hạn theo TTL.",
-  "case.inval.alt": "Sequence diagram: invalidation theo version chuyển cache key từ v3 sang v4"
+  "case.open": "Mở diagram đầy đủ ↗"
 }

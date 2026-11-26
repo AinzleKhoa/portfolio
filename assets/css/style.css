@@ -4874,12 +4874,6 @@ header {
     text-decoration: underline;
 }
 
-.case-note {
-    margin: 16px 0 0;
-    color: #8fb4c9;
-    font-size: 0.85rem;
-}
-
 @media (min-width: 992px) {
     .case-grid {
         grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -4890,17 +4884,4 @@ header {
     .case-frame {
         height: 240px;
     }
-}
-
-.case-card-wide {
-    grid-column: 1 / -1;
-}
-
-.case-card-wide .case-frame {
-    height: auto;
-}
-
-.case-card-wide .case-frame img {
-    width: 100%;
-    height: auto;
 }
